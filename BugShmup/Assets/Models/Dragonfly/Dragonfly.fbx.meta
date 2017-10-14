@@ -1,0 +1,145 @@
+fileFormatVersion: 2
+guid: 82e252ca48ee45749a91f8c502234c72
+timeCreated: 1508009674
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Base
+    100004: Base_end
+    100006: DragoMesh
+    100008: //RootNode
+    100010: Head
+    100012: Head_end
+    100014: Hips
+    100016: Jaw.L
+    100018: Jaw.L_end
+    100020: Jaw.R
+    100022: Jaw.R_end
+    100024: Tail1
+    100026: Tail2
+    100028: Tail2_end
+    100030: Wing1.L
+    100032: Wing1.L_end
+    100034: Wing1.R
+    100036: Wing1.R_end
+    100038: Wing2.L
+    100040: Wing2.L_end
+    100042: Wing2.R
+    100044: Wing2.R_end
+    400000: Armature
+    400002: Base
+    400004: Base_end
+    400006: DragoMesh
+    400008: //RootNode
+    400010: Head
+    400012: Head_end
+    400014: Hips
+    400016: Jaw.L
+    400018: Jaw.L_end
+    400020: Jaw.R
+    400022: Jaw.R_end
+    400024: Tail1
+    400026: Tail2
+    400028: Tail2_end
+    400030: Wing1.L
+    400032: Wing1.L_end
+    400034: Wing1.R
+    400036: Wing1.R_end
+    400038: Wing2.L
+    400040: Wing2.L_end
+    400042: Wing2.R
+    400044: Wing2.R_end
+    4300000: DragoMesh
+    7400000: Armature|ArmatureAction
+    9500000: //RootNode
+    13700000: DragoMesh
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Emission
+    second: {fileID: 2100000, guid: fe59185fc59a33c46995c5fee3dfef7c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NormalEdit
+    second: {fileID: 2100000, guid: fbb7d14260fb97b4c9511aa7138d8714, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
