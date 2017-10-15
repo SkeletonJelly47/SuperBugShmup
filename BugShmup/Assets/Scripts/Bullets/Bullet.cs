@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Bullet : MonoBehaviour
 {
-    [SerializeField] float projectileSpeed;
+    [SerializeField] protected float projectileSpeed;
 
     // Use this for initialization
     protected virtual void Start()

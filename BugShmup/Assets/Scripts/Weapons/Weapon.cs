@@ -14,18 +14,18 @@ public abstract class Weapon : MonoBehaviour
 
     // Use this for initialization
     public virtual void Start()
-    {
-        timer = 0f;
+    { 
         fireInterval = 1 / BulletPerSecond;
+        timer = fireInterval;
         masterObject = GameObject.FindGameObjectWithTag("MasterObject");
     }
 
     // Update is called once per frame
     public virtual void Update()
     {
-        if (Input.GetButton(FireKey))
+        if (timer >= fireInterval)
         {
-            if (timer > fireInterval)
+            if (Input.GetButton(FireKey))
             {
                 Instantiate(SpawnObj, transform.position, transform.rotation, masterObject.transform);
                 timer = 0f;
@@ -34,6 +34,10 @@ public abstract class Weapon : MonoBehaviour
             {
                 timer += Time.deltaTime;
             }
+        }
+        else
+        {
+            timer += Time.deltaTime;
         }
     }
 }
