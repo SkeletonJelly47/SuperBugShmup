@@ -3,7 +3,7 @@ guid: 82e252ca48ee45749a91f8c502234c72
 timeCreated: 1508009674
 licenseType: Free
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 19
   fileIDToRecycleName:
     100000: Armature
     100002: Base
@@ -55,22 +55,10 @@ ModelImporter:
     7400000: Armature|ArmatureAction
     9500000: //RootNode
     13700000: DragoMesh
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Emission
-    second: {fileID: 2100000, guid: fe59185fc59a33c46995c5fee3dfef7c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: NormalEdit
-    second: {fileID: 2100000, guid: fbb7d14260fb97b4c9511aa7138d8714, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -83,25 +71,94 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    importAnimatedCustomProperties: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|ArmatureAction
+      takeName: Armature|ArmatureAction
+      firstFrame: 0
+      lastFrame: 5
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Base
+        weight: 1
+      - path: Armature/Base/Base_end
+        weight: 1
+      - path: Armature/Hips
+        weight: 1
+      - path: Armature/Hips/Head
+        weight: 1
+      - path: Armature/Hips/Head/Head_end
+        weight: 1
+      - path: Armature/Hips/Jaw.L
+        weight: 1
+      - path: Armature/Hips/Jaw.L/Jaw.L_end
+        weight: 1
+      - path: Armature/Hips/Jaw.R
+        weight: 1
+      - path: Armature/Hips/Jaw.R/Jaw.R_end
+        weight: 1
+      - path: Armature/Hips/Tail1
+        weight: 1
+      - path: Armature/Hips/Tail1/Tail2
+        weight: 1
+      - path: Armature/Hips/Tail1/Tail2/Tail2_end
+        weight: 1
+      - path: Armature/Hips/Wing1.L
+        weight: 1
+      - path: Armature/Hips/Wing1.L/Wing1.L_end
+        weight: 1
+      - path: Armature/Hips/Wing1.R
+        weight: 1
+      - path: Armature/Hips/Wing1.R/Wing1.R_end
+        weight: 1
+      - path: Armature/Hips/Wing2.L
+        weight: 1
+      - path: Armature/Hips/Wing2.L/Wing2.L_end
+        weight: 1
+      - path: Armature/Hips/Wing2.R
+        weight: 1
+      - path: Armature/Hips/Wing2.R/Wing2.R_end
+        weight: 1
+      - path: DragoMesh
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    importVisibility: 1
     importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -117,7 +174,6 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-    normalCalculationMode: 4
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
