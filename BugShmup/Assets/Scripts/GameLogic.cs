@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameLogic : MonoBehaviour
 {
-    public GameObject MasterObject;
     private void Start()
     {
 

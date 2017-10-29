@@ -2,19 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraController : MonoBehaviour
+public class Bee : Enemy
 {
 
-    public float ScrollSpeed;
-
     // Use this for initialization
-    void Start()
+    protected override void Start()
     {
 
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
 
     }

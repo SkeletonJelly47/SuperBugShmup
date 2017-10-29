@@ -6,7 +6,6 @@ public abstract class Weapon : MonoBehaviour
 {
 
     [SerializeField] GameObject SpawnObj;
-    GameObject masterObject;
     public string FireKey = "Fire1";
     float timer;
     float fireInterval;
@@ -17,7 +16,6 @@ public abstract class Weapon : MonoBehaviour
     { 
         fireInterval = 1 / BulletPerSecond;
         timer = fireInterval;
-        masterObject = GameObject.FindGameObjectWithTag("MasterObject");
     }
 
     // Update is called once per frame
@@ -27,7 +25,7 @@ public abstract class Weapon : MonoBehaviour
         {
             if (Input.GetButton(FireKey))
             {
-                Instantiate(SpawnObj, transform.position, transform.rotation, masterObject.transform);
+                Instantiate(SpawnObj, transform.position, transform.rotation);
                 timer = 0f;
             }
             else

@@ -449,7 +449,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1081131773362966}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.2, z: 0}
+  m_LocalPosition: {x: 0.21, y: 1, z: 14.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4520943457768234}
@@ -739,9 +739,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4668cbd623893ba41a17e2d6e05cb2a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnObj: {fileID: 1750698077642956, guid: 24d68d4deeb3f0c448e522222b7b0250, type: 2}
+  SpawnObj: {fileID: 1996605033488276, guid: 24d68d4deeb3f0c448e522222b7b0250, type: 2}
   FireKey: Fire1
-  BulletPerSecond: 25
+  BulletPerSecond: 250
 --- !u!114 &114872405712330274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -761,9 +761,8 @@ SkinnedMeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1357173242780118}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -780,7 +779,6 @@ SkinnedMeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
