@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: a57c7e1609bad724fb527d9be42679f8
+timeCreated: 1509272014
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Berlin Sans FB
+  fontNames:
+  - Berlin Sans FB
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 659c597fe3d8f2f4180ca6f1a21477ee, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
