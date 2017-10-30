@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
-    private int health = 100;
+    [SerializeField] private int health;
     protected bool alive;
     BoxCollider collider;
 

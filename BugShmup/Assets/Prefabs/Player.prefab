@@ -741,7 +741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnObj: {fileID: 1996605033488276, guid: 24d68d4deeb3f0c448e522222b7b0250, type: 2}
   FireKey: Fire1
-  BulletPerSecond: 250
+  BulletPerSecond: 100
 --- !u!114 &114872405712330274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -754,6 +754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5.7
+  health: 200
 --- !u!137 &137852781577805356
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

@@ -25,6 +25,11 @@ public abstract class Bullet : MonoBehaviour
         if(collision.gameObject.tag == ColliderTag)
         {
             collision.gameObject.GetComponent<Enemy>().TakeDamage(damage);
+            DestroySelf();
         }
+    }
+    protected virtual void DestroySelf()
+    {
+        Destroy(gameObject);
     }
 }

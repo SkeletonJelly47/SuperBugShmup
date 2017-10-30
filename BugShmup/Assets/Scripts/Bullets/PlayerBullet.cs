@@ -9,6 +9,7 @@ public class PlayerBullet : Bullet
     protected override void Start()
     {
         base.Start();
+        //Make this smarter
         ColliderTag = "Enemy";
     }
 
@@ -20,6 +21,5 @@ public class PlayerBullet : Bullet
     protected override void OnTriggerEnter(Collider collision)
     {
         base.OnTriggerEnter(collision);
-        
     }
 }
