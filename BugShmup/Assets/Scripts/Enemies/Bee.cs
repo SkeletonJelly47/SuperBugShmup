@@ -7,15 +7,20 @@ public class Bee : Enemy
     Vector3 direction;
     [SerializeField] float moveSpeed;
 
-    // Use this for initialization
     protected override void Start()
     {
-        direction = new Vector3(0,0,1);
+        //Check if enemy rotation isn't 180 degrees
+        if(transform.rotation.eulerAngles.y != 180)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+
+        base.Start();
     }
 
     // Update is called once per frame
     protected override void Update()
     {
-        transform.position += direction * moveSpeed * Time.deltaTime;
+        transform.position += transform.forward * moveSpeed * Time.deltaTime;
     }
 }
