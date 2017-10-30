@@ -4,8 +4,9 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
-    private int health;
+    private int health = 100;
     protected bool alive;
+    BoxCollider collider;
 
     protected int Health
     {
@@ -16,9 +17,11 @@ public abstract class Enemy : MonoBehaviour
 
         set
         {
+            //dead
             health = value;
             if (health < 0)
             {
+                Debug.Log("Dead");
                 alive = false;
                 DestroySelf();
             }
@@ -28,7 +31,7 @@ public abstract class Enemy : MonoBehaviour
     // Use this for initialization
     protected virtual void Start()
     {
-
+        collider = GetComponent<BoxCollider>();
     }
 
     // Update is called once per frame
@@ -39,7 +42,7 @@ public abstract class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        Health -= damage;
     }
 
     protected virtual void DestroySelf()

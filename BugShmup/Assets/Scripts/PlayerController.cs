@@ -7,6 +7,25 @@ public class PlayerController : MonoBehaviour
     public float Speed;
     float verticalInput, horizontalInput;
     Vector3 dir;
+    [SerializeField] int health;
+
+    public int Health
+    {
+        get
+        {
+            return health;
+        }
+
+        set
+        {
+            health = value;
+            //dead
+            if (health < 0)
+            {
+                DestroySelf();
+            }
+        }
+    }
 
     // Use this for initialization
     void Start()
@@ -39,5 +58,15 @@ public class PlayerController : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
+    }
+
+    public void TakeDamage(int damage)
+    {
+        Health -= damage;
+    }
+
+    void DestroySelf()
+    {
+        Destroy(gameObject);
     }
 }

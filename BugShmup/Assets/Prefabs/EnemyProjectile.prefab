@@ -9,34 +9,34 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1996605033488276}
+  m_RootGameObject: {fileID: 1305701530295252}
   m_IsPrefabParent: 1
---- !u!1 &1996605033488276
+--- !u!1 &1305701530295252
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4754377711793598}
-  - component: {fileID: 33194927931723812}
-  - component: {fileID: 65289176434481270}
-  - component: {fileID: 23251448844904068}
-  - component: {fileID: 114634468029520426}
-  - component: {fileID: 54210006888192502}
+  - component: {fileID: 4042624590657298}
+  - component: {fileID: 33414108196942284}
+  - component: {fileID: 65639630755827558}
+  - component: {fileID: 23785671599857170}
+  - component: {fileID: 114179236294504532}
+  - component: {fileID: 54844284645612678}
   m_Layer: 0
-  m_Name: PlayerProjectile
+  m_Name: EnemyProjectile
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4754377711793598
+--- !u!4 &4042624590657298
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1996605033488276}
+  m_GameObject: {fileID: 1305701530295252}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 11.027944, y: 5.4779983, z: 8.630931}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
@@ -44,12 +44,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23251448844904068
+--- !u!23 &23785671599857170
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1996605033488276}
+  m_GameObject: {fileID: 1305701530295252}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -57,7 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: a26472916e9391a479818d7abd06da1c, type: 2}
+  - {fileID: 2100000, guid: c05d93e93133fb0488daf8ea747298b8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -76,19 +76,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33194927931723812
+--- !u!33 &33414108196942284
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1996605033488276}
+  m_GameObject: {fileID: 1305701530295252}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54210006888192502
+--- !u!54 &54844284645612678
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1996605033488276}
+  m_GameObject: {fileID: 1305701530295252}
   serializedVersion: 2
   m_Mass: 0.0000001
   m_Drag: 0
@@ -98,28 +98,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65289176434481270
+--- !u!65 &65639630755827558
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1996605033488276}
+  m_GameObject: {fileID: 1305701530295252}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114634468029520426
+--- !u!114 &114179236294504532
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1996605033488276}
+  m_GameObject: {fileID: 1305701530295252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00fbc52a78953f340bc852bcf1e857f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 745187def3e1b4b4f93224218d0ed133, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 20
-  damage: 5
+  projectileSpeed: 5
+  damage: 10
