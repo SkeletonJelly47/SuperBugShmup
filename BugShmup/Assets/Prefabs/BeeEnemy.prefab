@@ -138,7 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1305701530295252, guid: 6022ab47dc3075648afe9b7fc2a8e86d,
     type: 2}
-  bulletPerSecond: 2
+  bulletPerSecond: 1
 --- !u!136 &136492144026152848
 CapsuleCollider:
   m_ObjectHideFlags: 1

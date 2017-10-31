@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
         set
         {
             health = value;
-            //dead
+            Debug.Log("HP: " + health);
             if (health < 0)
             {
                 DestroySelf();
@@ -56,8 +56,8 @@ public class PlayerController : MonoBehaviour
 
     void GetInputs()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        verticalInput = Input.GetAxisRaw("Vertical");
     }
 
     public void TakeDamage(int damage)
@@ -68,5 +68,6 @@ public class PlayerController : MonoBehaviour
     void DestroySelf()
     {
         Destroy(gameObject);
+        Debug.Log("Player Died");
     }
 }
