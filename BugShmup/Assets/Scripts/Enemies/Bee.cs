@@ -5,7 +5,6 @@ using UnityEngine;
 public class Bee : Enemy
 {
     Vector3 direction;
-    [SerializeField] float moveSpeed;
 
     protected override void Start()
     {
@@ -19,8 +18,8 @@ public class Bee : Enemy
     }
 
     // Update is called once per frame
-    protected override void Update()
+    /*protected override void Update()
     {
         transform.position += transform.forward * moveSpeed * Time.deltaTime;
-    }
+    }*/
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
@@ -7,12 +8,21 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] private int health;
     protected bool alive;
     BoxCollider collider;
+    [SerializeField] protected float moveSpeed;
+
     //Change to WP container!
-    public List<GameObject> Waypoints;
-    //give me a proper name ffs
+    public GameObject WaypointContainer;
+
+    //Waypoint variables
     List<EnemyWaypoint> fetchedWaypoints;
     int currentWaypointIndex = 0;
     bool WPReached = false;
+    bool WPFinished = false;
+    float movedAmount = 0f;
+    float distanceToWaypoint = 0;
+    Vector3 directionToWaypoint;
+
+
 
     protected int Health
     {
@@ -37,26 +47,63 @@ public abstract class Enemy : MonoBehaviour
     protected virtual void Start()
     {
         collider = GetComponent<BoxCollider>();
+
+        //I knew there was an easier way!
+        fetchedWaypoints = WaypointContainer.GetComponentsInChildren<EnemyWaypoint>().ToList();
+
         //Not sure if there's an easier way for this but it'll do
-        for (int i = 0; i < Waypoints.Count ; i++)
+        /*for (int i = 0; i < Waypoints.Count ; i++)
         {
             //Check for empty list!
             fetchedWaypoints[i] = Waypoints[i].GetComponent<EnemyWaypoint>();
-        }
+        }*/
     }
 
     // Update is called once per frame
     protected virtual void Update()
     {
-        if (WPReached == false)
+        if (!WPFinished)
         {
-            //move towards wp
+            if (WPReached == false)
+            {
+                if (distanceToWaypoint == 0)
+                {
+                    distanceToWaypoint = (fetchedWaypoints[currentWaypointIndex].transform.position - transform.position).magnitude;
+                    directionToWaypoint = (fetchedWaypoints[currentWaypointIndex].transform.position - transform.position).normalized;
+                }
+                MoveToWaypoint();
+                if (movedAmount > distanceToWaypoint) // WP Reached
+                {
+                    WPReached = true;
+                }
+
+            }
+            else
+            {
+                transform.position = fetchedWaypoints[currentWaypointIndex].transform.position;
+                currentWaypointIndex++;
+                movedAmount = 0f;
+                distanceToWaypoint = 0f;
+                WPReached = false; //Hetkinen
+                if (currentWaypointIndex > fetchedWaypoints.Count-1)
+                {
+                    WPFinished = true;
+                }
+                //index++, WPReached = true, set pos to exactly to WP pos, movedAmount to zero, 
+            } 
         }
         else
         {
-            //index++, WPReached = true, set pos to exactly to WP pos
+            // K  Y  S  !  !
+            DestroySelf();
         }
 
+    }
+
+    void MoveToWaypoint()
+    {
+        transform.position += directionToWaypoint * Time.deltaTime * moveSpeed;
+        movedAmount += (directionToWaypoint * Time.deltaTime * moveSpeed).magnitude;
     }
 
     public void TakeDamage(int damage)

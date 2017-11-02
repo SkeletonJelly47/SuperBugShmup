@@ -124,7 +124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 20
-  moveSpeed: 2
+  moveSpeed: 6
+  WaypointContainer: {fileID: 0}
 --- !u!114 &114128134088190678
 MonoBehaviour:
   m_ObjectHideFlags: 1
