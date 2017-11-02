@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
         dir.y = 0;
         dir.z = verticalInput;
         //Normalize for constant diagonal speeds
-        dir.Normalize();
+        //dir.Normalize();
 
         //Apply movement
         Move(dir);
@@ -56,8 +56,8 @@ public class PlayerController : MonoBehaviour
 
     void GetInputs()
     {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        verticalInput = Input.GetAxisRaw("Vertical");
+        horizontalInput = Input.GetAxis("Horizontal");
+        verticalInput = Input.GetAxis("Vertical");
     }
 
     public void TakeDamage(int damage)
