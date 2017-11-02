@@ -19,7 +19,7 @@ public class Bee : Enemy
     }
     protected override void Shoot()
     {
-        
+        Instantiate(bulletPrefab, transform.position, transform.rotation);
     }
 
     // Update is called once per frame

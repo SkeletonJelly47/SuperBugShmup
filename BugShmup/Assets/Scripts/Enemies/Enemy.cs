@@ -9,6 +9,7 @@ public abstract class Enemy : MonoBehaviour
     protected bool alive;
     BoxCollider collider;
     [SerializeField] protected float moveSpeed;
+    public GameObject bulletPrefab;
 
     //Change to WP container!
     public GameObject WaypointContainer;
