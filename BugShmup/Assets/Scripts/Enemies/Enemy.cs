@@ -85,6 +85,11 @@ public abstract class Enemy : MonoBehaviour
                 movedAmount = 0f;
                 distanceToWaypoint = 0f;
                 WPReached = false; //Hetkinen
+                //Shoot or no shooterino
+                if (fetchedWaypoints[currentWaypointIndex].Shoot)
+                {
+                    Shoot();
+                }
                 if (currentWaypointIndex > fetchedWaypoints.Count-1)
                 {
                     WPFinished = true;
@@ -110,6 +115,8 @@ public abstract class Enemy : MonoBehaviour
     {
         Health -= damage;
     }
+    protected abstract void Shoot();
+
 
     protected virtual void DestroySelf()
     {

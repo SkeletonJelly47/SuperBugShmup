@@ -5,10 +5,20 @@ using UnityEngine;
 public class EnemyWaypoint : MonoBehaviour
 {
     Vector3 point;
-    bool Shoot;
+    [SerializeField] bool shoot;
+
+    public bool Shoot
+    {
+        get
+        {
+            return shoot;
+        }
+    }
 
     void Start()
     {
             
     }
+
+
 }
