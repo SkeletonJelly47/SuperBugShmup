@@ -6,6 +6,8 @@ using UnityEngine;
 public class Bee : Enemy
 {
     Vector3 direction;
+    GameObject target;
+    Vector3 targetLocation;
 
     protected override void Start()
     {   
@@ -14,17 +16,21 @@ public class Bee : Enemy
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
         }
+        target = GameObject.FindGameObjectWithTag("Player");
 
         base.Start();
     }
     protected override void Shoot()
     {
+        targetLocation = target.GetComponent<Transform>().position;
+        transform.LookAt(targetLocation);
         Instantiate(bulletPrefab, transform.position, transform.rotation);
     }
 
     // Update is called once per frame
     protected override void Update()
-    {
+    {   
         base.Update();
+
     }
 }
