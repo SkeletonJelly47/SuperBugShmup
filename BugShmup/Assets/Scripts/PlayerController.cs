@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     float verticalInput, horizontalInput;
     Vector3 dir;
     [SerializeField] int health;
+    [SerializeField] int maxHp;
 
     public int Health
     {
@@ -18,9 +19,10 @@ public class PlayerController : MonoBehaviour
 
         set
         {
-            health = value;
+            //Health is not set or limited at start
+            health = Mathf.Clamp(value, 0, maxHp);
             Debug.Log("HP: " + health);
-            if (health < 0)
+            if (health <= 0)
             {
                 DestroySelf();
             }
