@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Beetle : Enemy
 {
+    public Vector3 direction;
+    bool rotate;
     public Beetle()
     {
 
@@ -17,12 +19,17 @@ public class Beetle : Enemy
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
         }
-
+        rotate = true;
         base.Start();
     }
 
     protected override void Shoot()
     {
+        if (rotate == true)
+        {
+            transform.Rotate(direction);
+            rotate = false;
+        }
         Instantiate(bulletPrefab, transform.position, transform.rotation);
 
         Vector3 rot = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 15f, transform.eulerAngles.z);
