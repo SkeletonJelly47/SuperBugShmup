@@ -6,8 +6,8 @@ public class BeeHomingBullet : Bullet
 {
     Transform target;
     Rigidbody rb;
+    GameObject playerProjectile;
     public float rotationSpeed;
-    public float followTime;
     float timer;
     // Use this for initialization
     protected override void Start()
@@ -20,12 +20,6 @@ public class BeeHomingBullet : Bullet
     // Update is called once per frame
     protected override void Update()
     {
-        timer += Time.deltaTime;
-        if (timer > followTime)
-        {
-            base.Update();
-        }
-        else
         {
             base.Update();
             var rotation = Quaternion.LookRotation(target.position - transform.position);
@@ -34,10 +28,16 @@ public class BeeHomingBullet : Bullet
     }
     protected override void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == ColliderTag)
+        if (collision.tag == ColliderTag)
         {
             collision.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
             DestroySelf();
+        }
+        if (collision.tag == "PlayerProjectile")
+        {   
+            
+            DestroySelf();
+            Debug.Log("BUmbumbumbum");
         }
     }
 }
