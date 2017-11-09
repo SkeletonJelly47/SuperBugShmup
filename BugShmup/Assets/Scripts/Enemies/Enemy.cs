@@ -19,6 +19,11 @@ public abstract class Enemy : MonoBehaviour
     int currentWaypointIndex = 0;
     bool WPReached = false;
     bool WPFinished = false;
+    bool waitingAtWPLeave = false;
+    bool waitingAtWPArrive = false;
+
+    public float wait1, wait2;
+
     float movedAmount = 0f;
     float distanceToWaypoint = 0;
     Vector3 directionToWaypoint;
@@ -69,34 +74,25 @@ public abstract class Enemy : MonoBehaviour
             {
                 if (distanceToWaypoint == 0)
                 {
-                    distanceToWaypoint = (fetchedWaypoints[currentWaypointIndex].transform.position - transform.position).magnitude;
-                    directionToWaypoint = (fetchedWaypoints[currentWaypointIndex].transform.position - transform.position).normalized;
-                }
-                MoveToWaypoint();
-                if (movedAmount > distanceToWaypoint) // WP Reached
-                {
-                    WPReached = true;
+                    CalculateWaypoint();
                 }
 
+                MoveToWaypoint();
+
+                if (movedAmount > distanceToWaypoint) // WP Reached
+                {
+                    waitingAtWPArrive = true;
+                    WaypointReached();
+                }
             }
-            else
+            else if(wait1 > 0 && waitingAtWPArrive == true)
             {
-                transform.position = fetchedWaypoints[currentWaypointIndex].transform.position;
-                currentWaypointIndex++;
-                movedAmount = 0f;
-                distanceToWaypoint = 0f;
-                WPReached = false; //Hetkinen
-                //Shoot or no shooterino
-                if (fetchedWaypoints[currentWaypointIndex].Shoot)
-                {
-                    Shoot();
-                }
-                if (currentWaypointIndex > fetchedWaypoints.Count-1)
-                {
-                    WPFinished = true;
-                }
-                //index++, WPReached = true, set pos to exactly to WP pos, movedAmount to zero, 
-            } 
+                wait1 -= Time.deltaTime;
+            }
+            else if (wait2 > 0 && waitingAtWPLeave == true)
+            {
+                wait2 -= Time.deltaTime;
+            }
         }
         else
         {
@@ -104,6 +100,38 @@ public abstract class Enemy : MonoBehaviour
             DestroySelf();
         }
 
+    }
+
+    void CalculateWaypoint()
+    {
+        distanceToWaypoint = (fetchedWaypoints[currentWaypointIndex].transform.position - transform.position).magnitude;
+        directionToWaypoint = (fetchedWaypoints[currentWaypointIndex].transform.position - transform.position).normalized;
+    }
+
+    void WaypointReached()
+    {
+        //Set position to wp to prevent going over the waypoint
+        transform.position = fetchedWaypoints[currentWaypointIndex].transform.position;
+
+        //Go to next waypoint index
+        //currentWaypointIndex = Mathf.Clamp(currentWaypointIndex + 1, 0, fetchedWaypoints.Count - 1);
+        currentWaypointIndex++;
+
+        //Reset loop variables
+        movedAmount = 0f;
+        distanceToWaypoint = 0f;
+        WPReached = false;
+
+        //Shoot or no shooterino
+        if (fetchedWaypoints[currentWaypointIndex-1].Shoot)
+        {
+            Shoot();
+        }
+
+        if (currentWaypointIndex > fetchedWaypoints.Count-1)
+        {
+            WPFinished = true;
+        }
     }
 
     void MoveToWaypoint()
