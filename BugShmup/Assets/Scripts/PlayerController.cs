@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public int energy;
     public float Speed;
+    public GameObject PlayerProjectileSuperShot;
     float verticalInput, horizontalInput;
     Vector3 dir;
-    [SerializeField] int health;
+    [SerializeField]
+    int health;
 
     public int Health
     {
@@ -24,6 +27,25 @@ public class PlayerController : MonoBehaviour
             {
                 DestroySelf();
             }
+        }
+    }
+
+    public int Energy
+    {
+        get
+        {
+            return energy;
+        }
+        set
+        {
+
+            energy = value;
+
+            if (energy > 100)
+            {
+                energy = 100;
+            }
+
         }
     }
 
@@ -47,6 +69,16 @@ public class PlayerController : MonoBehaviour
 
         //Apply movement
         Move(dir);
+
+        if (Input.GetButtonDown("Fire2"))
+        {
+            if (energy == 100)
+            {
+                energy = 0;
+                Instantiate(PlayerProjectileSuperShot, transform.position, transform.rotation);
+                
+            }
+        }
     }
 
     void Move(Vector3 dir)

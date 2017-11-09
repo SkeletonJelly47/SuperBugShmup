@@ -10,6 +10,7 @@ public abstract class Enemy : MonoBehaviour
     BoxCollider collider;
     [SerializeField] protected float moveSpeed;
     public GameObject bulletPrefab;
+    public GameObject pickupPrefab;
 
     //Change to WP container!
     public GameObject WaypointContainer;
@@ -38,6 +39,7 @@ public abstract class Enemy : MonoBehaviour
             health = value;
             if (health < 0)
             {
+                Instantiate(pickupPrefab, transform.position, transform.rotation);
                 alive = false;
                 DestroySelf();
             }
@@ -48,7 +50,6 @@ public abstract class Enemy : MonoBehaviour
     protected virtual void Start()
     {
         collider = GetComponent<BoxCollider>();
-
         //I knew there was an easier way!
         fetchedWaypoints = WaypointContainer.GetComponentsInChildren<EnemyWaypoint>().ToList();
 
@@ -87,7 +88,7 @@ public abstract class Enemy : MonoBehaviour
                 distanceToWaypoint = 0f;
                 WPReached = false; //Hetkinen
                 //Shoot or no shooterino
-                if (fetchedWaypoints[currentWaypointIndex].Shoot)
+                if (fetchedWaypoints[currentWaypointIndex - 1].Shoot)
                 {
                     Shoot();
                 }
@@ -121,6 +122,7 @@ public abstract class Enemy : MonoBehaviour
 
     protected virtual void DestroySelf()
     {
+        
         Destroy(gameObject);
     }
     
