@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class EnemyWaypoint : MonoBehaviour
 {
-    Vector3 point;
     [SerializeField] bool shoot;
+    [SerializeField] bool curve;
+    [SerializeField] float curveAmt;
 
     public bool Shoot
     {
@@ -15,10 +16,12 @@ public class EnemyWaypoint : MonoBehaviour
         }
     }
 
-    void Start()
+    public float CurveAmt
     {
-            
+        //Setter to restrict curveAmt? Does it work in editor?? Restrict at awake?
+        get
+        {
+            return curveAmt;
+        }
     }
-
-
 }
