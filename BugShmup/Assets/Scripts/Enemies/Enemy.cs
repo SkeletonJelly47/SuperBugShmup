@@ -15,8 +15,8 @@ public abstract class Enemy : MonoBehaviour
     public GameObject WaypointContainer;
 
     //Waypoint variables
-    List<EnemyWaypoint> fetchedWaypoints;
-    int currentWaypointIndex = 0;
+    List<EnemyWaypoint> Waypoints;
+    int WPIndex = 0;
     bool WPReached = false;
     bool WPFinished = false;
     bool waitingAtWPLeave = false;
@@ -55,8 +55,8 @@ public abstract class Enemy : MonoBehaviour
         collider = GetComponent<BoxCollider>();
 
         //I knew there was an easier way!
-        fetchedWaypoints = WaypointContainer.GetComponentsInChildren<EnemyWaypoint>().ToList();
-        transform.position = fetchedWaypoints[0].transform.position;
+        Waypoints = WaypointContainer.GetComponentsInChildren<EnemyWaypoint>().ToList();
+        //transform.position = Waypoints[0].transform.position;
         //Instantiate(new GameObject("OriginPoint"), fetchedWaypoints[currentWaypointIndex].transform.position + GetCurveOrigin(fetchedWaypoints[currentWaypointIndex].CurveAmt), this.transform.rotation);
         //Vector3 AO = GetCurveOrigin(fetchedWaypoints[currentWaypointIndex].CurveAmt);
         //Debug.Log(AO +)
@@ -69,19 +69,32 @@ public abstract class Enemy : MonoBehaviour
     // Update is called once per frame
     protected virtual void Update()
     {
-        GetCurveOrigin(fetchedWaypoints[currentWaypointIndex].CurveAmt);
+        //GetCurveOrigin(Waypoints[WPIndex].CurveAmt);
         if (!WPFinished)
         {
             if (WPReached == false)
             {
-                if (distanceToWaypoint == 0)
+                if (distanceToWaypoint == 0 && Waypoints[WPIndex].Curve == false)
                 {
                     CalculateWaypoint();
                 }
+                else if (distanceToWaypoint == 0 && Waypoints[WPIndex].Curve)
+                {
+                    CalculateCurve(Waypoints[WPIndex].CurveAmt);
+                }
 
-                //MoveToWaypoint();
-
-                if (movedAmount > distanceToWaypoint) // WP Reached
+                //No curve
+                if (Waypoints[WPIndex].Curve == false)
+                {
+                    MoveToWaypoint(); 
+                }
+                //Curve
+                else if(Waypoints[WPIndex].Curve)
+                {
+                    MoveToWaypoint(Waypoints[WPIndex].CurveAmt);
+                }
+                //WP Reached
+                if (movedAmount > distanceToWaypoint || temp/distanceToWaypoint >= 1)
                 {
                     waitingAtWPArrive = true;
                     WaypointReached();
@@ -106,31 +119,68 @@ public abstract class Enemy : MonoBehaviour
 
     void CalculateWaypoint()
     {
-        distanceToWaypoint = (fetchedWaypoints[currentWaypointIndex].transform.position - transform.position).magnitude;
-        directionToWaypoint = (fetchedWaypoints[currentWaypointIndex].transform.position - transform.position).normalized;
+        distanceToWaypoint = (Waypoints[WPIndex].transform.position - transform.position).magnitude;
+        directionToWaypoint = (Waypoints[WPIndex].transform.position - transform.position).normalized;
+    }
+
+    void CalculateCurve(float curveAmt)
+    {
+        //Check if index is over bounds eg. a is the last checkpoint
+        if (WPIndex < Waypoints.Count - 1)
+        {
+            //Get a and b at current waypoints
+            a = Waypoints[WPIndex].transform.position;
+            b = Waypoints[WPIndex + 1].transform.position;
+            //Make vector D
+            D = b - a;
+            //Calculate x variable
+            x = curveAmt * (D.magnitude / 2);
+            //Calculate AO, remember to check what sign curveAmt is
+            AO = (D / 2) + GetPerpendicularVector(D).normalized * ((Mathf.Pow(D.magnitude, 2f) / (8 * x)) - (x / 2));
+            distanceToWaypoint = Mathf.Deg2Rad * Vector3.Angle(-AO, b - (a + AO)) * AO.magnitude;
+            //Apply rotation by adding to transform the final position vector eg. a + AO + slerp thingy
+            if (curveAmt > 0)
+            {
+                curvePoint = a + AO + (GetPerpendicularVector(D).normalized * -1) * AO.magnitude;
+            }
+            else
+            {
+                curvePoint = a + AO + (GetPerpendicularVector(D).normalized) * AO.magnitude;
+            }
+            //Position + o + rotated vector from OA -> OB.
+        }
+        else
+            Debug.Log("Index would go out of range, end of waypoints");
     }
 
     void WaypointReached()
     {
         //Set position to wp to prevent going over the waypoint
-        transform.position = fetchedWaypoints[currentWaypointIndex].transform.position;
+        //transform.position = Waypoints[WPIndex].transform.position;
 
         //Go to next waypoint index
         //currentWaypointIndex = Mathf.Clamp(currentWaypointIndex + 1, 0, fetchedWaypoints.Count - 1);
-        currentWaypointIndex++;
+        WPIndex++;
 
         //Reset loop variables
         movedAmount = 0f;
         distanceToWaypoint = 0f;
         WPReached = false;
+        //Curve variables
+        a = Vector3.zero;
+        b = Vector3.zero;
+        D = Vector3.zero;
+        AO = Vector3.zero;
+        temp = 0f;
+        x = 0f;
 
         //Shoot or no shooterino
-        if (fetchedWaypoints[currentWaypointIndex-1].Shoot)
+        if (Waypoints[WPIndex-1].Shoot)
         {
             Shoot();
         }
 
-        if (currentWaypointIndex > fetchedWaypoints.Count-1)
+        if (WPIndex > Waypoints.Count-1)
         {
             WPFinished = true;
         }
@@ -139,7 +189,12 @@ public abstract class Enemy : MonoBehaviour
     void MoveToWaypoint()
     {
         transform.position += directionToWaypoint * Time.deltaTime * moveSpeed;
-        movedAmount += (directionToWaypoint * Time.deltaTime * moveSpeed).magnitude;
+        movedAmount += (directionToWaypoint * Time.deltaTime * moveSpeed).magnitude;      
+    }
+    void MoveToWaypoint(float curveAmt)
+    {
+        temp += moveSpeed * Time.deltaTime;
+        transform.position = /*Waypoints[WPIndex].transform.position +*/ a + AO + Vector3.Slerp(-AO, (b - (a + AO)), temp / distanceToWaypoint);
     }
 
     Vector3 GetPerpendicularVector(Vector3 vec)
@@ -148,14 +203,15 @@ public abstract class Enemy : MonoBehaviour
         return Vector3.Cross(vec, Vector3.up); //k1 * k2 = -1
     }
     Vector3 AO = new Vector3();
-    Vector3 a, b, D;
+    Vector3 a, b, D, curvePoint;
     GameObject KP;
+    float x = 0;
     float temp = 0;
-    Vector3 GetCurveOrigin(float curveAmt)
+    /*Vector3 GetCurveOrigin(float curveAmt)
     {
         //Need to restrict curves at last wp
-        a = fetchedWaypoints[currentWaypointIndex].transform.position;
-        b = fetchedWaypoints[currentWaypointIndex+1].transform.position;
+        a = Waypoints[WPIndex].transform.position;
+        b = Waypoints[WPIndex+1].transform.position;
         float distanceToTravel;
 
         //Debug.Log("Vec A:" + a + " Vec B: " + b);
@@ -184,14 +240,14 @@ public abstract class Enemy : MonoBehaviour
         KP = Instantiate(new GameObject("Kaaren piste"), KaarenPiste, this.transform.rotation);
 
         temp += moveSpeed * Time.deltaTime;
-        distanceToTravel = Mathf.Deg2Rad * Vector3.Angle(-AO, b - (a + AO)) * AO.magnitude;
+        distanceToWaypoint = Mathf.Deg2Rad * Vector3.Angle(-AO, b - (a + AO)) * AO.magnitude;
         //transform.position = a+ AO + Vector3.RotateTowards(-AO, (b - (a + AO)), temp, 0.0f);
                                                                     //HERE TOO, U DUMMY
-        transform.position = a + AO + Vector3.Slerp(-AO, (b - (a + AO)), temp/distanceToTravel);
+        transform.position = a + AO + Vector3.Slerp(-AO, (b - (a + AO)), temp/distanceToWaypoint);
 
         return AO;
-    }
-    void OnDrawGizmos()
+    }*/
+    /*void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(AO, AO.magnitude);
@@ -199,7 +255,7 @@ public abstract class Enemy : MonoBehaviour
         Gizmos.DrawRay(a, b);
         //Gizmos.DrawRay(a+AO, (GetPerpendicularVector(D).normalized * -1) * AO.magnitude);
         Gizmos.color = Color.magenta;
-    }
+    }*/
     public void TakeDamage(int damage)
     {
         Health -= damage;

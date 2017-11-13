@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyWaypoint : MonoBehaviour
 {
     [SerializeField] bool shoot;
-    [SerializeField] bool curve;
+    [SerializeField] bool curve = true;
     [SerializeField] float curveAmt;
 
     public bool Shoot
@@ -15,6 +15,8 @@ public class EnemyWaypoint : MonoBehaviour
             return shoot;
         }
     }
+
+    public bool Curve { get { return curve; }  }
 
     public float CurveAmt
     {
