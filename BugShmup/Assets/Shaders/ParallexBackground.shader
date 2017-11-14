@@ -70,15 +70,25 @@
 			{	
 				// Draw top texture
 				float4 top = tex2D(_TopTex, i.uv0);
-
-
 				float4 middle = tex2D(_MiddleTex, i.uv1);
-				middle.rgb = normalize(middle.rgb * middle.a);
-			
 				float4 bottom = tex2D(_BottomTex, i.uv2);
 
-				return
-					top * middle;
+				float4 color = top;
+
+				if (top.a == 1 && middle.a <= 1 && bottom.a <= 1)
+				{
+					color.rgba = top.rgba;
+				}
+				else if (top.a <= 1 && middle.a == 1 && bottom.a <= 1)
+				{
+					color.rgba = middle.rgba;
+				}
+				else if (top.a <= 1 && middle.a <= 1 && bottom.a == 1)
+				{
+					color.rgba = bottom.rgba;
+				}
+
+				return color;
 			}
 
 			ENDCG
