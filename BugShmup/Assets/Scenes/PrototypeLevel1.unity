@@ -234,6 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 013253a61e6281c4481bb294e7d88984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 0}
   score: 0
 --- !u!4 &132451296
 Transform:
@@ -681,7 +682,7 @@ Prefab:
     - target: {fileID: 114399059484589844, guid: 7a113a6737779b143a534c95abc6b1b6,
         type: 2}
       propertyPath: moveSpeed
-      value: 2
+      value: 5.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a113a6737779b143a534c95abc6b1b6, type: 2}

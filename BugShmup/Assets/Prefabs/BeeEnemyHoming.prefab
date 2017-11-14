@@ -97,7 +97,10 @@ MonoBehaviour:
   moveSpeed: 6
   bulletPrefab: {fileID: 1770108376882588, guid: 3b07667a60f7c6a41a1401e643a71ed4,
     type: 2}
+  pickupPrefab: {fileID: 1199443182273340, guid: af5a24e45f90ce24fa9a5f544725ed11,
+    type: 2}
   WaypointContainer: {fileID: 0}
+  bulletDirection: {x: 0, y: 0, z: 0, w: 0}
 --- !u!136 &136512703144613312
 CapsuleCollider:
   m_ObjectHideFlags: 1

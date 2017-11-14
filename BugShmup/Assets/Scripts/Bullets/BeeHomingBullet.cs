@@ -35,9 +35,7 @@ public class BeeHomingBullet : Bullet
         }
         if (collision.tag == "PlayerProjectile")
         {   
-            
             DestroySelf();
-            Debug.Log("BUmbumbumbum");
         }
     }
 }

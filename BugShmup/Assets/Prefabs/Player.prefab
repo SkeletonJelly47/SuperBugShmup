@@ -782,8 +782,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.52, y: 0.63, z: 0.88}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.36, y: 0.27, z: 0.65}
+  m_Center: {x: 0, y: 0, z: 0.1}
 --- !u!95 &95841457771981052
 Animator:
   serializedVersion: 3
@@ -840,8 +840,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f01aace4c35d6f4a947d025940530f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  energy: 0
   Speed: 5.7
+  PlayerProjectileSuperShot: {fileID: 1996605033488276, guid: 7fc1017a0473b2c4a8416b228d7368ee,
+    type: 2}
   health: 200
+  maxHp: 200
 --- !u!114 &114938496014933964
 MonoBehaviour:
   m_ObjectHideFlags: 1

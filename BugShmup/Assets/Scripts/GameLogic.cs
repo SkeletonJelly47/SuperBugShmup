@@ -5,9 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class GameLogic : MonoBehaviour
 {
+    public GameObject Player;
+    public static PlayerController player;
     public int score;
-    private void Start()
+    private void Awake()
     {
+        player = Player.GetComponent<PlayerController>();
+        Debug.Log(player);
         score = 0;
     }
     void Update()
@@ -19,6 +23,7 @@ public class GameLogic : MonoBehaviour
         }
 
     }
+
     public void AddScore(int newScoreValue)
     {
         score += newScoreValue;

@@ -26,4 +26,12 @@ public class EnemyWaypoint : MonoBehaviour
             return curveAmt;
         }
     }
+
+    private void Awake()
+    {
+        if (CurveAmt == 0)
+        {
+            curve = false;
+        }
+    }
 }

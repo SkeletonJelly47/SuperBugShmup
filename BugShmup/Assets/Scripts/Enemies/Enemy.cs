@@ -121,8 +121,8 @@ public abstract class Enemy : MonoBehaviour
     void CalculateWaypoint()
     {
         //ok
-        distanceToWaypoint = (Waypoints[WPIndex+1].transform.position - transform.position).magnitude;
-        directionToWaypoint = (Waypoints[WPIndex+1].transform.position - transform.position).normalized;
+        distanceToWaypoint = (Waypoints[WPIndex].transform.position - transform.position).magnitude;
+        directionToWaypoint = (Waypoints[WPIndex].transform.position - transform.position).normalized;
     }
 
     /// <summary>
@@ -132,11 +132,11 @@ public abstract class Enemy : MonoBehaviour
     void CalculateCurve(float curveAmt)
     {
         //Check if index is over bounds eg. a is the last checkpoint
-        if (WPIndex < Waypoints.Count - 1)
+        if (WPIndex < Waypoints.Count)
         {
             //Get a and b at current waypoints
-            a = Waypoints[WPIndex].transform.position;
-            b = Waypoints[WPIndex + 1].transform.position;
+            a = transform.position;
+            b = Waypoints[WPIndex].transform.position;
             //Make vector D
             D = b - a;
             //Calculate x variable
@@ -159,6 +159,7 @@ public abstract class Enemy : MonoBehaviour
         //Reset loop variables
         movedAmount = 0f;
         distanceToWaypoint = 0f;
+        directionToWaypoint = Vector3.zero;
         WPReached = false;
 
         //Reset curve variables
@@ -176,7 +177,7 @@ public abstract class Enemy : MonoBehaviour
             Shoot();
         }
 
-        if (WPIndex > Waypoints.Count-1)
+        if (WPIndex > Waypoints.Count -1)
         {
             WPFinished = true;
         }
