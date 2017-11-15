@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Beetle : Enemy
 {
-    public Vector3 direction;
+    Vector3 direction;
     bool rotate;
     public Beetle()
     {
@@ -15,10 +15,10 @@ public class Beetle : Enemy
 	protected override void Start ()
     {
         //Check if enemy rotation isn't 180 degrees
-        if (transform.rotation.eulerAngles.y != 180)
+        /*if (transform.rotation.eulerAngles.y != 180)
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
-        }
+        }*/
         rotate = true;
         base.Start();
     }

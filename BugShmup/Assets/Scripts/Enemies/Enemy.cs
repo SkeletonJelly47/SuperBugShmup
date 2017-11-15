@@ -10,6 +10,7 @@ public abstract class Enemy : MonoBehaviour
     protected bool alive;
     [SerializeField] protected float moveSpeed;
     public GameObject bulletPrefab;
+    public GameObject pickupPrefab;
     BoxCollider collider;
 
     //WP container
@@ -37,6 +38,9 @@ public abstract class Enemy : MonoBehaviour
     bool waitingAtWPLeave = false;
     bool waitingAtWPArrive = false;
 
+    //Pickup variables
+    bool drop;
+
 
     protected int Health
     {
@@ -51,6 +55,10 @@ public abstract class Enemy : MonoBehaviour
             health = value;
             if (health < 0)
             {
+                if (drop)
+                {
+                    Instantiate(pickupPrefab, transform.position, transform.rotation); 
+                }
                 alive = false;
                 DestroySelf();
             }
@@ -63,7 +71,11 @@ public abstract class Enemy : MonoBehaviour
         collider = GetComponent<BoxCollider>();
 
         //I knew there was an easier way!
-        Waypoints = WaypointContainer.GetComponentsInChildren<EnemyWaypoint>().ToList();        
+        Waypoints = WaypointContainer.GetComponentsInChildren<EnemyWaypoint>().ToList();
+        if(pickupPrefab == null)
+        {
+            drop = false;
+        }   
     }
 
     // Update is called once per frame
@@ -207,7 +219,6 @@ public abstract class Enemy : MonoBehaviour
 
     Vector3 GetPerpendicularVector(Vector3 vec)
     {
-        Debug.Log("Perpendicular vector: " + Vector3.Cross(vec, Vector3.up));
         return Vector3.Cross(vec, Vector3.up);
     }
     
