@@ -20,8 +20,6 @@ public abstract class Enemy : MonoBehaviour
     int WPIndex = 0;
     bool WPReached = false;
     bool WPFinished = false;
-    bool waitingAtWPLeave = false;
-    bool waitingAtWPArrive = false;
     float distanceToWaypoint = 0;
     float movedAmount = 0f;
     Vector3 directionToWaypoint;
@@ -36,6 +34,9 @@ public abstract class Enemy : MonoBehaviour
 
     //Wait variables
     public float wait1, wait2;
+    bool waitingAtWPLeave = false;
+    bool waitingAtWPArrive = false;
+
 
     protected int Health
     {
@@ -98,13 +99,15 @@ public abstract class Enemy : MonoBehaviour
                     WaypointReached();
                 }
             }
-            /*else if(wait1 > 0 && waitingAtWPArrive == true)
+            /*//Waiting at arriving
+            else if(Waypoints[WPIndex].WaitArrive > 0 && waitingAtWPArrive == true)
             {
-                wait1 -= Time.deltaTime;
+                Waypoints[WPIndex].WaitArrive -= Time.deltaTime;
             }
-            else if (wait2 > 0 && waitingAtWPLeave == true)
+            //Waiting before leaving
+            else if (Waypoints[WPIndex].WaitLeave > 0 && waitingAtWPLeave == true)
             {
-                wait2 -= Time.deltaTime;
+                Waypoints[WPIndex].WaitLeave -= Time.deltaTime;
             }*/
         }
         else

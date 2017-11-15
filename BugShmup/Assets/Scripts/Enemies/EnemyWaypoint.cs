@@ -6,7 +6,10 @@ public class EnemyWaypoint : MonoBehaviour
 {
     [SerializeField] bool shoot;
     [SerializeField] bool curve = true;
+    [Range(-1f ,1f)]
     [SerializeField] float curveAmt;
+    [SerializeField] float waitArrive;
+    [SerializeField] float waitLeave;
 
     public bool Shoot
     {
@@ -18,20 +21,26 @@ public class EnemyWaypoint : MonoBehaviour
 
     public bool Curve { get { return curve; }  }
 
-    public float CurveAmt
-    {
-        //Setter to restrict curveAmt? Does it work in editor?? Restrict at awake?
-        get
-        {
-            return curveAmt;
-        }
-    }
+    public float CurveAmt { get { return curveAmt; } }
+
+    public float WaitArrive { get { return waitArrive; } set { waitArrive = value; } }
+
+    public float WaitLeave { get { return waitLeave; } set { waitLeave = value; } }
 
     private void Awake()
     {
+        //Limit curve values
         if (CurveAmt == 0)
         {
             curve = false;
+        }
+        else if (curveAmt < -1)
+        {
+            curveAmt = -1;
+        }
+        else if (curveAmt > 1)
+        {
+            curveAmt = 1;
         }
     }
 }
