@@ -94,12 +94,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  moveSpeed: 0
+  moveSpeed: 6
   bulletPrefab: {fileID: 1305701530295252, guid: 35b946b8668285d4e8fe37df54dc78ba,
     type: 2}
-  pickupPrefab: {fileID: 1199443182273340, guid: f510594262bf46f4db5a8211951c1c45,
-    type: 2}
   WaypointContainer: {fileID: 0}
+  wait1: 0
+  wait2: 0
 --- !u!136 &136501149573077940
 CapsuleCollider:
   m_ObjectHideFlags: 1

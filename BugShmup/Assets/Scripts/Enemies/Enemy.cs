@@ -10,7 +10,7 @@ public abstract class Enemy : MonoBehaviour
     protected bool alive;
     [SerializeField] protected float moveSpeed;
     public GameObject bulletPrefab;
-    BoxCollider collider;
+    Collider collider;
 
     //WP container
     public GameObject WaypointContainer;
@@ -59,7 +59,7 @@ public abstract class Enemy : MonoBehaviour
     // Use this for initialization
     protected virtual void Start()
     {
-        collider = GetComponent<BoxCollider>();
+        collider = GetComponent<Collider>();
 
         //I knew there was an easier way!
         Waypoints = WaypointContainer.GetComponentsInChildren<EnemyWaypoint>().ToList();        

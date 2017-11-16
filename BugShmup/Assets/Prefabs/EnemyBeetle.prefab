@@ -21,9 +21,11 @@ GameObject:
   - component: {fileID: 4659608384894096}
   - component: {fileID: 33196033226944408}
   - component: {fileID: 23810286715317250}
+  - component: {fileID: 114345479583260982}
+  - component: {fileID: 135326264844363692}
   m_Layer: 0
   m_Name: EnemyBeetle
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,3 +82,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1741730664784920}
   m_Mesh: {fileID: 4300000, guid: 95c0157e37bd323429746ddf25b76b7f, type: 3}
+--- !u!114 &114345479583260982
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1741730664784920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e36084b4298690d41b645f7d6ade5683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 60
+  moveSpeed: 6
+  bulletPrefab: {fileID: 1305701530295252, guid: 6022ab47dc3075648afe9b7fc2a8e86d,
+    type: 2}
+  WaypointContainer: {fileID: 0}
+  wait1: 0
+  wait2: 0
+  direction: {x: 0, y: 0, z: 0}
+--- !u!135 &135326264844363692
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1741730664784920}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.158611
+  m_Center: {x: 0, y: -0.103729635, z: 0.19328567}
