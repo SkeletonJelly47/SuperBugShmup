@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     int health;
     [SerializeField] int maxHp;
+    float timer = 10;
+    public bool invinsibility;
 
     public int Health
     {
@@ -96,7 +98,22 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        Health -= damage;
+        if (invinsibility != true)
+        {
+            Health -= damage;
+        }
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        invinsibility = true;
+        timer -= Time.deltaTime;
+        Debug.Log("Heyyyy");
+
+        if (timer <= 0)
+        {
+            invinsibility = false;
+        }
     }
 
     void DestroySelf()
