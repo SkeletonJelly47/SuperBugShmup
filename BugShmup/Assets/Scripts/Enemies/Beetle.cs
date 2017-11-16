@@ -5,38 +5,28 @@ using UnityEngine;
 
 public class Beetle : Enemy
 {
-    public Vector3 direction;
+    public float rotation;
+    public Transform weaponTarget;
     bool rotate;
-    public Beetle()
-    {
-
-    }
+    Transform Weapon;
 
 	protected override void Start ()
     {
-        //Check if enemy rotation isn't 180 degrees
-        if (transform.rotation.eulerAngles.y != 180)
-        {
-            transform.rotation = Quaternion.Euler(0, 180, 0);
-        }
-        rotate = true;
         base.Start();
+        Weapon = transform.GetChild(0);
     }
 
     protected override void Shoot()
     {
-        if (rotate == true)
-        {
-            transform.Rotate(direction);
-            rotate = false;
-        }
-        Instantiate(bulletPrefab, transform.position, transform.rotation);
-
-        Vector3 rot = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 15f, transform.eulerAngles.z);
+        Vector3 rot = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 0 + rotation, transform.eulerAngles.z);
 
         Instantiate(bulletPrefab, transform.position, Quaternion.Euler(rot));
 
-        rot = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 15f, transform.eulerAngles.z);
+        rot = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 15f + rotation, transform.eulerAngles.z);
+
+        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(rot));
+
+        rot = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 15f + rotation, transform.eulerAngles.z);
 
         Instantiate(bulletPrefab, transform.position, Quaternion.Euler(rot));
 
@@ -49,6 +39,7 @@ public class Beetle : Enemy
     // Update is called once per frame
     protected override void Update ()
     {
+        Weapon.transform.LookAt(weaponTarget);
         base.Update();
 	}
 }

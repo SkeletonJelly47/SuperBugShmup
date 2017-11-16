@@ -7,19 +7,15 @@ public class Bee : Enemy
 {
     Vector3 direction;
     GameObject target;
-    public Quaternion bulletDirection;
-    Vector3 targetLocation;
+    public Vector3 targetLocation;
+
+    public Transform weaponTarget;
+    Transform Weapon;
 
     protected override void Start()
     {   
-        //Check if enemy rotation isn't 180 degrees
-        if(transform.rotation.eulerAngles.y != 180)
-        {
-            transform.rotation = Quaternion.Euler(0, 180, 0);
-        }
-        target = GameObject.FindGameObjectWithTag("Player");
-
         base.Start();
+        Weapon = transform.GetChild(0);
     }
     protected override void Shoot()
     {
@@ -32,6 +28,7 @@ public class Bee : Enemy
     protected override void Update()
     {   
         base.Update();
+        Weapon.transform.LookAt(weaponTarget);
 
     }
 }
