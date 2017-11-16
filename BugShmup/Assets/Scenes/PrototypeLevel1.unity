@@ -204,11 +204,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf89571f30f92cd458647fe28ea9e64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shoot: 0
+  shoot: 1
   curve: 1
   curveAmt: 0.5
-  waitArrive: 0
-  waitLeave: 0
+  waitArrive: 1
+  waitLeave: 1
 --- !u!1 &132451294
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,11 +718,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf89571f30f92cd458647fe28ea9e64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shoot: 0
-  curve: 0
+  shoot: 1
+  curve: 1
   curveAmt: 1
-  waitArrive: 0
-  waitLeave: 0
+  waitArrive: 2.5
+  waitLeave: 2.5
 --- !u!1 &548315819
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,11 +763,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf89571f30f92cd458647fe28ea9e64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shoot: 0
-  curve: 1
+  shoot: 1
+  curve: 0
   curveAmt: 0.2
-  waitArrive: 0
-  waitLeave: 0
+  waitArrive: 4
+  waitLeave: 4
 --- !u!1001 &579992527
 Prefab:
   m_ObjectHideFlags: 0
@@ -812,6 +812,16 @@ Prefab:
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1879742200}
+    - target: {fileID: 114226556670522156, guid: 1ce340b9294b544498e17b004462e649,
+        type: 2}
+      propertyPath: wait1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114226556670522156, guid: 1ce340b9294b544498e17b004462e649,
+        type: 2}
+      propertyPath: wait2
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ce340b9294b544498e17b004462e649, type: 2}
   m_IsPrefabParent: 0
@@ -1006,11 +1016,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf89571f30f92cd458647fe28ea9e64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shoot: 0
+  shoot: 1
   curve: 1
   curveAmt: 1
-  waitArrive: 0
-  waitLeave: 0
+  waitArrive: 2
+  waitLeave: 2
 --- !u!1 &1159117899
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,11 +1061,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf89571f30f92cd458647fe28ea9e64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shoot: 0
+  shoot: 1
   curve: 0
   curveAmt: 0.65
-  waitArrive: 0
-  waitLeave: 0
+  waitArrive: 3.5
+  waitLeave: 3.5
 --- !u!1001 &1300513448
 Prefab:
   m_ObjectHideFlags: 0
@@ -1248,11 +1258,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf89571f30f92cd458647fe28ea9e64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shoot: 0
-  curve: 1
+  shoot: 1
+  curve: 0
   curveAmt: 1
-  waitArrive: 0
-  waitLeave: 0
+  waitArrive: 3
+  waitLeave: 3
 --- !u!1 &1681689310
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,11 +1303,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf89571f30f92cd458647fe28ea9e64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shoot: 0
-  curve: 1
+  shoot: 1
+  curve: 0
   curveAmt: -1
-  waitArrive: 0
-  waitLeave: 0
+  waitArrive: 4.5
+  waitLeave: 4.5
 --- !u!1001 &1730937244
 Prefab:
   m_ObjectHideFlags: 0
@@ -1494,11 +1504,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf89571f30f92cd458647fe28ea9e64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shoot: 0
-  curve: 0
+  shoot: 1
+  curve: 1
   curveAmt: 1
-  waitArrive: 0
-  waitLeave: 0
+  waitArrive: 1.5
+  waitLeave: 1.5
 --- !u!1 &2022676517
 GameObject:
   m_ObjectHideFlags: 0
