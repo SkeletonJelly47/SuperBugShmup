@@ -93,12 +93,12 @@ public abstract class Enemy : MonoBehaviour
                 if (distanceToWaypoint == 0 && Waypoints[WPIndex].Curve == false)
                 {
                     CalculateWaypoint();
-                    wait1 = Waypoints[WPIndex].WaitArrive;
-                    wait2 = Waypoints[WPIndex].WaitLeave;
+                    GetWaitTimes();
                 }
                 else if (distanceToWaypoint == 0 && Waypoints[WPIndex].Curve)
                 {
                     CalculateCurve(Waypoints[WPIndex].CurveAmt);
+                    GetWaitTimes();
                 }
 
                 //No curve
@@ -169,6 +169,12 @@ public abstract class Enemy : MonoBehaviour
         //ok
         distanceToWaypoint = (Waypoints[WPIndex].transform.position - transform.position).magnitude;
         directionToWaypoint = (Waypoints[WPIndex].transform.position - transform.position).normalized;
+    }
+
+    void GetWaitTimes()
+    {
+        wait1 = Waypoints[WPIndex].WaitArrive;
+        wait2 = Waypoints[WPIndex].WaitLeave;
     }
 
     /// <summary>
