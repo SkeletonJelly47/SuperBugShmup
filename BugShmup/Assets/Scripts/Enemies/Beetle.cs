@@ -5,21 +5,21 @@ using UnityEngine;
 
 public class Beetle : Enemy
 {
-    public Vector3 direction;
+    Vector3 direction;
     bool rotate;
     public Beetle()
     {
 
     }
 
-    protected override void Start()
+	protected override void Start ()
     {
         //Check if enemy rotation isn't 180 degrees
-         if (transform.rotation.eulerAngles.y != 180)
-          {
-              transform.rotation = Quaternion.Euler(0, 180, 0);
-          }
-          rotate = true;
+        /*if (transform.rotation.eulerAngles.y != 180)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }*/
+        rotate = true;
         base.Start();
     }
 
@@ -47,8 +47,8 @@ public class Beetle : Enemy
     }
 
     // Update is called once per frame
-    protected override void Update()
+    protected override void Update ()
     {
         base.Update();
-    }
+	}
 }

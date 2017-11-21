@@ -5,13 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class GameLogic : MonoBehaviour
 {
-    public GameObject Player;
+    //public GameObject Player;
     public static PlayerController player;
     public int score;
     private void Awake()
     {
-        player = Player.GetComponent<PlayerController>();
-        Debug.Log(player);
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         score = 0;
     }
     void Update()

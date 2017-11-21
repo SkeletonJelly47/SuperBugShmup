@@ -9,46 +9,46 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1213154501463332}
+  m_RootGameObject: {fileID: 1109831213616376}
   m_IsPrefabParent: 1
---- !u!1 &1213154501463332
+--- !u!1 &1109831213616376
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4308928766160480}
-  - component: {fileID: 33014476331048540}
-  - component: {fileID: 136444623585217642}
-  - component: {fileID: 23355396864194660}
-  - component: {fileID: 114824556574761184}
+  - component: {fileID: 4478071340670506}
+  - component: {fileID: 33333386418026932}
+  - component: {fileID: 136492144026152848}
+  - component: {fileID: 23310940254835568}
+  - component: {fileID: 114073290288023448}
   m_Layer: 0
-  m_Name: BeetleEnemy
+  m_Name: BeeEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4308928766160480
+--- !u!4 &4478071340670506
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1213154501463332}
+  m_GameObject: {fileID: 1109831213616376}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.00000058114523}
-  m_LocalPosition: {x: -0.8, y: 1, z: 43.69}
+  m_LocalPosition: {x: 0.2, y: 1, z: 34.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: 0}
---- !u!23 &23355396864194660
+--- !u!23 &23310940254835568
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1213154501463332}
+  m_GameObject: {fileID: 1109831213616376}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -75,19 +75,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33014476331048540
+--- !u!33 &33333386418026932
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1213154501463332}
+  m_GameObject: {fileID: 1109831213616376}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114824556574761184
+--- !u!114 &114073290288023448
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1213154501463332}
+  m_GameObject: {fileID: 1109831213616376}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 107eaaa79af39b34bb4b73edb28eee19, type: 3}
@@ -97,16 +97,18 @@ MonoBehaviour:
   moveSpeed: 6
   bulletPrefab: {fileID: 1305701530295252, guid: 6022ab47dc3075648afe9b7fc2a8e86d,
     type: 2}
-  pickupPrefab: {fileID: 1199443182273340, guid: d3108733073163449b56042bb65687de,
+  pickupPrefab: {fileID: 1199443182273340, guid: af5a24e45f90ce24fa9a5f544725ed11,
     type: 2}
   WaypointContainer: {fileID: 0}
+  wait1: 0
+  wait2: 0
   bulletDirection: {x: 0, y: 0, z: 0, w: 0}
---- !u!136 &136444623585217642
+--- !u!136 &136492144026152848
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1213154501463332}
+  m_GameObject: {fileID: 1109831213616376}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1

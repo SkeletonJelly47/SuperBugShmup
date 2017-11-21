@@ -6,10 +6,13 @@ using UnityEngine;
 public abstract class Enemy : MonoBehaviour
 {
     //Enemy properties
-    [SerializeField] private int health;
+    [SerializeField]
+    private int health;
     protected bool alive;
-    [SerializeField] protected float moveSpeed;
+    [SerializeField]
+    protected float moveSpeed;
     public GameObject bulletPrefab;
+    public GameObject pickupPrefab;
     Collider collider;
 
     //WP container
@@ -20,12 +23,10 @@ public abstract class Enemy : MonoBehaviour
     int WPIndex = 0;
     bool WPReached = false;
     bool WPFinished = false;
-    bool waitingAtWPLeave = false;
-    bool waitingAtWPArrive = false;
     float distanceToWaypoint = 0;
     float movedAmount = 0f;
     Vector3 directionToWaypoint;
-    
+
     //Curve waypoint variables
     Vector3 AO = new Vector3();
     Vector3 a, b, D, curvePoint;
@@ -36,6 +37,13 @@ public abstract class Enemy : MonoBehaviour
 
     //Wait variables
     public float wait1, wait2;
+    bool waitingAtWPLeave = false;
+    bool waitingAtWPArrive = false;
+    bool hasShot = false;
+
+    //Pickup variables
+    bool drop;
+
 
     protected int Health
     {
@@ -50,6 +58,10 @@ public abstract class Enemy : MonoBehaviour
             health = value;
             if (health < 0)
             {
+                if (drop)
+                {
+                    Instantiate(pickupPrefab, transform.position, transform.rotation);
+                }
                 alive = false;
                 DestroySelf();
             }
@@ -62,7 +74,13 @@ public abstract class Enemy : MonoBehaviour
         collider = GetComponent<Collider>();
 
         //I knew there was an easier way!
-        Waypoints = WaypointContainer.GetComponentsInChildren<EnemyWaypoint>().ToList();        
+        Waypoints = WaypointContainer.GetComponentsInChildren<EnemyWaypoint>().ToList();
+        if (pickupPrefab == null)
+        {
+            drop = false;
+        }
+        wait1 = Waypoints[0].WaitArrive;
+        wait2 = Waypoints[0].WaitLeave;
     }
 
     // Update is called once per frame
@@ -75,19 +93,21 @@ public abstract class Enemy : MonoBehaviour
                 if (distanceToWaypoint == 0 && Waypoints[WPIndex].Curve == false)
                 {
                     CalculateWaypoint();
+                    GetWaitTimes();
                 }
                 else if (distanceToWaypoint == 0 && Waypoints[WPIndex].Curve)
                 {
                     CalculateCurve(Waypoints[WPIndex].CurveAmt);
+                    GetWaitTimes();
                 }
 
                 //No curve
                 if (Waypoints[WPIndex].Curve == false)
                 {
-                    MoveToWaypoint(); 
+                    MoveToWaypoint();
                 }
                 //Curve
-                else if(Waypoints[WPIndex].Curve)
+                else if (Waypoints[WPIndex].Curve)
                 {
                     MoveToWaypoint(Waypoints[WPIndex].CurveAmt);
                 }
@@ -95,17 +115,43 @@ public abstract class Enemy : MonoBehaviour
                 if (movedAmount > distanceToWaypoint || curveCompletetion >= 1)
                 {
                     waitingAtWPArrive = true;
+                    WPReached = true;
+                    //WaypointReached();
+                }
+            }
+            if (WPReached == true)
+            {
+                //Waiting at arriving
+                if (wait1 > 0 && waitingAtWPArrive == true)
+                {
+                    wait1 -= Time.deltaTime;
+                }
+                else
+                {
+                    waitingAtWPArrive = false;
+                    waitingAtWPLeave = true;
+                    //Shoot or no shoot
+                    if (Waypoints[WPIndex].Shoot)
+                    {
+                        if (hasShot == false)
+                        {
+                            Shoot();
+                            hasShot = true;
+                        }
+                    }
+                }
+
+                //Waiting before leaving
+                if (wait2 > 0 && waitingAtWPLeave == true && waitingAtWPArrive == false)
+                {
+                    wait2 -= Time.deltaTime;
+                }
+                else if(wait2 <= 0)
+                {
+                    waitingAtWPLeave = false;
                     WaypointReached();
                 }
             }
-            /*else if(wait1 > 0 && waitingAtWPArrive == true)
-            {
-                wait1 -= Time.deltaTime;
-            }
-            else if (wait2 > 0 && waitingAtWPLeave == true)
-            {
-                wait2 -= Time.deltaTime;
-            }*/
         }
         else
         {
@@ -123,6 +169,12 @@ public abstract class Enemy : MonoBehaviour
         //ok
         distanceToWaypoint = (Waypoints[WPIndex].transform.position - transform.position).magnitude;
         directionToWaypoint = (Waypoints[WPIndex].transform.position - transform.position).normalized;
+    }
+
+    void GetWaitTimes()
+    {
+        wait1 = Waypoints[WPIndex].WaitArrive;
+        wait2 = Waypoints[WPIndex].WaitLeave;
     }
 
     /// <summary>
@@ -171,13 +223,20 @@ public abstract class Enemy : MonoBehaviour
         temp = 0f;
         x = 0f;
 
+        //Reset wait variables
+        wait1 = 0;
+        wait2 = 0;
+        waitingAtWPLeave = false;
+        waitingAtWPArrive = false;
+        hasShot = false;
+
         //Shoot or no shooterino
-        if (Waypoints[WPIndex-1].Shoot)
+        /*if (Waypoints[WPIndex - 1].Shoot)
         {
             Shoot();
-        }
+        }*/
 
-        if (WPIndex > Waypoints.Count -1)
+        if (WPIndex > Waypoints.Count - 1)
         {
             WPFinished = true;
         }
@@ -189,7 +248,7 @@ public abstract class Enemy : MonoBehaviour
     void MoveToWaypoint()
     {
         transform.position += directionToWaypoint * Time.deltaTime * moveSpeed;
-        movedAmount += (directionToWaypoint * Time.deltaTime * moveSpeed).magnitude;      
+        movedAmount += (directionToWaypoint * Time.deltaTime * moveSpeed).magnitude;
     }
     /// <summary>
     /// Moves the enemy in a curve towards next waypoint
@@ -204,10 +263,9 @@ public abstract class Enemy : MonoBehaviour
 
     Vector3 GetPerpendicularVector(Vector3 vec)
     {
-        Debug.Log("Perpendicular vector: " + Vector3.Cross(vec, Vector3.up));
         return Vector3.Cross(vec, Vector3.up);
     }
-    
+
     public void TakeDamage(int damage)
     {
         Health -= damage;
@@ -218,5 +276,5 @@ public abstract class Enemy : MonoBehaviour
     protected virtual void DestroySelf()
     {
         Destroy(gameObject);
-    } 
+    }
 }
