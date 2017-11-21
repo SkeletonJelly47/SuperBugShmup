@@ -42,5 +42,14 @@ public class EnemyWaypoint : MonoBehaviour
         {
             curveAmt = 1;
         }
+        //Limit wait values
+        else if (waitArrive < 0)
+        {
+            waitArrive = 0;
+        }
+        else if (waitLeave < 0)
+        {
+            waitLeave = 0;
+        }
     }
 }

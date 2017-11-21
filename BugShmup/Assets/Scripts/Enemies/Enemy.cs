@@ -142,11 +142,11 @@ public abstract class Enemy : MonoBehaviour
                 }
 
                 //Waiting before leaving
-                if (wait2 > 0 && waitingAtWPLeave == true && waitingAtWPArrive == false)
+                if (wait2 >= 0 && waitingAtWPLeave == true && waitingAtWPArrive == false)
                 {
                     wait2 -= Time.deltaTime;
                 }
-                else if(wait2 <= 0)
+                else if(wait2 < 0)
                 {
                     waitingAtWPLeave = false;
                     WaypointReached();
