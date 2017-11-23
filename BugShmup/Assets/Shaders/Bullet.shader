@@ -2,7 +2,8 @@
 {
 	Properties
 	{
-		_Color ("Main Color", Color) = (1,1,1,1)
+		_Color("Main Color", Color) = (1, 1, 1, 1)
+		_Threshold ("Threshold", Range(0.0, 1.0)) = 0.5
 	}
 
 	SubShader
@@ -14,13 +15,13 @@
 			#pragma fragment frag
 			#include "UnityCG.cginc"
 
-			struct appdata
+			struct vertexInput
 			{
 				float4 vertex : POSITION;
 				float3 normal : NORMAL;
 			};
 
-			struct v2f
+			struct vertexOutput
 			{
 				float4 pos : SV_POSITION;
 				float3 normal : TEXCOORD0;
@@ -28,21 +29,18 @@
 
 			float3 _Color;
 
-			v2f vert(appdata v)
+			vertexOutput vert(vertexInput i)
 			{
-				v2f o;
-				o.pos = UnityObjectToClipPos(v.vertex);
-				o.normal = normalize(v.normal);
+				vertexOutput o;
+				o.pos = UnityObjectToClipPos(i.vertex);
+				o.normal = normalize(i.normal);
 				return o;
 			}
 
-			fixed4 frag (v2f i) : SV_Target
+			fixed4 frag (vertexOutput i) : SV_Target
 			{
-				
 				fixed4 color;
-				color = i.pos;
-
-
+				color.rgb = _Color;
 				return color;
 			}
 
