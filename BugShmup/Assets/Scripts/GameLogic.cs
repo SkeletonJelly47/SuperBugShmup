@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(BoxCollider))]
+
 public class GameLogic : MonoBehaviour
 {
     //public GameObject Player;
@@ -19,6 +21,9 @@ public class GameLogic : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         score = 0;
         Debug.Log(Camera.main);
+        Debug.Log("My name is " + gameObject.name, gameObject);
+        bulletKill = gameObject.GetComponent<BoxCollider>() as BoxCollider;
+        Debug.Log("my box collider is " + bulletKill);
         CreateBoundaries();
         //BG = GameObject.FindGameObjectWithTag("BG");
     }
@@ -44,12 +49,22 @@ public class GameLogic : MonoBehaviour
 
     void CreateBoundaries()
     {
-        bulletKill = new BoxCollider();
-        bulletKill.center = BG.transform.position;
+        bulletKill = gameObject.GetComponent<BoxCollider>() as BoxCollider;
+        Debug.Log(bulletKill);
+        //bulletKill.center = BG.transform.position;
         float Ydist = Vector3.Distance(BG.transform.position, Camera.main.transform.position);
         float frustumHeight = 2.0f * Ydist * Mathf.Tan(Camera.main.fieldOfView * 0.5f * Mathf.Deg2Rad);
         float frustumWidth = frustumHeight * Camera.main.aspect;
 
-        bulletKill.size.Set(frustumWidth, boxHeight, frustumHeight);
+        bulletKill.size = new Vector3(frustumWidth, boxHeight, frustumHeight);
+        Debug.Log("my size is " + bulletKill.size);
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "PlayerProjectile" || other.tag == "Projectile")
+        {
+            Destroy(other.gameObject);
+        }
     }
 }
