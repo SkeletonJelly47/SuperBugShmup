@@ -4,104 +4,132 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public int energy;
-    public float Speed;
-    public GameObject PlayerProjectileSuperShot;
-    float verticalInput, horizontalInput;
-    Vector3 dir;
-    [SerializeField]
-    int health;
-    [SerializeField] int maxHp;
+	public int energy;
+	public float Speed;
+	[SerializeField]
+	float startingSpeed, maxSpeed, accelerationValue, movementGraceTimer;
+	float timer;
+	public GameObject PlayerProjectileSuperShot;
+	float verticalInput, horizontalInput;
+	Vector3 dir;
+	[SerializeField]
+	int health;
 
-    public int Health
-    {
-        get
-        {
-            return health;
-        }
+	public int Health
+	{
+		get
+		{
+			return health;
+		}
 
-        set
-        {
-            //Health is not set or limited at start
-            health = Mathf.Clamp(value, 0, maxHp);
-            Debug.Log("HP: " + health);
-            if (health <= 0)
-            {
-                DestroySelf();
-            }
-        }
-    }
+		set
+		{
+			health = value;
+			Debug.Log("HP: " + health);
+			if (health < 0)
+			{
+				DestroySelf();
+			}
+		}
+	}
 
-    public int Energy
-    {
-        get
-        {
-            return energy;
-        }
-        set
-        {
+	public int Energy
+	{
+		get
+		{
+			return energy;
+		}
+		set
+		{
 
-            energy = value;
+			energy = value;
 
-            if (energy > 100)
-            {
-                energy = 100;
-            }
+			if (energy > 100)
+			{
+				energy = 100;
+			}
 
-        }
-    }
+		}
+	}
 
-    // Use this for initialization
-    void Start()
-    {
-        dir = Vector3.forward;
-    }
+	// Use this for initialization
+	void Start()
+	{
+		dir = Vector3.forward;
+	}
 
-    // Update is called once per frame
-    void Update()
-    {
-        //Retrieve inputs
-        GetInputs();
-        //Assign input values
-        dir.x = horizontalInput;
-        dir.y = 0;
-        dir.z = verticalInput;
-        //Normalize for constant diagonal speeds
-        //dir.Normalize();
+	// Update is called once per frame
+	void Update()
+	{
+		//Retrieve inputs
+		GetInputs();
+		//Assign input values
 
-        //Apply movement
-        Move(dir);
+		dir.x = horizontalInput;
+		dir.y = 0;
+		dir.z = verticalInput;
+		if (horizontalInput != 0 || verticalInput != 0)
+		{
+			Delay();
+		}
+		else if (dir.x == 0 && dir.z == 0)
+		{
+			timer += Time.deltaTime;
+			if (timer > movementGraceTimer)
+			{
+				Speed = startingSpeed;
+				timer = 0;
+			}
 
-        if (Input.GetButtonDown("Fire2"))
-        {
-            if (energy == 100)
-            {
-                energy = 0;
-                Instantiate(PlayerProjectileSuperShot, transform.position, transform.rotation);
-                
-            }
-        }
-    }
+		}
+		if (Speed > startingSpeed)
+		{
 
-    void Move(Vector3 dir)
-    {
-        transform.position += dir * Speed * Time.deltaTime;
-    }
+		}
+		//Normalize for constant diagonal speeds
+		dir.Normalize();
 
-    void GetInputs()
-    {
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
-    }
+		//Apply movement
+		Move(dir);
 
-    public void TakeDamage(int damage)
-    {
-        Health -= damage;
-    }
+		if (Input.GetButtonDown("Fire2"))
+		{
+			if (energy == 100)
+			{
+				energy = 0;
+				Instantiate(PlayerProjectileSuperShot, transform.position, transform.rotation);
 
-    void DestroySelf()
-    {
-        Destroy(gameObject);
-        Debug.Log("Player Died");
-    }
+			}
+		}
+	}
+
+	void Move(Vector3 dir)
+	{
+		transform.position += dir * Speed * Time.deltaTime;
+	}
+
+	void GetInputs()
+	{
+		horizontalInput = Input.GetAxisRaw("Horizontal");
+		verticalInput = Input.GetAxisRaw("Vertical");
+	}
+
+	public void TakeDamage(int damage)
+	{
+		Health -= damage;
+	}
+
+	void DestroySelf()
+	{
+		Destroy(gameObject);
+		Debug.Log("Player Died");
+	}
+	void Delay()
+	{
+		Speed = Speed + (accelerationValue / 100);
+		if (Speed >= maxSpeed)
+		{
+			Speed = maxSpeed;
+		}
+	}
 }
