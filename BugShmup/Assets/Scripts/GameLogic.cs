@@ -49,15 +49,16 @@ public class GameLogic : MonoBehaviour
 
     void CreateBoundaries()
     {
-        bulletKill = gameObject.GetComponent<BoxCollider>() as BoxCollider;
-        Debug.Log(bulletKill);
-        //bulletKill.center = BG.transform.position;
+        //Get box collider
+        bulletKill = gameObject.GetComponent<BoxCollider>();
+        //Calulate distance from BG to camera
         float Ydist = Vector3.Distance(BG.transform.position, Camera.main.transform.position);
+        //Calculate x and z size for bulletKill trigger
         float frustumHeight = 2.0f * Ydist * Mathf.Tan(Camera.main.fieldOfView * 0.5f * Mathf.Deg2Rad);
         float frustumWidth = frustumHeight * Camera.main.aspect;
 
+        //Set size,     Size.set doesn't work ¯\_(ツ)_/¯ fuck unity
         bulletKill.size = new Vector3(frustumWidth, boxHeight, frustumHeight);
-        Debug.Log("my size is " + bulletKill.size);
     }
 
     void OnTriggerExit(Collider other)
