@@ -66,7 +66,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   BG: {fileID: 0}
-  killTriggerHeight: 4
+  killTriggerHeight: 5
   killTriggerPadding: 2
   boundaryXInset: 0.18
-  boundaryZInset: 0.5
+  boundaryZInset: 0.36

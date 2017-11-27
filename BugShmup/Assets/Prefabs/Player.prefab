@@ -862,8 +862,8 @@ MonoBehaviour:
     type: 2}
   health: 200
   maxHp: 200
-  invinsibilityAmount: 1
-  collisionDamage: 10
+  invincibilityAmount: 1
+  collisionDamage: 5
 --- !u!114 &114938496014933964
 MonoBehaviour:
   m_ObjectHideFlags: 1

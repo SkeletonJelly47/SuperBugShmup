@@ -12,7 +12,7 @@ public class RenderTextureHandler : MonoBehaviour
     public int x, y;
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         //Get RawImage and RectTransform
         img = GetComponent<RawImage>();

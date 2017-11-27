@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     int health;
     [SerializeField]
     int maxHp;
-    float timer;
+    float invincibilityTimer;
     bool invincibility;
     [SerializeField]
     float invincibilityAmount;
@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         invincibility = false;
-        timer = invincibilityAmount;
+        invincibilityTimer = invincibilityAmount;
         dir = Vector3.forward;
     }
 
@@ -93,14 +93,14 @@ public class PlayerController : MonoBehaviour
         }
 
         //Apply timer
-        if (invincibility == true && timer > 0)
+        if (invincibility == true && invincibilityTimer > 0)
         {
-            timer -= Time.deltaTime;
+            invincibilityTimer -= Time.deltaTime;
         }
         else
         {
 
-            timer = invincibilityAmount;
+            invincibilityTimer = invincibilityAmount;
             invincibility = false;
         }
     }
