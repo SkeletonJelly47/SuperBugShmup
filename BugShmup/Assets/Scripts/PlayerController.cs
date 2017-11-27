@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     int health;
     [SerializeField] int maxHp;
+    float xMax, zMax, xMin, zMin;   
 
     public int Health
     {
@@ -85,7 +86,27 @@ public class PlayerController : MonoBehaviour
 
     void Move(Vector3 dir)
     {
-        transform.position += dir * Speed * Time.deltaTime;
+        Vector3 newPos = transform.position + dir * Speed * Time.deltaTime;
+        
+        //Confine within boundaries
+        if(newPos.x > xMax)
+        {
+            newPos.x = xMax;
+        }
+        else if (newPos.x < xMin)
+        {
+            newPos.x = xMin;
+        }
+        else if (newPos.z > zMax)
+        {
+            newPos.z = zMax;
+        }
+        else if (newPos.z < zMin)
+        {
+            newPos.z = zMin;
+        }
+
+        transform.position = newPos;
     }
 
     void GetInputs()
@@ -97,6 +118,14 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(int damage)
     {
         Health -= damage;
+    }
+
+    public void ReceiveBoundaries(float width, float height, Vector3 origin)
+    {
+        xMax = origin.x + width / 2;
+        zMax = origin.z + height / 2;
+        xMin = origin.x - width / 2;
+        zMin = origin.z - height / 2;
     }
 
     void DestroySelf()
