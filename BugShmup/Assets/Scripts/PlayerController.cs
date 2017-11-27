@@ -86,6 +86,7 @@ public class PlayerController : MonoBehaviour
 
     void Move(Vector3 dir)
     {
+        //Calculate new position
         Vector3 newPos = transform.position + dir * Speed * Time.deltaTime;
         
         //Confine within boundaries
@@ -93,19 +94,19 @@ public class PlayerController : MonoBehaviour
         {
             newPos.x = xMax;
         }
-        else if (newPos.x < xMin)
+        if (newPos.x < xMin)
         {
             newPos.x = xMin;
         }
-        else if (newPos.z > zMax)
+        if (newPos.z > zMax)
         {
             newPos.z = zMax;
         }
-        else if (newPos.z < zMin)
+        if (newPos.z < zMin)
         {
             newPos.z = zMin;
         }
-
+        //Apply new position
         transform.position = newPos;
     }
 
