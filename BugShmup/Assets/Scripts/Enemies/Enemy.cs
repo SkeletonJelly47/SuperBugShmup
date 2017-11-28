@@ -6,16 +6,16 @@ using UnityEngine;
 public abstract class Enemy : MonoBehaviour
 {
     //Enemy properties
-    [SerializeField]
+    [Header("Gameplay settings")]
     private int health;
     protected bool alive;
     [SerializeField]
     protected float moveSpeed;
-    public GameObject bulletPrefab;
     public GameObject pickupPrefab;
     BoxCollider collider;
 
     //WP container
+    [Header("Waypoint settings")]
     public GameObject WaypointContainer;
 
     //Linear waypoint variables
@@ -37,13 +37,12 @@ public abstract class Enemy : MonoBehaviour
 
     //Wait variables
     public float wait1, wait2;
-    bool waitingAtWPLeave = false;
-    bool waitingAtWPArrive = false;
+    [Header("Weapon settings")]
+    public GameObject bulletPrefab;
     bool hasShot = false;
 
     //Pickup variables
     bool drop;
-
 
     protected int Health
     {

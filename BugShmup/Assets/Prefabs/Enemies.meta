@@ -1,8 +1,15 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: b182e6e13cee88247954851eef536a34
 folderAsset: yes
 timeCreated: 1510748308
 licenseType: Pro
+=======
+guid: ac49ea75a46714140a6c1cbc37fa9f67
+folderAsset: yes
+timeCreated: 1511020782
+licenseType: Free
+>>>>>>> EnemyShootingFix
 DefaultImporter:
   userData: 
   assetBundleName: 
