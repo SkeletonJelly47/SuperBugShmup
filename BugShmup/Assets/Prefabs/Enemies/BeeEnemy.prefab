@@ -122,11 +122,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 107eaaa79af39b34bb4b73edb28eee19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
   moveSpeed: 5
+  pickupPrefab: {fileID: 1199443182273340, guid: af5a24e45f90ce24fa9a5f544725ed11,
+    type: 2}
   WaypointContainer: {fileID: 0}
-  wait1: 0
-  wait2: 0
   bulletPrefab: {fileID: 1305701530295252, guid: 6022ab47dc3075648afe9b7fc2a8e86d,
     type: 2}
   shootAtPlayer: 0
