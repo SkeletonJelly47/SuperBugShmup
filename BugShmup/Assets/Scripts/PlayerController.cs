@@ -82,10 +82,6 @@ public class PlayerController : MonoBehaviour
 			}
 
 		}
-		if (Speed > startingSpeed)
-		{
-
-		}
 		//Normalize for constant diagonal speeds
 		dir.Normalize();
 
