@@ -20,10 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4754377711793598}
   - component: {fileID: 33194927931723812}
-  - component: {fileID: 65289176434481270}
   - component: {fileID: 23251448844904068}
   - component: {fileID: 54210006888192502}
   - component: {fileID: 114781259271362368}
+  - component: {fileID: 65784501217780642}
   m_Layer: 0
   m_Name: PlayerProjectileSuperShot
   m_TagString: PlayerProjectile
@@ -38,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1996605033488276}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.027944, y: 5.4779983, z: 8.630931}
-  m_LocalScale: {x: 2, y: 0.2, z: 2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -57,7 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: a26472916e9391a479818d7abd06da1c, type: 2}
+  - {fileID: 2100000, guid: 5da41366004967b40a77df0b5fecfed4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,7 +82,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1996605033488276}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 1dd612aac313fc14e8d805212fa1a019, type: 3}
 --- !u!54 &54210006888192502
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -98,18 +98,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65289176434481270
+--- !u!65 &65784501217780642
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1996605033488276}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.6014393, y: 0.3327589, z: 0.87206817}
+  m_Center: {x: 0, y: -0.000000007450581, z: -0.013295814}
 --- !u!114 &114781259271362368
 MonoBehaviour:
   m_ObjectHideFlags: 1
