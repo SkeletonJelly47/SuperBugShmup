@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 90685b7fff62e7f4cb6be795d88757c0
-timeCreated: 1511949519
+guid: 1dd612aac313fc14e8d805212fa1a019
+timeCreated: 1511949325
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Bullet
+    4300000: Arrow
   materials:
     importMaterials: 0
     materialName: 0
