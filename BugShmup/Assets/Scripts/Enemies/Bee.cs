@@ -18,6 +18,7 @@ public class Bee : Enemy
         Weapon = transform.GetChild(0);
         shootingDirection += 180;
         target = GameObject.FindWithTag("Player");
+        weaponTarget = GameObject.FindGameObjectWithTag("Player").transform;
     }
     protected override void Shoot()
     {

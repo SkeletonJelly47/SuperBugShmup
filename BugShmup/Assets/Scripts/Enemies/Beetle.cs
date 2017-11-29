@@ -15,6 +15,7 @@ public class Beetle : Enemy
         base.Start();
         shootingDirection += 180;
         Weapon = transform.GetChild(0);
+        weaponTarget = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     protected override void Shoot()
