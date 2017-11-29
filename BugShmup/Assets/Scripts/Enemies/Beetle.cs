@@ -5,50 +5,58 @@ using UnityEngine;
 
 public class Beetle : Enemy
 {
-    Vector3 direction;
-    bool rotate;
-    public Beetle()
-    {
+    Transform Weapon;
+    [SerializeField] bool shootAtPlayer;
+    [SerializeField] float shootingDirection;
+    public Transform weaponTarget;
 
-    }
-
-	protected override void Start ()
+    protected override void Start()
     {
-        //Check if enemy rotation isn't 180 degrees
-        /*if (transform.rotation.eulerAngles.y != 180)
-        {
-            transform.rotation = Quaternion.Euler(0, 180, 0);
-        }*/
-        rotate = true;
         base.Start();
+        shootingDirection += 180;
+        Weapon = transform.GetChild(0);
     }
 
     protected override void Shoot()
     {
-        if (rotate == true)
+        if (shootAtPlayer)
         {
-            transform.Rotate(direction);
-            rotate = false;
+            Vector3 rot = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 0, transform.eulerAngles.z);
+
+            Instantiate(bulletPrefab, transform.position, Weapon.rotation);
+
+            rot = new Vector3(transform.eulerAngles.x, Weapon.rotation.eulerAngles.y + 15f, transform.eulerAngles.z);
+
+            Instantiate(bulletPrefab, transform.position, Quaternion.Euler(rot));
+
+            rot = new Vector3(transform.eulerAngles.x, Weapon.rotation.eulerAngles.y - 15f, transform.eulerAngles.z);
+
+            Instantiate(bulletPrefab, transform.position, Quaternion.Euler(rot));
+
         }
-        Instantiate(bulletPrefab, transform.position, transform.rotation);
+        else
+        {
+            Vector3 rot = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 0 + shootingDirection, transform.eulerAngles.z);
 
-        Vector3 rot = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 15f, transform.eulerAngles.z);
+            Instantiate(bulletPrefab, transform.position, Quaternion.Euler(rot));
 
-        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(rot));
+            rot = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 15f + shootingDirection, transform.eulerAngles.z);
 
-        rot = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 15f, transform.eulerAngles.z);
+            Instantiate(bulletPrefab, transform.position, Quaternion.Euler(rot));
 
-        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(rot));
+            rot = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 15f + shootingDirection, transform.eulerAngles.z);
 
+            Instantiate(bulletPrefab, transform.position, Quaternion.Euler(rot));
+        }
 
         //Instantiate(bulletPrefab, transform.position, transform.localEulerAngles(dir);
 
         //transform.Rotate(1, 3, 5);
     }
-
     // Update is called once per frame
-    protected override void Update ()
+    protected override void Update()
     {
+        Weapon.transform.LookAt(weaponTarget);
         base.Update();
-	}
+    }
 }

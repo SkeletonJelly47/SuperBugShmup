@@ -5,33 +5,46 @@ using UnityEngine;
 
 public class Bee : Enemy
 {
-    Vector3 direction;
+    Transform Weapon;
+    [SerializeField] bool shootAtPlayer;
+    [SerializeField] float shootingDirection;
+    public Transform weaponTarget;
+
     GameObject target;
-    public Quaternion bulletDirection;
     Vector3 targetLocation;
-
     protected override void Start()
-    {   
-        //Check if enemy rotation isn't 180 degrees
-        if(transform.rotation.eulerAngles.y != 180)
-        {
-            transform.rotation = Quaternion.Euler(0, 180, 0);
-        }
-        target = GameObject.FindGameObjectWithTag("Player");
-
+    {
         base.Start();
+        Weapon = transform.GetChild(0);
+        shootingDirection += 180;
+        target = GameObject.FindWithTag("Player");
     }
     protected override void Shoot()
     {
-        targetLocation = target.GetComponent<Transform>().position;
-        transform.LookAt(targetLocation);
-        Instantiate(bulletPrefab, transform.position, transform.rotation);
+        if (shootAtPlayer)
+        {
+            Instantiate(bulletPrefab, transform.position, Weapon.rotation);
+        }
+        else
+        {
+            /* Use this if you need enemy to rotate towards player while shooting
+            RotateObject(); */
+            Vector3 rot = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + shootingDirection, transform.eulerAngles.z);
+            Instantiate(bulletPrefab, transform.position, Quaternion.Euler(rot));
+        }
+
+
     }
 
     // Update is called once per frame
     protected override void Update()
-    {   
+    {
+        Weapon.transform.LookAt(weaponTarget);
         base.Update();
-
+    }
+    private void RotateObject()
+    {
+        targetLocation = target.GetComponent<Transform>().position;
+        transform.LookAt(targetLocation);
     }
 }

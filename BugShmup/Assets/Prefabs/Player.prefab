@@ -450,7 +450,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1081131773362966}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.21, y: 1, z: 14.12}
+  m_LocalPosition: {x: 0, y: 0, z: 11.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4693855238185100}
@@ -754,6 +754,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   energy: 0
   Speed: 5.7
+  startingSpeed: 2
+  maxSpeed: 10
+  accelerationValue: 10
+  movementGraceTimer: 0.5
   PlayerProjectileSuperShot: {fileID: 1996605033488276, guid: 7fc1017a0473b2c4a8416b228d7368ee,
     type: 2}
   health: 5

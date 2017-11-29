@@ -3454,6 +3454,16 @@ Prefab:
       propertyPath: killTriggerPadding
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114129443247276156, guid: 6d2608981f3da3246ad0aa23200966e0,
+        type: 2}
+      propertyPath: boundaryXInset
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114129443247276156, guid: 6d2608981f3da3246ad0aa23200966e0,
+        type: 2}
+      propertyPath: boundaryZInset
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d2608981f3da3246ad0aa23200966e0, type: 2}
   m_IsPrefabParent: 0

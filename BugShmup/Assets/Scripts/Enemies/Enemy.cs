@@ -6,16 +6,16 @@ using UnityEngine;
 public abstract class Enemy : MonoBehaviour
 {
     //Enemy properties
-    [SerializeField]
+    [Header("Gameplay settings")]
     private int health;
     protected bool alive;
     [SerializeField]
     protected float moveSpeed;
-    public GameObject bulletPrefab;
     public GameObject pickupPrefab;
-    Collider collider;
+    BoxCollider collider;
 
     //WP container
+    [Header("Waypoint settings")]
     public GameObject WaypointContainer;
 
     //Linear waypoint variables
@@ -39,11 +39,12 @@ public abstract class Enemy : MonoBehaviour
     float wait1, wait2;
     bool waitingAtWPLeave = false;
     bool waitingAtWPArrive = false;
+    [Header("Weapon settings")]
+    public GameObject bulletPrefab;
     bool hasShot = false;
 
     //Pickup variables
-    bool drop;
-
+    bool drop = true;
 
     protected int Health
     {
@@ -71,7 +72,7 @@ public abstract class Enemy : MonoBehaviour
     // Use this for initialization
     protected virtual void Start()
     {
-        collider = GetComponent<Collider>();
+        collider = GetComponent<BoxCollider>();
 
         //I knew there was an easier way!
         Waypoints = WaypointContainer.GetComponentsInChildren<EnemyWaypoint>().ToList();
@@ -142,11 +143,11 @@ public abstract class Enemy : MonoBehaviour
                 }
 
                 //Waiting before leaving
-                if (wait2 >= 0 && waitingAtWPLeave == true && waitingAtWPArrive == false)
+                if (wait2 > 0 && waitingAtWPLeave == true && waitingAtWPArrive == false)
                 {
                     wait2 -= Time.deltaTime;
                 }
-                else if(wait2 < 0)
+                else if(wait2 <= 0)
                 {
                     waitingAtWPLeave = false;
                     WaypointReached();
