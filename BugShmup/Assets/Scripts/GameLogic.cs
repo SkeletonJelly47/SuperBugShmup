@@ -14,18 +14,20 @@ public class GameLogic : MonoBehaviour
     //Boundary variables
     BoxCollider bulletKill;
     [SerializeField] GameObject BG;
-    [SerializeField] float boxHeight;
+    [SerializeField] float killTriggerHeight;
+    [SerializeField] float killTriggerPadding;
+    [SerializeField] float boundaryXInset, boundaryZInset;
+    float frustumHeight;
+    float frustumWidth;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-        score = 0;
-        Debug.Log(Camera.main);
-        Debug.Log("My name is " + gameObject.name, gameObject);
-        bulletKill = gameObject.GetComponent<BoxCollider>() as BoxCollider;
-        Debug.Log("my box collider is " + bulletKill);
         CreateBoundaries();
-        //BG = GameObject.FindGameObjectWithTag("BG");
+        //Give boundaries to player
+        SendBoundariesToPlayer();
+        score = 0;
+        bulletKill = gameObject.GetComponent<BoxCollider>();
     }
     void Update()
     {
@@ -52,13 +54,19 @@ public class GameLogic : MonoBehaviour
         //Get box collider
         bulletKill = gameObject.GetComponent<BoxCollider>();
         //Calulate distance from BG to camera
-        float Ydist = Vector3.Distance(BG.transform.position, Camera.main.transform.position);
+        float Ydist = (Camera.main.transform.position - transform.position).y;
         //Calculate x and z size for bulletKill trigger
-        float frustumHeight = 2.0f * Ydist * Mathf.Tan(Camera.main.fieldOfView * 0.5f * Mathf.Deg2Rad);
-        float frustumWidth = frustumHeight * Camera.main.aspect;
+        frustumHeight = 2.0f * Ydist * Mathf.Tan(Camera.main.fieldOfView * 0.5f * Mathf.Deg2Rad);
+        frustumWidth = frustumHeight * Camera.main.aspect;
 
         //Set size,     Size.set doesn't work ¯\_(ツ)_/¯ fuck unity
-        bulletKill.size = new Vector3(frustumWidth, boxHeight, frustumHeight);
+        bulletKill.size = new Vector3(frustumWidth + killTriggerPadding, killTriggerHeight, frustumHeight + killTriggerPadding);
+    }
+
+    void SendBoundariesToPlayer()
+    {
+        //Send player the boundaries with insets applied, relative to the origin (GameLogic)
+        player.ReceiveBoundaries(frustumWidth - boundaryXInset, frustumHeight - boundaryZInset, transform.position);
     }
 
     void OnTriggerExit(Collider other)

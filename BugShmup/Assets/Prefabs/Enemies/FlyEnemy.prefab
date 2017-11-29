@@ -96,6 +96,7 @@ MonoBehaviour:
   health: 15
   moveSpeed: 9
   bulletPrefab: {fileID: 0}
+  pickupPrefab: {fileID: 0}
   WaypointContainer: {fileID: 0}
   wait1: 0
   wait2: 0
