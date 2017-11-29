@@ -97,10 +97,9 @@ MonoBehaviour:
   moveSpeed: 6
   bulletPrefab: {fileID: 1305701530295252, guid: 6022ab47dc3075648afe9b7fc2a8e86d,
     type: 2}
+  pickupPrefab: {fileID: 1199443182273340, guid: d3108733073163449b56042bb65687de,
+    type: 2}
   WaypointContainer: {fileID: 0}
-  wait1: 0
-  wait2: 0
-  direction: {x: 0, y: 0, z: 0}
 --- !u!135 &135326264844363692
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -98,8 +98,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 0}
   pickupPrefab: {fileID: 0}
   WaypointContainer: {fileID: 0}
-  wait1: 0
-  wait2: 0
 --- !u!136 &136903934929154052
 CapsuleCollider:
   m_ObjectHideFlags: 1

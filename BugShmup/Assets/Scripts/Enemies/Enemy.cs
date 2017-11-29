@@ -36,7 +36,7 @@ public abstract class Enemy : MonoBehaviour
     float curveCompletetion;
 
     //Wait variables
-    public float wait1, wait2;
+    float wait1, wait2;
     bool waitingAtWPLeave = false;
     bool waitingAtWPArrive = false;
     bool hasShot = false;
