@@ -7,6 +7,7 @@ public abstract class Enemy : MonoBehaviour
 {
     //Enemy properties
     [Header("Gameplay settings")]
+    [SerializeField]
     private int health;
     protected bool alive;
     [SerializeField]
@@ -57,7 +58,7 @@ public abstract class Enemy : MonoBehaviour
         {
             //dead
             health = value;
-            if (health < 0)
+            if (health <= 0)
             {
                 if (drop)
                 {
