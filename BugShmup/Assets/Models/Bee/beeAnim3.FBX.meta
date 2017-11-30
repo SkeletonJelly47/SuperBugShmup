@@ -1,0 +1,183 @@
+fileFormatVersion: 2
+guid: 18a91d5af570f554b86e089e154e68ab
+timeCreated: 1512048152
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: antenna1
+    100002: antenna1(mirrored)
+    100004: antenna2
+    100006: antenna2(mirrored)
+    100008: antenna3
+    100010: antenna3(mirrored)
+    100012: ass1
+    100014: ass2
+    100016: ass3
+    100018: ass4
+    100020: ass5
+    100022: ass6
+    100024: //RootNode
+    100026: bl1
+    100028: bl1(mirrored)
+    100030: bl2
+    100032: bl2(mirrored)
+    100034: bl3
+    100036: bl3(mirrored)
+    100038: bl4
+    100040: bl4(mirrored)
+    100042: bl5
+    100044: bl5(mirrored)
+    100046: fl1
+    100048: fl1(mirrored)
+    100050: fl2
+    100052: fl2(mirrored)
+    100054: fl3
+    100056: fl3(mirrored)
+    100058: fl4
+    100060: fl4(mirrored)
+    100062: fl5
+    100064: fl5(mirrored)
+    100066: head
+    100068: head2
+    100070: midbody
+    100072: ml1
+    100074: ml1(mirrored)
+    100076: ml2
+    100078: ml2(mirrored)
+    100080: ml3
+    100082: ml3(mirrored)
+    100084: ml4
+    100086: ml4(mirrored)
+    100088: ml5
+    100090: ml5(mirrored)
+    100092: Object001
+    100094: wing1
+    100096: wing1(mirrored)
+    100098: wing2
+    100100: wing2(mirrored)
+    400000: antenna1
+    400002: antenna1(mirrored)
+    400004: antenna2
+    400006: antenna2(mirrored)
+    400008: antenna3
+    400010: antenna3(mirrored)
+    400012: ass1
+    400014: ass2
+    400016: ass3
+    400018: ass4
+    400020: ass5
+    400022: ass6
+    400024: //RootNode
+    400026: bl1
+    400028: bl1(mirrored)
+    400030: bl2
+    400032: bl2(mirrored)
+    400034: bl3
+    400036: bl3(mirrored)
+    400038: bl4
+    400040: bl4(mirrored)
+    400042: bl5
+    400044: bl5(mirrored)
+    400046: fl1
+    400048: fl1(mirrored)
+    400050: fl2
+    400052: fl2(mirrored)
+    400054: fl3
+    400056: fl3(mirrored)
+    400058: fl4
+    400060: fl4(mirrored)
+    400062: fl5
+    400064: fl5(mirrored)
+    400066: head
+    400068: head2
+    400070: midbody
+    400072: ml1
+    400074: ml1(mirrored)
+    400076: ml2
+    400078: ml2(mirrored)
+    400080: ml3
+    400082: ml3(mirrored)
+    400084: ml4
+    400086: ml4(mirrored)
+    400088: ml5
+    400090: ml5(mirrored)
+    400092: Object001
+    400094: wing1
+    400096: wing1(mirrored)
+    400098: wing2
+    400100: wing2(mirrored)
+    4300000: Object001
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Object001
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
