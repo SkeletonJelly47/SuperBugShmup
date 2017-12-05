@@ -127,7 +127,7 @@ MonoBehaviour:
   pickupPrefab: {fileID: 1199443182273340, guid: af5a24e45f90ce24fa9a5f544725ed11,
     type: 2}
   WaypointContainer: {fileID: 0}
-  bulletPrefab: {fileID: 1305701530295252, guid: 6022ab47dc3075648afe9b7fc2a8e86d,
+  bulletPrefab: {fileID: 1305701530295252, guid: d251725f25390f346961a8d38dacccfa,
     type: 2}
   shootAtPlayer: 0
   shootingDirection: 180
