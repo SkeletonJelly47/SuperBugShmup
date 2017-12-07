@@ -13,12 +13,13 @@ public class AudioManager : MonoBehaviour
 
     public struct Audios
     {
-        public Audios(AudioClip block, AudioClip enemyShot, AudioClip fly, AudioClip hit, AudioClip laser, AudioClip menu, AudioClip playerShoot, AudioClip superShot)
+        public Audios(AudioClip block, AudioClip enemyShot, AudioClip fly, AudioClip hit, AudioClip homingMissile, AudioClip laser, AudioClip menu, AudioClip playerShoot, AudioClip superShot)
         {
             Block = block;
             EnemyShot = enemyShot;
             Flyehive = fly;
             Hit = hit;
+            HomingMissile = homingMissile;
             Laser = laser;
             MenuAmbiance = menu;
             PlayerShoot = playerShoot;
@@ -28,6 +29,7 @@ public class AudioManager : MonoBehaviour
         public static AudioClip Block;
         public static AudioClip EnemyShot;
         public static AudioClip Hit;
+        public static AudioClip HomingMissile;
         public static AudioClip Flyehive;
         public static AudioClip Laser;
         public static AudioClip MenuAmbiance;
@@ -50,7 +52,7 @@ public class AudioManager : MonoBehaviour
 
         LoadAudio();
 
-        Audios audios = new Audios(audioArray[0], audioArray[1], audioArray[2], audioArray[3], audioArray[4], audioArray[5], audioArray[6], audioArray[7]);
+        Audios audios = new Audios(audioArray[0], audioArray[1], audioArray[2], audioArray[3], audioArray[4], audioArray[5], audioArray[6], audioArray[7], audioArray[8]);
     }
 
     public void LoadAudio()

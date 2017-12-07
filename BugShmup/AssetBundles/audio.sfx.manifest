@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1413531522
+CRC: 3114973171
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: a0dc2d3ae5027ebe8bcfd37d8b3b8b2f
+    Hash: b3205a5725542a3b80a490d1cedb2ff3
   TypeTreeHash:
     serializedVersion: 2
     Hash: c516f2a3b2b6b67ef759f6410a790acd
@@ -13,6 +13,7 @@ ClassTypes:
   Script: {instanceID: 0}
 Assets:
 - Assets/Audio/SFX/Menu Ambience.ogg
+- Assets/Audio/SFX/HomingMissile.ogg
 - Assets/Audio/SFX/Super shot.ogg
 - Assets/Audio/SFX/Flyehive.ogg
 - Assets/Audio/SFX/player shoot.ogg
