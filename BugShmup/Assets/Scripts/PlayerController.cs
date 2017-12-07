@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-	public int energy;
-	public float Speed;
-	[SerializeField]
-	float startingSpeed, maxSpeed, accelerationValue, movementGraceTimer;
-	float timer;
-	public GameObject PlayerProjectileSuperShot;
-	float verticalInput, horizontalInput;
-	Vector3 dir;
-	[SerializeField]
-	int health;
+    public static int energy;
+    public float Speed;
+    [SerializeField]
+    float startingSpeed, maxSpeed, accelerationValue, movementGraceTimer;
+    float timer;
+    float verticalInput, horizontalInput;
+    Vector3 dir;
+    [SerializeField]
+    int health;
     [SerializeField]
     int maxHp;
     float invincibilityTimer;
@@ -22,93 +21,82 @@ public class PlayerController : MonoBehaviour
     float invincibilityAmount;
     [SerializeField]
     int collisionDamage;
-    float xMax, zMax, xMin, zMin;   
+    float xMax, zMax, xMin, zMin;
 
-	public int Health
-	{
-		get
-		{
-			return health;
-		}
+    public int Health
+    {
+        get
+        {
+            return health;
+        }
 
-		set
-		{
-			health = value;
-			Debug.Log("HP: " + health);
-			if (health < 0)
-			{
-				DestroySelf();
+        set
+        {
+            health = value;
+            Debug.Log("HP: " + health);
+            if (health < 0)
+            {
+                DestroySelf();
                 GameLogic.GL.LoseGame();
-			}
-		}
-	}
+            }
+        }
+    }
 
-	public int Energy
-	{
-		get
-		{
-			return energy;
-		}
-		set
-		{
+    public int Energy
+    {
+        get
+        {
+            return energy;
+        }
+        set
+        {
+            energy = value;
 
-			energy = value;
+            if (energy > 100)
+            {
+                energy = 100;
+            }
 
-			if (energy > 100)
-			{
-				energy = 100;
-			}
+        }
+    }
 
-		}
-	}
-
-	// Use this for initialization
-	void Start()
-	{
+    // Use this for initialization
+    void Start()
+    {
         invincibility = false;
         invincibilityTimer = invincibilityAmount;
-		dir = Vector3.forward;
-	}
+        dir = Vector3.forward;
+    }
 
-	// Update is called once per frame
-	void Update()
-	{
-		//Retrieve inputs
-		GetInputs();
-		//Assign input values
+    // Update is called once per frame
+    void Update()
+    {
+        //Retrieve inputs
+        GetInputs();
+        //Assign input values
 
-		dir.x = horizontalInput;
-		dir.y = 0;
-		dir.z = verticalInput;
-		if (horizontalInput != 0 || verticalInput != 0)
-		{
-			Delay();
-		}
-		else if (dir.x == 0 && dir.z == 0)
-		{
-			timer += Time.deltaTime;
-			if (timer > movementGraceTimer)
-			{
-				Speed = startingSpeed;
-				timer = 0;
-			}
+        dir.x = horizontalInput;
+        dir.y = 0;
+        dir.z = verticalInput;
+        if (horizontalInput != 0 || verticalInput != 0)
+        {
+            Delay();
+        }
+        else if (dir.x == 0 && dir.z == 0)
+        {
+            timer += Time.deltaTime;
+            if (timer > movementGraceTimer)
+            {
+                Speed = startingSpeed;
+                timer = 0;
+            }
 
-		}
-		//Normalize for constant diagonal speeds
-		dir.Normalize();
+        }
+        //Normalize for constant diagonal speeds
+        dir.Normalize();
 
-		//Apply movement
-		Move(dir);
-
-		if (Input.GetButtonDown("Fire2"))
-		{
-			if (energy == 100)
-			{
-				energy = 0;
-				Instantiate(PlayerProjectileSuperShot, transform.position, transform.rotation);
-
-			}
-		}
+        //Apply movement
+        Move(dir);
 
         //Apply timer
         if (invincibility == true && invincibilityTimer > 0)
@@ -121,15 +109,15 @@ public class PlayerController : MonoBehaviour
             invincibilityTimer = invincibilityAmount;
             invincibility = false;
         }
-	}
+    }
 
-	void Move(Vector3 dir)
-	{
+    void Move(Vector3 dir)
+    {
         //Calculate new position
         Vector3 newPos = transform.position + dir * Speed * Time.deltaTime;
-        
+
         //Confine within boundaries
-        if(newPos.x > xMax)
+        if (newPos.x > xMax)
         {
             newPos.x = xMax;
         }
@@ -147,17 +135,17 @@ public class PlayerController : MonoBehaviour
         }
         //Apply new position
         transform.position = newPos;
-	}
+    }
 
-	void GetInputs()
-	{
-		horizontalInput = Input.GetAxisRaw("Horizontal");
-		verticalInput = Input.GetAxisRaw("Vertical");
-	}
+    void GetInputs()
+    {
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        verticalInput = Input.GetAxisRaw("Vertical");
+    }
 
     //Player takes damage
-	public void TakeDamage(int damage)
-	{
+    public void TakeDamage(int damage)
+    {
         if (invincibility == false)
         {
             Health -= damage;
@@ -184,25 +172,26 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Take damage ontriggerstay");
         }
     }
-	public void ReceiveBoundaries(float width, float height, Vector3 origin)
+    public void ReceiveBoundaries(float width, float height, Vector3 origin)
     {
         xMax = origin.x + width / 2;
         zMax = origin.z + height / 2;
         xMin = origin.x - width / 2;
         zMin = origin.z - height / 2;
-	}
+    }
 
-	void DestroySelf()
-	{
-		Destroy(gameObject);
-		Debug.Log("Player Died");
-	}
-	void Delay()
-	{
-		Speed = Speed + (accelerationValue / 100);
-		if (Speed >= maxSpeed)
-		{
-			Speed = maxSpeed;
-		}
-	}
+    void DestroySelf()
+    {
+        Destroy(gameObject);
+        Debug.Log("Player Died");
+    }
+
+    void Delay()
+    {
+        Speed = Speed + (accelerationValue / 100);
+        if (Speed >= maxSpeed)
+        {
+            Speed = maxSpeed;
+        }
+    }
 }

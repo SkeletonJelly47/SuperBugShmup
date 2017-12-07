@@ -2,14 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public abstract class Weapon : MonoBehaviour
 {
-
     [SerializeField] GameObject SpawnObj;
+    public GameObject PlayerProjectileSuperShot;
+
+    // For playing audio
+    [HideInInspector]
+    public AudioSource audioSource;
+
     public string FireKey = "Fire1";
     float timer;
     float fireInterval;
     public float BulletPerSecond;
+
+    public virtual void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     // Use this for initialization
     public virtual void Start()
@@ -25,7 +36,12 @@ public abstract class Weapon : MonoBehaviour
         {
             if (Input.GetButton(FireKey))
             {
+                if (audioSource.clip != AudioManager.Audios.PlayerShoot)
+                    audioSource.clip = AudioManager.Audios.PlayerShoot;
+
                 Instantiate(SpawnObj, transform.position, transform.rotation);
+                // Play shoot audio!
+                audioSource.Play();
                 timer = 0f;
             }
             else
@@ -36,6 +52,21 @@ public abstract class Weapon : MonoBehaviour
         else
         {
             timer += Time.deltaTime;
+        }
+
+        if (Input.GetButtonDown("Fire2"))
+        {
+            if (PlayerController.energy == 100)
+            {
+                PlayerController.energy = 0;
+
+                if (audioSource.clip != AudioManager.Audios.SuperShot)
+                    audioSource.clip = AudioManager.Audios.SuperShot;
+
+                Instantiate(PlayerProjectileSuperShot, transform.position, transform.rotation);
+
+                audioSource.Play();
+            }
         }
     }
 }

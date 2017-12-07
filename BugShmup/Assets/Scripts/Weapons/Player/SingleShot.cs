@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class SingleShot : Weapon
 {
+    public override void Awake()
+    {
+        base.Awake();
+        audioSource.clip = AudioManager.Audios.PlayerShoot;
+    }
 
     // Use this for initialization
     public override void Start()
@@ -14,6 +19,11 @@ public class SingleShot : Weapon
     // Update is called once per frame
     public override void Update()
     {
+        if (audioSource.clip == null)
+        {
+            audioSource.clip = AudioManager.Audios.PlayerShoot;
+        }
+
         base.Update();
     }
 }
