@@ -1,0 +1,66 @@
+Initialize engine version: 5.6.2f1 (a2913c821e27)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 730 (ID=0x1287)
+    Vendor:   NVIDIA
+    VRAM:     1994 MB
+    Driver:   21.21.13.7290
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\mikkopel\Desktop\SuperBugShmup\BugShmup\SuperBugShmupLevel2QABuild_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\mikkopel\Desktop\SuperBugShmup\BugShmup\SuperBugShmupLevel2QABuild_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\mikkopel\Desktop\SuperBugShmup\BugShmup\SuperBugShmupLevel2QABuild_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\mikkopel\Desktop\SuperBugShmup\BugShmup\SuperBugShmupLevel2QABuild_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\mikkopel\Desktop\SuperBugShmup\BugShmup\SuperBugShmupLevel2QABuild_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\mikkopel\Desktop\SuperBugShmup\BugShmup\SuperBugShmupLevel2QABuild_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\mikkopel\Desktop\SuperBugShmup\BugShmup\SuperBugShmupLevel2QABuild_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\mikkopel\Desktop\SuperBugShmup\BugShmup\SuperBugShmupLevel2QABuild_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.030 seconds
+Platform assembly: C:\Users\mikkopel\Desktop\SuperBugShmup\BugShmup\SuperBugShmupLevel2QABuild_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\mikkopel\Desktop\SuperBugShmup\BugShmup\SuperBugShmupLevel2QABuild_Data\Managed\System.dll (this message is harmless)
+OnLevelWasLoaded was found on GameLogic
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+ 
+(Filename:  Line: 376)
+
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 3.383501 ms
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: d44 -> priority: 1 
+  Thread -> id: 2598 -> priority: 1 
+  Thread -> id: 2c04 -> priority: 1 
+  Thread -> id: b4 -> priority: 1 
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.784578 ms
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 1686.
+Total: 0.528465 ms (FindLiveObjects: 0.090731 ms CreateObjectMapping: 0.032446 ms MarkObjects: 0.383655 ms  DeleteObjects: 0.021030 ms)
+
+GameLogic (GameLogic)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+BG (UnityEngine.MeshRenderer)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+HP: 90
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+HP: 80
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+HP: 70
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+HP: 60
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
