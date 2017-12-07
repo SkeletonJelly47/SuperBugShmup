@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public abstract class Enemy : MonoBehaviour
 {
     //Enemy properties
@@ -14,6 +15,7 @@ public abstract class Enemy : MonoBehaviour
     protected float moveSpeed;
     public GameObject pickupPrefab;
     BoxCollider collider;
+    AudioSource audioSource;
 
     //WP container
     [Header("Waypoint settings")]
@@ -74,6 +76,8 @@ public abstract class Enemy : MonoBehaviour
     protected virtual void Start()
     {
         collider = GetComponent<BoxCollider>();
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = AudioManager.Audios.Hit;
 
         //I knew there was an easier way!
         Waypoints = WaypointContainer.GetComponentsInChildren<EnemyWaypoint>().ToList();
@@ -271,12 +275,14 @@ public abstract class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         Health -= damage;
+        if(!audioSource.isPlaying)
+            audioSource.Play();
     }
 
     protected abstract void Shoot();
 
     protected virtual void DestroySelf()
     {
-        Destroy(gameObject);
+        Destroy(gameObject, audioSource.clip.length);
     }
 }
