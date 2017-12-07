@@ -24,5 +24,9 @@ public class SuperShotScript : Bullet
         {
             collision.gameObject.GetComponent<Enemy>().TakeDamage(damage);
         }
+        if(collision.gameObject.tag == "Projectile")
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }
