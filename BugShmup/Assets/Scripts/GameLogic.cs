@@ -19,7 +19,10 @@ public class GameLogic : MonoBehaviour
     [SerializeField] float boundaryXInset, boundaryZInset;
     float frustumHeight;
     float frustumWidth;
+
+    //Static and non-static references
     public static GameLogic GL;
+    public GameObject DieScreen;
 
     private void Start()
     {
@@ -87,11 +90,17 @@ public class GameLogic : MonoBehaviour
     public void LoseGame()
     {
         Time.timeScale = 0f;
+        DieScreen.SetActive(true);
     }
 
     public void ResetLevel()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(1);
+    }
+
+    void OnLevelWasLoaded()
+    {
+        Time.timeScale = 1f;
     }
 }
