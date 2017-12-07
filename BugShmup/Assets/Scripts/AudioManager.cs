@@ -63,7 +63,7 @@ public class AudioManager : MonoBehaviour
         for(int i = 0; i < audioArray.Length; i++)
         {
             audioArray[i] = audioBundle.LoadAllAssets<AudioClip>()[i];
-            Debug.Log(audioArray[i].name);
+            //Debug.Log(audioArray[i].name);
         }
     }
 }
