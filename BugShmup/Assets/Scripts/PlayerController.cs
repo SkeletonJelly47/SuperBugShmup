@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
 			if (health < 0)
 			{
 				DestroySelf();
+                GameLogic.GL.LoseGame();
 			}
 		}
 	}

@@ -19,9 +19,16 @@ public class GameLogic : MonoBehaviour
     [SerializeField] float boundaryXInset, boundaryZInset;
     float frustumHeight;
     float frustumWidth;
+    public static GameLogic GL;
 
     private void Start()
     {
+        if (GL == null)
+        {
+            GL = this;
+            Debug.Log(GL);
+        }
+
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         CreateBoundaries();
         //Give boundaries to player
@@ -75,5 +82,16 @@ public class GameLogic : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
+    }
+
+    public void LoseGame()
+    {
+        Time.timeScale = 0f;
+    }
+
+    public void ResetLevel()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(1);
     }
 }
