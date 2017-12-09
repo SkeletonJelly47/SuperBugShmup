@@ -23,6 +23,7 @@ public class GameLogic : MonoBehaviour
     //Static and non-static references
     public static GameLogic GL;
     public GameObject DieScreen;
+    public GameObject PauseScreen;
 
     private void Start()
     {
@@ -45,6 +46,10 @@ public class GameLogic : MonoBehaviour
         {
             SaveCurrentScore(score);
             SceneManager.LoadScene("PrototypeLeaderboard");
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseToggle();
         }
     }
 
@@ -96,11 +101,48 @@ public class GameLogic : MonoBehaviour
     public void ResetLevel()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     void OnLevelWasLoaded()
     {
         Time.timeScale = 1f;
+    }
+
+    void TimeToggle()
+    {
+        if (player.Health > 0)
+        {
+            //Stop time
+            if (Time.timeScale == 1f)
+            {
+                Time.timeScale = 0f;
+            }
+            //Resume time
+            else if (Time.timeScale == 0f)
+            {
+                Time.timeScale = 1f;
+            }
+        }
+    }
+
+    public void PauseToggle()
+    {
+        if (player.Health > 0)
+        {
+            //Pausing
+            if (PauseScreen.activeSelf == false)
+            {
+                PauseScreen.SetActive(true);
+                TimeToggle();
+            }
+            //Unpausing
+            else
+            {
+                PauseScreen.SetActive(false);
+                TimeToggle();
+            }
+
+        }
     }
 }

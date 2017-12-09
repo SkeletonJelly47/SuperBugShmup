@@ -3595,6 +3595,11 @@ Prefab:
         type: 2}
       propertyPath: DieScreen
       value: 
+      objectReference: {fileID: 1085847431}
+    - target: {fileID: 114129443247276156, guid: 6d2608981f3da3246ad0aa23200966e0,
+        type: 2}
+      propertyPath: PauseScreen
+      value: 
       objectReference: {fileID: 1085847430}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d2608981f3da3246ad0aa23200966e0, type: 2}
@@ -6226,7 +6231,12 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!1 &1085847430 stripped
 GameObject:
-  m_PrefabParentObject: {fileID: 1685306003539148, guid: 7b233401487de8f4f804f271ae553235,
+  m_PrefabParentObject: {fileID: 1104537723988754, guid: 7b233401487de8f4f804f271ae553235,
+    type: 2}
+  m_PrefabInternal: {fileID: 1085847429}
+--- !u!1 &1085847431 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1705899709623004, guid: 7b233401487de8f4f804f271ae553235,
     type: 2}
   m_PrefabInternal: {fileID: 1085847429}
 --- !u!1 &1105853929
