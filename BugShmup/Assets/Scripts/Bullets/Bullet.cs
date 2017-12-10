@@ -27,6 +27,11 @@ public abstract class Bullet : MonoBehaviour
             collision.gameObject.GetComponent<Enemy>().TakeDamage(damage);
             DestroySelf();
         }
+        if(collision.gameObject.tag == "Boss")
+        {
+            collision.gameObject.GetComponent<BossScript>().TakeDamage(damage);
+            DestroySelf();
+        }
     }
     protected virtual void DestroySelf()
     {
