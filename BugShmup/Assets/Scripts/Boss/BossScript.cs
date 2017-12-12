@@ -4,10 +4,10 @@ using UnityEngine;
 
 public enum BossActions
 {
-    RapidFire,
+    RapidFireMiddle,
+    RapidFireSides,
     ShootAtPlayer,
     Homing,
-    Idle,
     Break
 }
 
@@ -24,9 +24,9 @@ public class BossScript : MonoBehaviour
     bool waiting;
     bool speedUp;
     public BossActions state = BossActions.Break;
-    Transform[] eyeTransform;
+     public Transform[] eyeTransform;
     GameObject[] eyeObject;
-    Transform crosshairOne, crosshairTwo;
+   public Transform crosshairOne, crosshairTwo;
     public Transform weaponTarget;
     public GameObject basicBullet, fastBullet, homingBullet, bigBullet;
     [SerializeField]
@@ -62,16 +62,14 @@ public class BossScript : MonoBehaviour
     void Start()
     {
 
-        crosshairOne = transform.GetChild(8);
-        crosshairTwo = transform.GetChild(9);
-
-        eyeTransform = gameObject.GetComponentsInChildren<Transform>();
+      /*  eyeTransform = gameObject.GetComponentsInChildren<Transform>();
         eyeObject = new GameObject[eyeTransform.Length];
         foreach (Transform child in eyeTransform)
         {
             getChildNumber++;
             eyeObject.SetValue(child.gameObject, getChildNumber - 1);
         }
+        */
         BeetlePurkkaaSaatana();
         phase = 0;
         waiting = false;
@@ -94,12 +92,12 @@ public class BossScript : MonoBehaviour
                             SpreadShotSpeed();
                         }
                         StartCoroutine(PauseBetweenShots(2));
-                        state = BossActions.RapidFire;
+                        state = BossActions.RapidFireSides;
                     }
                     if (phase == 1)
                     {
-                        StartCoroutine(PauseBetweenShots(2));
-                        state = BossActions.RapidFire;
+                        StartCoroutine(PauseBetweenShots(1));
+                        state = BossActions.RapidFireMiddle;
                     }
                     if (phase == 2)
                     {
@@ -120,7 +118,7 @@ public class BossScript : MonoBehaviour
 
                     break;
                 }
-            case BossActions.RapidFire:
+            case BossActions.RapidFireSides:
                 {
                     if (waiting == false && shotCount < projectilesShot)
                     {
@@ -130,14 +128,25 @@ public class BossScript : MonoBehaviour
                         StartCoroutine(PauseBetweenShots(rapidFireInterval));
                         shotCount += 1;
                     }
-                    if (waiting == false && shotCount >= projectilesShot)
+                    if (shotCount >= projectilesShot)
                     {
+                        shotCount = 0;
+                        phase += 1;
+                        state = BossActions.Break;
+                    }
+                    break;
+                }
+            case BossActions.RapidFireMiddle:
+                {
+                    if (waiting == false && shotCount < projectilesShot)
+                    {
+
                         RapidFire(eyeTransform[6].transform.position);
                         RapidFire(eyeTransform[7].transform.position);
                         StartCoroutine(PauseBetweenShots(rapidFireInterval));
                         shotCount += 1;
                     }
-                    if (shotCount >= projectilesShot * 2)
+                    if (shotCount >= projectilesShot)
                     {
                         shotCount = 0;
                         phase += 1;
@@ -195,37 +204,37 @@ public class BossScript : MonoBehaviour
     }
     void BeetlePewPewEyeOne()
     {
-        Vector3 rot = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 22.5f + 140, transform.eulerAngles.z);
+        Vector3 rot = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 22.5f, transform.eulerAngles.z);
 
         Instantiate(basicBullet, eyeTransform[1].transform.position, Quaternion.Euler(rot));
 
-        rot = new Vector3(transform.eulerAngles.x, Quaternion.Euler(rot).eulerAngles.y + 11.25f, transform.eulerAngles.z);
+        rot = new Vector3(transform.eulerAngles.x, Quaternion.Euler(rot).eulerAngles.y - 11.25f, transform.eulerAngles.z);
 
         Instantiate(basicBullet, eyeTransform[1].transform.position, Quaternion.Euler(rot));
 
-        rot = new Vector3(transform.eulerAngles.x, Quaternion.Euler(rot).eulerAngles.y + 11.25f, transform.eulerAngles.z);
+        rot = new Vector3(transform.eulerAngles.x, Quaternion.Euler(rot).eulerAngles.y - 22.5f, transform.eulerAngles.z);
 
         Instantiate(basicBullet, eyeTransform[1].transform.position, Quaternion.Euler(rot));
 
-        rot = new Vector3(transform.eulerAngles.x, Quaternion.Euler(rot).eulerAngles.y + 11.25f, transform.eulerAngles.z);
+        rot = new Vector3(transform.eulerAngles.x, Quaternion.Euler(rot).eulerAngles.y - 11.25f, transform.eulerAngles.z);
 
         Instantiate(basicBullet, eyeTransform[1].transform.position, Quaternion.Euler(rot));
     }
     void BeetlePewPewEyeFour()
     {
-        Vector3 rot = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 22.5f + 140, transform.eulerAngles.z);
+        Vector3 rot = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 22.5f, transform.eulerAngles.z);
 
         Instantiate(basicBullet, eyeTransform[4].transform.position, Quaternion.Euler(rot));
 
-        rot = new Vector3(transform.eulerAngles.x, Quaternion.Euler(rot).eulerAngles.y + 11.25f, transform.eulerAngles.z);
+        rot = new Vector3(transform.eulerAngles.x, Quaternion.Euler(rot).eulerAngles.y - 11.25f, transform.eulerAngles.z);
 
         Instantiate(basicBullet, eyeTransform[4].transform.position, Quaternion.Euler(rot));
 
-        rot = new Vector3(transform.eulerAngles.x, Quaternion.Euler(rot).eulerAngles.y + 11.25f, transform.eulerAngles.z);
+        rot = new Vector3(transform.eulerAngles.x, Quaternion.Euler(rot).eulerAngles.y - 22.5f, transform.eulerAngles.z);
 
         Instantiate(basicBullet, eyeTransform[4].transform.position, Quaternion.Euler(rot));
 
-        rot = new Vector3(transform.eulerAngles.x, Quaternion.Euler(rot).eulerAngles.y + 11.25f, transform.eulerAngles.z);
+        rot = new Vector3(transform.eulerAngles.x, Quaternion.Euler(rot).eulerAngles.y - 11.25f, transform.eulerAngles.z);
 
         Instantiate(basicBullet, eyeTransform[4].transform.position, Quaternion.Euler(rot));
     }
@@ -248,7 +257,7 @@ public class BossScript : MonoBehaviour
     }
     void RapidFire(Vector3 eyePosition)
     {
-        Vector3 rot = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 180, transform.eulerAngles.z);
+        Vector3 rot = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z);
         Instantiate(basicBullet, eyePosition, Quaternion.Euler(rot));
     }
     void ShootAtPlayer(Vector3 eyePosition, Quaternion crossHair)

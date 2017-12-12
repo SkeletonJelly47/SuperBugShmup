@@ -7,11 +7,12 @@ public abstract class Bullet : MonoBehaviour
     [SerializeField] protected float projectileSpeed;
     [SerializeField] protected int damage;
     protected string ColliderTag;
+    GameObject boss;
 
     // Use this for initialization
     protected virtual void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -29,7 +30,7 @@ public abstract class Bullet : MonoBehaviour
         }
         if(collision.gameObject.tag == "Boss")
         {
-            collision.gameObject.GetComponent<BossScript>().TakeDamage(damage);
+            collision.gameObject.GetComponent<BossTakeDamageScript>().TakeDamage(damage);
             DestroySelf();
         }
     }
