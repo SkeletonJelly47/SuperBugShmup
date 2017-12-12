@@ -37,6 +37,7 @@ public class BossScript : MonoBehaviour
 
     [Header("RapidFire")]
     public float rapidFireInterval;
+    public int projectilesShot;
     [Header("ShootAtPlayer")]
     public float shootAtPlayerInterval;
 
@@ -121,7 +122,7 @@ public class BossScript : MonoBehaviour
                 }
             case BossActions.RapidFire:
                 {
-                    if (waiting == false && shotCount < 6)
+                    if (waiting == false && shotCount < projectilesShot)
                     {
 
                         RapidFire(eyeTransform[5].transform.position);
@@ -129,14 +130,14 @@ public class BossScript : MonoBehaviour
                         StartCoroutine(PauseBetweenShots(rapidFireInterval));
                         shotCount += 1;
                     }
-                    if (waiting == false && shotCount >= 6)
+                    if (waiting == false && shotCount >= projectilesShot)
                     {
                         RapidFire(eyeTransform[6].transform.position);
                         RapidFire(eyeTransform[7].transform.position);
                         StartCoroutine(PauseBetweenShots(rapidFireInterval));
                         shotCount += 1;
                     }
-                    if (shotCount >= 12)
+                    if (shotCount >= projectilesShot * 2)
                     {
                         shotCount = 0;
                         phase += 1;

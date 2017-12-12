@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: eed3d5f986ac3244586cd02332db1cd1
+timeCreated: 1513077487
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Base
+    100004: BossSpider
+    100006: EyeLoc1.1
+    100008: EyeLoc1.2
+    100010: EyeLoc1.3
+    100012: EyeLoc1.4
+    100014: EyeLoc2.1
+    100016: EyeLoc2.2
+    100018: EyeLoc2.3
+    100020: EyeLoc2.4
+    100022: Hips
+    100024: Jaw.L
+    100026: Jaw.L_end
+    100028: Jaw.R
+    100030: Jaw.R_end
+    100032: JawFront.1.L
+    100034: JawFront.1.R
+    100036: JawFront.2.L
+    100038: JawFront.2.L_end
+    100040: JawFront.2.R
+    100042: JawFront.2.R_end
+    100044: JawFront.Target.L
+    100046: JawFront.Target.L_end
+    100048: JawFront.Target.R
+    100050: JawFront.Target.R_end
+    100052: Leg.1.Target.L
+    100054: Leg.1.Target.L_end
+    100056: Leg.1.Target.R
+    100058: Leg.1.Target.R_end
+    100060: Leg.2.Target.L
+    100062: Leg.2.Target.L_end
+    100064: Leg.2.Target.R
+    100066: Leg.2.Target.R_end
+    100068: Leg1.1.L
+    100070: Leg1.1.R
+    100072: Leg1.2.L
+    100074: Leg1.2.L_end
+    100076: Leg1.2.R
+    100078: Leg1.2.R_end
+    100080: Leg2.1.L
+    100082: Leg2.1.R
+    100084: Leg2.2.L
+    100086: Leg2.2.L_end
+    100088: Leg2.2.R
+    100090: Leg2.2.R_end
+    100092: //RootNode
+    100094: SpiderBoss_Mask
+    400000: Armature
+    400002: Base
+    400004: BossSpider
+    400006: EyeLoc1.1
+    400008: EyeLoc1.2
+    400010: EyeLoc1.3
+    400012: EyeLoc1.4
+    400014: EyeLoc2.1
+    400016: EyeLoc2.2
+    400018: EyeLoc2.3
+    400020: EyeLoc2.4
+    400022: Hips
+    400024: Jaw.L
+    400026: Jaw.L_end
+    400028: Jaw.R
+    400030: Jaw.R_end
+    400032: JawFront.1.L
+    400034: JawFront.1.R
+    400036: JawFront.2.L
+    400038: JawFront.2.L_end
+    400040: JawFront.2.R
+    400042: JawFront.2.R_end
+    400044: JawFront.Target.L
+    400046: JawFront.Target.L_end
+    400048: JawFront.Target.R
+    400050: JawFront.Target.R_end
+    400052: Leg.1.Target.L
+    400054: Leg.1.Target.L_end
+    400056: Leg.1.Target.R
+    400058: Leg.1.Target.R_end
+    400060: Leg.2.Target.L
+    400062: Leg.2.Target.L_end
+    400064: Leg.2.Target.R
+    400066: Leg.2.Target.R_end
+    400068: Leg1.1.L
+    400070: Leg1.1.R
+    400072: Leg1.2.L
+    400074: Leg1.2.L_end
+    400076: Leg1.2.R
+    400078: Leg1.2.R_end
+    400080: Leg2.1.L
+    400082: Leg2.1.R
+    400084: Leg2.2.L
+    400086: Leg2.2.L_end
+    400088: Leg2.2.R
+    400090: Leg2.2.R_end
+    400092: //RootNode
+    400094: SpiderBoss_Mask
+    2300000: SpiderBoss_Mask
+    3300000: SpiderBoss_Mask
+    4300000: SpiderBoss_Mask
+    4300002: BossSpider
+    7400000: Armature|ArmatureAction
+    7400002: SpookyScaryAnimation
+    9500000: //RootNode
+    13700000: BossSpider
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|ArmatureAction
+      takeName: Armature|ArmatureAction
+      firstFrame: 20
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Base
+        weight: 1
+      - path: Armature/Base/Hips
+        weight: 1
+      - path: Armature/Base/Hips/EyeLoc1.1
+        weight: 1
+      - path: Armature/Base/Hips/EyeLoc1.2
+        weight: 1
+      - path: Armature/Base/Hips/EyeLoc1.3
+        weight: 1
+      - path: Armature/Base/Hips/EyeLoc1.4
+        weight: 1
+      - path: Armature/Base/Hips/EyeLoc2.1
+        weight: 1
+      - path: Armature/Base/Hips/EyeLoc2.2
+        weight: 1
+      - path: Armature/Base/Hips/EyeLoc2.3
+        weight: 1
+      - path: Armature/Base/Hips/EyeLoc2.4
+        weight: 1
+      - path: Armature/Base/Hips/Jaw.L
+        weight: 1
+      - path: Armature/Base/Hips/Jaw.L/Jaw.L_end
+        weight: 1
+      - path: Armature/Base/Hips/Jaw.R
+        weight: 1
+      - path: Armature/Base/Hips/Jaw.R/Jaw.R_end
+        weight: 1
+      - path: Armature/Base/Hips/JawFront.1.L
+        weight: 1
+      - path: Armature/Base/Hips/JawFront.1.L/JawFront.2.L
+        weight: 1
+      - path: Armature/Base/Hips/JawFront.1.L/JawFront.2.L/JawFront.2.L_end
+        weight: 1
+      - path: Armature/Base/Hips/JawFront.1.R
+        weight: 1
+      - path: Armature/Base/Hips/JawFront.1.R/JawFront.2.R
+        weight: 1
+      - path: Armature/Base/Hips/JawFront.1.R/JawFront.2.R/JawFront.2.R_end
+        weight: 1
+      - path: Armature/Base/Hips/JawFront.Target.L
+        weight: 1
+      - path: Armature/Base/Hips/JawFront.Target.L/JawFront.Target.L_end
+        weight: 1
+      - path: Armature/Base/Hips/JawFront.Target.R
+        weight: 1
+      - path: Armature/Base/Hips/JawFront.Target.R/JawFront.Target.R_end
+        weight: 1
+      - path: Armature/Base/Hips/Leg1.1.L
+        weight: 1
+      - path: Armature/Base/Hips/Leg1.1.L/Leg1.2.L
+        weight: 1
+      - path: Armature/Base/Hips/Leg1.1.L/Leg1.2.L/Leg1.2.L_end
+        weight: 1
+      - path: Armature/Base/Hips/Leg1.1.R
+        weight: 1
+      - path: Armature/Base/Hips/Leg1.1.R/Leg1.2.R
+        weight: 1
+      - path: Armature/Base/Hips/Leg1.1.R/Leg1.2.R/Leg1.2.R_end
+        weight: 1
+      - path: Armature/Base/Hips/Leg2.1.L
+        weight: 1
+      - path: Armature/Base/Hips/Leg2.1.L/Leg2.2.L
+        weight: 1
+      - path: Armature/Base/Hips/Leg2.1.L/Leg2.2.L/Leg2.2.L_end
+        weight: 1
+      - path: Armature/Base/Hips/Leg2.1.R
+        weight: 1
+      - path: Armature/Base/Hips/Leg2.1.R/Leg2.2.R
+        weight: 1
+      - path: Armature/Base/Hips/Leg2.1.R/Leg2.2.R/Leg2.2.R_end
+        weight: 1
+      - path: Armature/Base/Hips/SpiderBoss_Mask
+        weight: 1
+      - path: Armature/Base/Leg.1.Target.L
+        weight: 1
+      - path: Armature/Base/Leg.1.Target.L/Leg.1.Target.L_end
+        weight: 1
+      - path: Armature/Base/Leg.1.Target.R
+        weight: 1
+      - path: Armature/Base/Leg.1.Target.R/Leg.1.Target.R_end
+        weight: 1
+      - path: Armature/Base/Leg.2.Target.L
+        weight: 1
+      - path: Armature/Base/Leg.2.Target.L/Leg.2.Target.L_end
+        weight: 1
+      - path: Armature/Base/Leg.2.Target.R
+        weight: 1
+      - path: Armature/Base/Leg.2.Target.R/Leg.2.Target.R_end
+        weight: 1
+      - path: BossSpider
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: SpookyScaryAnimation
+      takeName: Armature|ArmatureAction
+      firstFrame: 20
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Base
+        weight: 1
+      - path: Armature/Base/Hips
+        weight: 1
+      - path: Armature/Base/Hips/EyeLoc1.1
+        weight: 1
+      - path: Armature/Base/Hips/EyeLoc1.2
+        weight: 1
+      - path: Armature/Base/Hips/EyeLoc1.3
+        weight: 1
+      - path: Armature/Base/Hips/EyeLoc1.4
+        weight: 1
+      - path: Armature/Base/Hips/EyeLoc2.1
+        weight: 1
+      - path: Armature/Base/Hips/EyeLoc2.2
+        weight: 1
+      - path: Armature/Base/Hips/EyeLoc2.3
+        weight: 1
+      - path: Armature/Base/Hips/EyeLoc2.4
+        weight: 1
+      - path: Armature/Base/Hips/Jaw.L
+        weight: 1
+      - path: Armature/Base/Hips/Jaw.L/Jaw.L_end
+        weight: 1
+      - path: Armature/Base/Hips/Jaw.R
+        weight: 1
+      - path: Armature/Base/Hips/Jaw.R/Jaw.R_end
+        weight: 1
+      - path: Armature/Base/Hips/JawFront.1.L
+        weight: 1
+      - path: Armature/Base/Hips/JawFront.1.L/JawFront.2.L
+        weight: 1
+      - path: Armature/Base/Hips/JawFront.1.L/JawFront.2.L/JawFront.2.L_end
+        weight: 1
+      - path: Armature/Base/Hips/JawFront.1.R
+        weight: 1
+      - path: Armature/Base/Hips/JawFront.1.R/JawFront.2.R
+        weight: 1
+      - path: Armature/Base/Hips/JawFront.1.R/JawFront.2.R/JawFront.2.R_end
+        weight: 1
+      - path: Armature/Base/Hips/JawFront.Target.L
+        weight: 1
+      - path: Armature/Base/Hips/JawFront.Target.L/JawFront.Target.L_end
+        weight: 1
+      - path: Armature/Base/Hips/JawFront.Target.R
+        weight: 1
+      - path: Armature/Base/Hips/JawFront.Target.R/JawFront.Target.R_end
+        weight: 1
+      - path: Armature/Base/Hips/Leg1.1.L
+        weight: 1
+      - path: Armature/Base/Hips/Leg1.1.L/Leg1.2.L
+        weight: 1
+      - path: Armature/Base/Hips/Leg1.1.L/Leg1.2.L/Leg1.2.L_end
+        weight: 1
+      - path: Armature/Base/Hips/Leg1.1.R
+        weight: 1
+      - path: Armature/Base/Hips/Leg1.1.R/Leg1.2.R
+        weight: 1
+      - path: Armature/Base/Hips/Leg1.1.R/Leg1.2.R/Leg1.2.R_end
+        weight: 1
+      - path: Armature/Base/Hips/Leg2.1.L
+        weight: 1
+      - path: Armature/Base/Hips/Leg2.1.L/Leg2.2.L
+        weight: 1
+      - path: Armature/Base/Hips/Leg2.1.L/Leg2.2.L/Leg2.2.L_end
+        weight: 1
+      - path: Armature/Base/Hips/Leg2.1.R
+        weight: 1
+      - path: Armature/Base/Hips/Leg2.1.R/Leg2.2.R
+        weight: 1
+      - path: Armature/Base/Hips/Leg2.1.R/Leg2.2.R/Leg2.2.R_end
+        weight: 1
+      - path: Armature/Base/Hips/SpiderBoss_Mask
+        weight: 1
+      - path: Armature/Base/Leg.1.Target.L
+        weight: 1
+      - path: Armature/Base/Leg.1.Target.L/Leg.1.Target.L_end
+        weight: 1
+      - path: Armature/Base/Leg.1.Target.R
+        weight: 1
+      - path: Armature/Base/Leg.1.Target.R/Leg.1.Target.R_end
+        weight: 1
+      - path: Armature/Base/Leg.2.Target.L
+        weight: 1
+      - path: Armature/Base/Leg.2.Target.L/Leg.2.Target.L_end
+        weight: 1
+      - path: Armature/Base/Leg.2.Target.R
+        weight: 1
+      - path: Armature/Base/Leg.2.Target.R/Leg.2.Target.R_end
+        weight: 1
+      - path: BossSpider
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
