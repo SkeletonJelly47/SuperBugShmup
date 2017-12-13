@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -208,8 +208,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1879742200}
@@ -217,13 +216,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: shootingDirection
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: shootAtPlayer
       value: 0
       objectReference: {fileID: 0}
@@ -507,8 +504,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 586204575}
@@ -516,8 +512,7 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: shootingDirection
       value: 180
       objectReference: {fileID: 0}
@@ -806,7 +801,11 @@ Transform:
   - {fileID: 842609701}
   - {fileID: 677240061}
   m_Father: {fileID: 0}
+<<<<<<< HEAD
+  m_RootOrder: 12
+=======
   m_RootOrder: 14
+>>>>>>> origin/feature/level2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &59744518
 Prefab:
@@ -851,8 +850,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 459235845}
@@ -860,13 +858,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: shootingDirection
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: shootAtPlayer
       value: 0
       objectReference: {fileID: 0}
@@ -1139,8 +1135,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (23)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1751735320}
@@ -1538,8 +1533,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1879742200}
@@ -1547,13 +1541,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: shootingDirection
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: shootAtPlayer
       value: 0
       objectReference: {fileID: 0}
@@ -2000,13 +1992,17 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (70)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
+<<<<<<< HEAD
+      objectReference: {fileID: 329392903}
+    - target: {fileID: 0}
+=======
       objectReference: {fileID: 1301375284}
     - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
         type: 2}
+>>>>>>> origin/feature/level2
       propertyPath: shootAtPlayer
       value: 0
       objectReference: {fileID: 0}
@@ -2354,8 +2350,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (18)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1205546757}
@@ -2794,8 +2789,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (19)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1751735320}
@@ -2851,8 +2845,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1879742200}
@@ -2860,13 +2853,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: shootingDirection
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: shootAtPlayer
       value: 0
       objectReference: {fileID: 0}
@@ -3220,8 +3211,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (51)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1679730071}
@@ -3233,12 +3223,72 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
   m_IsPrefabParent: 0
+<<<<<<< HEAD
+--- !u!1001 &300692105
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1757733617}
+    m_Modifications:
+    - target: {fileID: 4615808651120946, guid: 66dd11213b4202f47b7c65c9c7e4ba04, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615808651120946, guid: 66dd11213b4202f47b7c65c9c7e4ba04, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615808651120946, guid: 66dd11213b4202f47b7c65c9c7e4ba04, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -42
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615808651120946, guid: 66dd11213b4202f47b7c65c9c7e4ba04, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615808651120946, guid: 66dd11213b4202f47b7c65c9c7e4ba04, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615808651120946, guid: 66dd11213b4202f47b7c65c9c7e4ba04, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615808651120946, guid: 66dd11213b4202f47b7c65c9c7e4ba04, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615808651120946, guid: 66dd11213b4202f47b7c65c9c7e4ba04, type: 2}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 114574035187910668, guid: 66dd11213b4202f47b7c65c9c7e4ba04,
+        type: 2}
+      propertyPath: WaypointContainer
+      value: 
+      objectReference: {fileID: 1879742200}
+    - target: {fileID: 114574035187910668, guid: 66dd11213b4202f47b7c65c9c7e4ba04,
+        type: 2}
+      propertyPath: shootingDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1869282025424380, guid: 66dd11213b4202f47b7c65c9c7e4ba04, type: 2}
+      propertyPath: m_Name
+      value: BeeEnemyHoming (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 66dd11213b4202f47b7c65c9c7e4ba04, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &319036043
+=======
 --- !u!4 &287638210 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e,
     type: 2}
   m_PrefabInternal: {fileID: 287638209}
 --- !u!1 &288319488
+>>>>>>> origin/feature/level2
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -3399,8 +3449,57 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e,
     type: 2}
+<<<<<<< HEAD
+  m_PrefabInternal: {fileID: 347651279}
+--- !u!1 &352383894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 352383895}
+  m_Layer: 0
+  m_Name: BeeHomingSeparated
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &352383895
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 352383894}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 100}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1697367802}
+  - {fileID: 1529905414}
+  - {fileID: 18410963}
+  - {fileID: 357204702}
+  - {fileID: 778928772}
+  - {fileID: 1896482531}
+  - {fileID: 934941549}
+  - {fileID: 1982276397}
+  - {fileID: 882695922}
+  - {fileID: 1729896952}
+  - {fileID: 13140704}
+  - {fileID: 411838720}
+  - {fileID: 347651280}
+  - {fileID: 1945274418}
+  - {fileID: 175261141}
+  - {fileID: 1871472266}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &357204701
+=======
   m_PrefabInternal: {fileID: 300257960}
 --- !u!1001 &300440618
+>>>>>>> origin/feature/level2
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -3443,8 +3542,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1337855625}
@@ -3531,6 +3629,11 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 0}
+      propertyPath: shootingDirection
+      value: 180
+=======
     - target: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
       propertyPath: m_LocalRotation.x
       value: -0
@@ -3564,6 +3667,7 @@ Prefab:
         type: 2}
       propertyPath: shootAtPlayer
       value: 1
+>>>>>>> origin/feature/level2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
@@ -3736,8 +3840,12 @@ Prefab:
       propertyPath: m_Name
       value: EnemyBeetle (25)
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 0}
+=======
     - target: {fileID: 114226556670522156, guid: 1ce340b9294b544498e17b004462e649,
         type: 2}
+>>>>>>> origin/feature/level2
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 279901933}
@@ -12616,8 +12724,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (52)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 279901933}
@@ -12677,8 +12784,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (13)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1350378139}
@@ -12747,13 +12853,25 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (54)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
+<<<<<<< HEAD
+      objectReference: {fileID: 1879742200}
+    - target: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shootingDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+=======
       objectReference: {fileID: 809286317}
     - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
         type: 2}
+>>>>>>> origin/feature/level2
       propertyPath: shootAtPlayer
       value: 1
       objectReference: {fileID: 0}
@@ -12808,8 +12926,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (25)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1679730071}
@@ -13116,11 +13233,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 0}
+      propertyPath: WaypointContainer
+      value: 
+      objectReference: {fileID: 1946258347}
+=======
     - target: {fileID: 114872405712330274, guid: a416f96acb6c0344182d1ad2a3bc01bd,
         type: 2}
       propertyPath: health
       value: 100
       objectReference: {fileID: 0}
+>>>>>>> origin/feature/level2
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a416f96acb6c0344182d1ad2a3bc01bd, type: 2}
   m_IsPrefabParent: 0
@@ -13167,8 +13291,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1337855625}
@@ -13401,8 +13524,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1371890551}
@@ -13633,8 +13755,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (75)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1751735320}
@@ -13694,11 +13815,22 @@ Prefab:
       propertyPath: m_Name
       value: EnemyBeetle (27)
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 0}
+      propertyPath: WaypointContainer
+      value: 
+      objectReference: {fileID: 809286317}
+    - target: {fileID: 0}
+      propertyPath: shootAtPlayer
+      value: 1
+      objectReference: {fileID: 0}
+=======
     - target: {fileID: 114226556670522156, guid: 1ce340b9294b544498e17b004462e649,
         type: 2}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 279901933}
+>>>>>>> origin/feature/level2
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ce340b9294b544498e17b004462e649, type: 2}
   m_IsPrefabParent: 0
@@ -13776,6 +13908,23 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 114129443247276156, guid: 6d2608981f3da3246ad0aa23200966e0,
+        type: 2}
+      propertyPath: BG
+      value: 
+      objectReference: {fileID: 1397596133}
+    - target: {fileID: 114129443247276156, guid: 6d2608981f3da3246ad0aa23200966e0,
+        type: 2}
+      propertyPath: DieScreen
+      value: 
+      objectReference: {fileID: 1085847431}
+    - target: {fileID: 114129443247276156, guid: 6d2608981f3da3246ad0aa23200966e0,
+        type: 2}
+      propertyPath: PauseScreen
+      value: 
+      objectReference: {fileID: 1085847430}
+=======
     - target: {fileID: 1741730664784920, guid: 1ce340b9294b544498e17b004462e649, type: 2}
       propertyPath: m_Name
       value: EnemyBeetle (4)
@@ -13790,6 +13939,7 @@ Prefab:
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1679730071}
+>>>>>>> origin/feature/level2
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ce340b9294b544498e17b004462e649, type: 2}
   m_IsPrefabParent: 0
@@ -14023,10 +14173,13 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (15)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
+<<<<<<< HEAD
+      objectReference: {fileID: 577372865}
+    - target: {fileID: 0}
+=======
       objectReference: {fileID: 1350378139}
     - target: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -14039,6 +14192,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
         type: 2}
+>>>>>>> origin/feature/level2
       propertyPath: shootAtPlayer
       value: 0
       objectReference: {fileID: 0}
@@ -14476,8 +14630,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (12)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1371890551}
@@ -14986,10 +15139,55 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!4 &1490082089 stripped
 Transform:
+<<<<<<< HEAD
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 727378539}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: -0.9, y: 0, z: 338}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 490732884}
+  - {fileID: 1520222425}
+  - {fileID: 1676968459}
+  - {fileID: 459819854}
+  - {fileID: 1970640580}
+  - {fileID: 1571590550}
+  - {fileID: 1084038543}
+  - {fileID: 659873199}
+  - {fileID: 884978411}
+  - {fileID: 1739032368}
+  - {fileID: 1067115906}
+  - {fileID: 1909570483}
+  - {fileID: 941456084}
+  - {fileID: 1671919694}
+  - {fileID: 925836621}
+  - {fileID: 257477538}
+  - {fileID: 366593798}
+  - {fileID: 1747427172}
+  - {fileID: 1825214631}
+  - {fileID: 78894363}
+  - {fileID: 692699033}
+  - {fileID: 628140227}
+  - {fileID: 1153830327}
+  - {fileID: 909398205}
+  - {fileID: 889665107}
+  - {fileID: 2139343511}
+  - {fileID: 152587499}
+  - {fileID: 449632770}
+  - {fileID: 828457173}
+  - {fileID: 1543419052}
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &732277592
+=======
   m_PrefabParentObject: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e,
     type: 2}
   m_PrefabInternal: {fileID: 1490082088}
 --- !u!1001 &1490708005
+>>>>>>> origin/feature/level2
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -15032,8 +15230,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (44)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1269263712}
@@ -15149,15 +15346,25 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (58)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
+<<<<<<< HEAD
+      objectReference: {fileID: 586204575}
+    - target: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shootingDirection
+      value: 180
+=======
       objectReference: {fileID: 842609700}
     - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
         type: 2}
       propertyPath: shootAtPlayer
       value: 0
+>>>>>>> origin/feature/level2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
@@ -15423,8 +15630,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (16)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1301375284}
@@ -15540,8 +15746,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1565793966}
@@ -15657,8 +15862,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 586204575}
@@ -16019,8 +16223,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (29)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1269263712}
@@ -16080,15 +16283,25 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (23)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
+<<<<<<< HEAD
+      objectReference: {fileID: 586204575}
+    - target: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shootingDirection
+      value: 180
+=======
       objectReference: {fileID: 107032555}
     - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
         type: 2}
       propertyPath: shootAtPlayer
       value: 1
+>>>>>>> origin/feature/level2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
@@ -16182,8 +16395,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1565793966}
@@ -16402,8 +16614,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1371890551}
@@ -16562,9 +16773,43 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
+  m_Children:
+  - {fileID: 589385249}
+  - {fileID: 1926314979}
+  - {fileID: 1564970682}
+  - {fileID: 1777216498}
+  - {fileID: 1265850963}
+  - {fileID: 503724005}
+  - {fileID: 163030353}
+  - {fileID: 445056795}
+  - {fileID: 2111114937}
+  - {fileID: 1808768296}
+  - {fileID: 229884441}
+  - {fileID: 74214188}
+  - {fileID: 1335567077}
+  - {fileID: 603499598}
+  - {fileID: 1786411390}
+  - {fileID: 1023839679}
+  - {fileID: 2017820401}
+  - {fileID: 4149068}
+  - {fileID: 120197164}
+  - {fileID: 1498647213}
+  - {fileID: 786090768}
+  - {fileID: 582543790}
+  - {fileID: 2114219073}
+  - {fileID: 1519930991}
+  - {fileID: 955508262}
+  - {fileID: 1794560712}
+  - {fileID: 993255805}
+  - {fileID: 394178276}
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+=======
   m_Children: []
   m_Father: {fileID: 1565793967}
   m_RootOrder: 2
+>>>>>>> origin/feature/level2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1617130517
 MonoBehaviour:
@@ -16988,9 +17233,36 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
+  m_Children:
+  - {fileID: 941219538}
+  - {fileID: 1755071809}
+  - {fileID: 857406427}
+  - {fileID: 504478611}
+  - {fileID: 263735786}
+  - {fileID: 216024197}
+  - {fileID: 2074676513}
+  - {fileID: 463990451}
+  - {fileID: 2118426887}
+  - {fileID: 732277593}
+  - {fileID: 1989354175}
+  - {fileID: 2082623338}
+  - {fileID: 816624402}
+  - {fileID: 873278681}
+  - {fileID: 385063195}
+  - {fileID: 1644552616}
+  - {fileID: 1975000583}
+  - {fileID: 372302060}
+  - {fileID: 189784878}
+  - {fileID: 372257614}
+  - {fileID: 1951594301}
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+=======
   m_Children: []
   m_Father: {fileID: 1946258348}
   m_RootOrder: 1
+>>>>>>> origin/feature/level2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1669454027
 MonoBehaviour:
@@ -17051,8 +17323,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (17)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1301375284}
@@ -17112,8 +17383,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1565793966}
@@ -17124,8 +17394,187 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e,
     type: 2}
+<<<<<<< HEAD
+  m_PrefabInternal: {fileID: 1084038542}
+--- !u!1001 &1085847429
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 224691444806697892, guid: 7b233401487de8f4f804f271ae553235,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224691444806697892, guid: 7b233401487de8f4f804f271ae553235,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224691444806697892, guid: 7b233401487de8f4f804f271ae553235,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224691444806697892, guid: 7b233401487de8f4f804f271ae553235,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224691444806697892, guid: 7b233401487de8f4f804f271ae553235,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224691444806697892, guid: 7b233401487de8f4f804f271ae553235,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224691444806697892, guid: 7b233401487de8f4f804f271ae553235,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224691444806697892, guid: 7b233401487de8f4f804f271ae553235,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224691444806697892, guid: 7b233401487de8f4f804f271ae553235,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224691444806697892, guid: 7b233401487de8f4f804f271ae553235,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224691444806697892, guid: 7b233401487de8f4f804f271ae553235,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224691444806697892, guid: 7b233401487de8f4f804f271ae553235,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224691444806697892, guid: 7b233401487de8f4f804f271ae553235,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224691444806697892, guid: 7b233401487de8f4f804f271ae553235,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224691444806697892, guid: 7b233401487de8f4f804f271ae553235,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224691444806697892, guid: 7b233401487de8f4f804f271ae553235,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224691444806697892, guid: 7b233401487de8f4f804f271ae553235,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224691444806697892, guid: 7b233401487de8f4f804f271ae553235,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104537723988754, guid: 7b233401487de8f4f804f271ae553235, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114042166110655336, guid: 7b233401487de8f4f804f271ae553235,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114212275567689864, guid: 7b233401487de8f4f804f271ae553235,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1577736660}
+    - target: {fileID: 114212275567689864, guid: 7b233401487de8f4f804f271ae553235,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PauseToggle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7b233401487de8f4f804f271ae553235, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &1085847430 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1104537723988754, guid: 7b233401487de8f4f804f271ae553235,
+    type: 2}
+  m_PrefabInternal: {fileID: 1085847429}
+--- !u!1 &1085847431 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1705899709623004, guid: 7b233401487de8f4f804f271ae553235,
+    type: 2}
+  m_PrefabInternal: {fileID: 1085847429}
+--- !u!1 &1105853929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1105853930}
+  - component: {fileID: 1105853931}
+  m_Layer: 0
+  m_Name: WP
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1105853930
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1105853929}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1350378140}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1105853931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1105853929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf89571f30f92cd458647fe28ea9e64b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shoot: 1
+  curve: 0
+  curveAmt: 0.25
+  waitArrive: 0.5
+  waitLeave: 0.5
+--- !u!1 &1111529162
+=======
   m_PrefabInternal: {fileID: 1676968458}
 --- !u!1 &1679730071
+>>>>>>> origin/feature/level2
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -17314,13 +17763,25 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (45)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
+<<<<<<< HEAD
+      objectReference: {fileID: 459235845}
+    - target: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shootingDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+=======
       objectReference: {fileID: 279901933}
     - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
         type: 2}
+>>>>>>> origin/feature/level2
       propertyPath: shootAtPlayer
       value: 1
       objectReference: {fileID: 0}
@@ -17480,7 +17941,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4615808651120946, guid: 66dd11213b4202f47b7c65c9c7e4ba04, type: 2}
       propertyPath: m_LocalRotation.y
+<<<<<<< HEAD
+      value: 1
+=======
       value: -0
+>>>>>>> origin/feature/level2
       objectReference: {fileID: 0}
     - target: {fileID: 4615808651120946, guid: 66dd11213b4202f47b7c65c9c7e4ba04, type: 2}
       propertyPath: m_LocalRotation.z
@@ -17488,7 +17953,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4615808651120946, guid: 66dd11213b4202f47b7c65c9c7e4ba04, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4615808651120946, guid: 66dd11213b4202f47b7c65c9c7e4ba04, type: 2}
       propertyPath: m_RootOrder
@@ -17604,10 +18069,21 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (13)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
+<<<<<<< HEAD
+      objectReference: {fileID: 1350378139}
+    - target: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shootingDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+=======
       objectReference: {fileID: 1301375284}
     - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
         type: 2}
@@ -17672,6 +18148,7 @@ Prefab:
       objectReference: {fileID: 1751735320}
     - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
         type: 2}
+>>>>>>> origin/feature/level2
       propertyPath: shootAtPlayer
       value: 0
       objectReference: {fileID: 0}
@@ -17726,13 +18203,17 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (81)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
+<<<<<<< HEAD
+      objectReference: {fileID: 1679730071}
+    - target: {fileID: 0}
+=======
       objectReference: {fileID: 1751735320}
     - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
         type: 2}
+>>>>>>> origin/feature/level2
       propertyPath: shootAtPlayer
       value: 0
       objectReference: {fileID: 0}
@@ -17784,6 +18265,48 @@ Transform:
 --- !u!1 &1757733616
 GameObject:
   m_ObjectHideFlags: 0
+<<<<<<< HEAD
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4579190640812670, guid: d4cc939cac01dde46b12cc262bce2e17, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579190640812670, guid: d4cc939cac01dde46b12cc262bce2e17, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579190640812670, guid: d4cc939cac01dde46b12cc262bce2e17, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579190640812670, guid: d4cc939cac01dde46b12cc262bce2e17, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579190640812670, guid: d4cc939cac01dde46b12cc262bce2e17, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579190640812670, guid: d4cc939cac01dde46b12cc262bce2e17, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579190640812670, guid: d4cc939cac01dde46b12cc262bce2e17, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4579190640812670, guid: d4cc939cac01dde46b12cc262bce2e17, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d4cc939cac01dde46b12cc262bce2e17, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1294685377
+=======
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
@@ -17834,6 +18357,7 @@ Transform:
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1763888645
+>>>>>>> origin/feature/level2
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -17973,6 +18497,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 20
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+=======
     - target: {fileID: 1109831213616376, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
       propertyPath: m_Name
       value: BeeEnemy (55)
@@ -17987,6 +18513,7 @@ Prefab:
       propertyPath: shootAtPlayer
       value: 1
       objectReference: {fileID: 0}
+>>>>>>> origin/feature/level2
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
   m_IsPrefabParent: 0
@@ -18038,8 +18565,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (24)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1269263712}
@@ -18211,8 +18737,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (6)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1946258347}
@@ -18262,11 +18787,35 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemyHoming (18)
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 0}
+      propertyPath: WaypointContainer
+      value: 
+      objectReference: {fileID: 1350378139}
+    - target: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shootingDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shootAtPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
+        type: 2}
+      propertyPath: WaypointContainer
+      value: 
+      objectReference: {fileID: 1879742200}
+=======
     - target: {fileID: 114574035187910668, guid: 66dd11213b4202f47b7c65c9c7e4ba04,
         type: 2}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1679730071}
+>>>>>>> origin/feature/level2
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66dd11213b4202f47b7c65c9c7e4ba04, type: 2}
   m_IsPrefabParent: 0
@@ -18318,11 +18867,30 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemyHoming (9)
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 0}
+      propertyPath: WaypointContainer
+      value: 
+      objectReference: {fileID: 1350378139}
+    - target: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shootingDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shootAtPlayer
+      value: 0
+      objectReference: {fileID: 0}
+=======
     - target: {fileID: 114574035187910668, guid: 66dd11213b4202f47b7c65c9c7e4ba04,
         type: 2}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1565793966}
+>>>>>>> origin/feature/level2
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66dd11213b4202f47b7c65c9c7e4ba04, type: 2}
   m_IsPrefabParent: 0
@@ -18548,16 +19116,33 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: WaypointContainer
+      value: 
+<<<<<<< HEAD
+      objectReference: {fileID: 459235845}
+    - target: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shootingDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+=======
+      objectReference: {fileID: 1371890551}
+    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
+        type: 2}
+>>>>>>> origin/feature/level2
+      propertyPath: shootAtPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
         type: 2}
       propertyPath: WaypointContainer
       value: 
-      objectReference: {fileID: 1371890551}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
-      propertyPath: shootAtPlayer
-      value: 0
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1879742200}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
   m_IsPrefabParent: 0
@@ -18806,8 +19391,12 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemyHoming (11)
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 0}
+=======
     - target: {fileID: 114574035187910668, guid: 66dd11213b4202f47b7c65c9c7e4ba04,
         type: 2}
+>>>>>>> origin/feature/level2
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1565793966}
@@ -18862,15 +19451,25 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (31)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
+<<<<<<< HEAD
+      objectReference: {fileID: 586204575}
+    - target: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shootingDirection
+      value: 180
+=======
       objectReference: {fileID: 1679730071}
     - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
         type: 2}
       propertyPath: shootAtPlayer
       value: 1
+>>>>>>> origin/feature/level2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
@@ -19057,10 +19656,13 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (6)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
+<<<<<<< HEAD
+      objectReference: {fileID: 107032555}
+    - target: {fileID: 0}
+=======
       objectReference: {fileID: 1879742200}
     - target: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -19073,6 +19675,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
         type: 2}
+>>>>>>> origin/feature/level2
       propertyPath: shootAtPlayer
       value: 0
       objectReference: {fileID: 0}
@@ -19256,8 +19859,12 @@ Prefab:
       propertyPath: m_Name
       value: FlyEnemy (1)
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 0}
+=======
     - target: {fileID: 114305900267217416, guid: 14e8b34a0dfc65a4c8d98f1551b39ba0,
         type: 2}
+>>>>>>> origin/feature/level2
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 484631346}
@@ -19268,6 +19875,16 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 4602311498000238, guid: 14e8b34a0dfc65a4c8d98f1551b39ba0,
     type: 2}
+<<<<<<< HEAD
+  m_PrefabInternal: {fileID: 1571590549}
+--- !u!114 &1577736660 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114129443247276156, guid: 6d2608981f3da3246ad0aa23200966e0,
+    type: 2}
+  m_PrefabInternal: {fileID: 539796868}
+  m_Script: {fileID: 11500000, guid: 013253a61e6281c4481bb294e7d88984, type: 3}
+--- !u!1001 &1609879840
+=======
   m_PrefabInternal: {fileID: 1877169258}
 --- !u!1 &1879742200
 GameObject:
@@ -19302,6 +19919,7 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1883719003
+>>>>>>> origin/feature/level2
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -19348,7 +19966,20 @@ Prefab:
         type: 2}
       propertyPath: WaypointContainer
       value: 
+<<<<<<< HEAD
+      objectReference: {fileID: 1879742200}
+    - target: {fileID: 114574035187910668, guid: 66dd11213b4202f47b7c65c9c7e4ba04,
+        type: 2}
+      propertyPath: shootingDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1869282025424380, guid: 66dd11213b4202f47b7c65c9c7e4ba04, type: 2}
+      propertyPath: m_Name
+      value: BeeEnemyHoming
+      objectReference: {fileID: 0}
+=======
       objectReference: {fileID: 1269263712}
+>>>>>>> origin/feature/level2
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66dd11213b4202f47b7c65c9c7e4ba04, type: 2}
   m_IsPrefabParent: 0
@@ -19627,8 +20258,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 586204575}
@@ -19753,8 +20383,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (15)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1301375284}
@@ -19814,8 +20443,12 @@ Prefab:
       propertyPath: m_Name
       value: EnemyBeetle (4)
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 0}
+=======
     - target: {fileID: 114226556670522156, guid: 1ce340b9294b544498e17b004462e649,
         type: 2}
+>>>>>>> origin/feature/level2
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1701975144}
@@ -19870,13 +20503,25 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (22)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
+<<<<<<< HEAD
+      objectReference: {fileID: 1350378139}
+    - target: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shootingDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+=======
       objectReference: {fileID: 279901933}
     - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
         type: 2}
+>>>>>>> origin/feature/level2
       propertyPath: shootAtPlayer
       value: 1
       objectReference: {fileID: 0}
@@ -19931,15 +20576,29 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (38)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
+<<<<<<< HEAD
+      objectReference: {fileID: 586204575}
+    - target: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shootingDirection
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109831213616376, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+      propertyPath: m_Name
+      value: BeeEnemy
+=======
       objectReference: {fileID: 279901933}
     - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
         type: 2}
       propertyPath: shootAtPlayer
       value: 1
+>>>>>>> origin/feature/level2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
@@ -20121,6 +20780,12 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (71)
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 0}
+      propertyPath: WaypointContainer
+      value: 
+      objectReference: {fileID: 1301375284}
+=======
     - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
         type: 2}
       propertyPath: WaypointContainer
@@ -20131,6 +20796,7 @@ Prefab:
       propertyPath: shootAtPlayer
       value: 0
       objectReference: {fileID: 0}
+>>>>>>> origin/feature/level2
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
   m_IsPrefabParent: 0
@@ -20182,8 +20848,12 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemyHoming (5)
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 0}
+=======
     - target: {fileID: 114574035187910668, guid: 66dd11213b4202f47b7c65c9c7e4ba04,
         type: 2}
+>>>>>>> origin/feature/level2
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1350378139}
@@ -20225,11 +20895,106 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+<<<<<<< HEAD
+  - {fileID: 787961916}
+  - {fileID: 2046328569}
+  - {fileID: 788866125}
+  - {fileID: 1417514643}
+  m_Father: {fileID: 1079976615}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1755071809 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e,
+    type: 2}
+  m_PrefabInternal: {fileID: 300440618}
+--- !u!1 &1757733616
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1757733617}
+  m_Layer: 0
+  m_Name: BeeSeparated
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1757733617
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1757733616}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.1, y: 1, z: 79.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1034392902}
+  - {fileID: 733747072}
+  - {fileID: 2002106894}
+  - {fileID: 1565627762}
+  - {fileID: 1898203633}
+  - {fileID: 256994764}
+  - {fileID: 1271664533}
+  - {fileID: 1970036838}
+  - {fileID: 2043397204}
+  - {fileID: 59744519}
+  - {fileID: 1119236206}
+  - {fileID: 1490082089}
+  - {fileID: 1397519586}
+  - {fileID: 1263111686}
+  - {fileID: 1693058018}
+  - {fileID: 1387853088}
+  - {fileID: 792791729}
+  - {fileID: 207770505}
+  - {fileID: 206650162}
+  - {fileID: 1294685378}
+  - {fileID: 34847090}
+  - {fileID: 601731259}
+  - {fileID: 855598899}
+  - {fileID: 418750483}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1767989992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1767989993}
+  - component: {fileID: 1767989994}
+  m_Layer: 0
+  m_Name: WP (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1767989993
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1767989992}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6, y: 0, z: 4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1301375285}
+  m_RootOrder: 0
+=======
   - {fileID: 1452124988}
   - {fileID: 1669454026}
   - {fileID: 1177189434}
   m_Father: {fileID: 50855638}
   m_RootOrder: 5
+>>>>>>> origin/feature/level2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1951594300
 Prefab:
@@ -20274,11 +21039,18 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (20)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
+<<<<<<< HEAD
+      objectReference: {fileID: 1269263712}
+    - target: {fileID: 0}
+      propertyPath: shootAtPlayer
+      value: 1
+      objectReference: {fileID: 0}
+=======
       objectReference: {fileID: 2126867422}
+>>>>>>> origin/feature/level2
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
   m_IsPrefabParent: 0
@@ -20391,8 +21163,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (30)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 107032555}
@@ -20571,7 +21342,66 @@ MonoBehaviour:
   curveAmt: 0.2
   waitArrive: 0.05
   waitLeave: 0.05
+<<<<<<< HEAD
+--- !u!1001 &1825214630
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 727378540}
+    m_Modifications:
+    - target: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -54
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109831213616376, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+      propertyPath: m_Name
+      value: BeeEnemy (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: WaypointContainer
+      value: 
+      objectReference: {fileID: 1751735320}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1825214631 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1825214630}
+--- !u!1 &1850221085
+=======
 --- !u!1 &1974757255
+>>>>>>> origin/feature/level2
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -20715,8 +21545,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 586204575}
@@ -20724,10 +21553,17 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: shootingDirection
+<<<<<<< HEAD
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shootAtPlayer
+      value: 0
+=======
       value: 180
+>>>>>>> origin/feature/level2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
@@ -20797,7 +21633,76 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
+--- !u!108 &1885309037
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1885309036}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 1
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 0.5
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 1
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &1885309038
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1885309036}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 0, y: 10.49, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1888730666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1888730667}
+  - component: {fileID: 1888730668}
+  m_Layer: 0
+  m_Name: WP (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1888730667
+=======
 --- !u!4 &1988411977
+>>>>>>> origin/feature/level2
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -20853,11 +21758,22 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (10)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
+<<<<<<< HEAD
+      objectReference: {fileID: 586204575}
+    - target: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shootingDirection
+      value: 180
+      objectReference: {fileID: 0}
+=======
       objectReference: {fileID: 107032555}
+>>>>>>> origin/feature/level2
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
   m_IsPrefabParent: 0
@@ -20909,8 +21825,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (61)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 842609700}
@@ -21066,11 +21981,22 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemyHoming (9)
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 0}
+      propertyPath: WaypointContainer
+      value: 
+      objectReference: {fileID: 279901933}
+    - target: {fileID: 0}
+      propertyPath: shootAtPlayer
+      value: 1
+      objectReference: {fileID: 0}
+=======
     - target: {fileID: 114574035187910668, guid: 66dd11213b4202f47b7c65c9c7e4ba04,
         type: 2}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1679730071}
+>>>>>>> origin/feature/level2
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66dd11213b4202f47b7c65c9c7e4ba04, type: 2}
   m_IsPrefabParent: 0
@@ -21336,8 +22262,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 459235845}
@@ -21406,8 +22331,12 @@ Prefab:
       propertyPath: m_Name
       value: EnemyBeetle (1)
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 0}
+=======
     - target: {fileID: 114226556670522156, guid: 1ce340b9294b544498e17b004462e649,
         type: 2}
+>>>>>>> origin/feature/level2
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 279901933}
@@ -21649,8 +22578,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 16
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 1109831213616376, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+      propertyPath: m_Name
+      value: BeeEnemy (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+=======
     - target: {fileID: 114305900267217416, guid: 14e8b34a0dfc65a4c8d98f1551b39ba0,
         type: 2}
+>>>>>>> origin/feature/level2
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 310073164}
@@ -21705,11 +22642,26 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemyHoming (14)
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 0}
+      propertyPath: WaypointContainer
+      value: 
+      objectReference: {fileID: 586204575}
+    - target: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shootingDirection
+      value: 180
+      objectReference: {fileID: 0}
+=======
     - target: {fileID: 114574035187910668, guid: 66dd11213b4202f47b7c65c9c7e4ba04,
         type: 2}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1565793966}
+>>>>>>> origin/feature/level2
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66dd11213b4202f47b7c65c9c7e4ba04, type: 2}
   m_IsPrefabParent: 0
@@ -21762,8 +22714,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 20
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 0}
+=======
     - target: {fileID: 114574035187910668, guid: 66dd11213b4202f47b7c65c9c7e4ba04,
         type: 2}
+>>>>>>> origin/feature/level2
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1269263712}
@@ -21826,6 +22782,125 @@ Prefab:
         type: 2}
       propertyPath: WaypointContainer
       value: 
+<<<<<<< HEAD
+      objectReference: {fileID: 1679730071}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 66dd11213b4202f47b7c65c9c7e4ba04, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &2017820401 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4615808651120946, guid: 66dd11213b4202f47b7c65c9c7e4ba04,
+    type: 2}
+  m_PrefabInternal: {fileID: 2017820400}
+--- !u!1 &2022676517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2022676520}
+  - component: {fileID: 2022676519}
+  - component: {fileID: 2022676518}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2022676518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2022676517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &2022676519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2022676517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 5
+--- !u!4 &2022676520
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2022676517}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2029850901
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2029850902}
+  - component: {fileID: 2029850903}
+  m_Layer: 0
+  m_Name: WP (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2029850902
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2029850901}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5, y: 0, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 586204576}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2029850903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2029850901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf89571f30f92cd458647fe28ea9e64b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shoot: 1
+  curve: 1
+  curveAmt: 0.1
+  waitArrive: 0.05
+  waitLeave: 0.05
+--- !u!1001 &2040090569
+=======
       objectReference: {fileID: 1565793966}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66dd11213b4202f47b7c65c9c7e4ba04, type: 2}
@@ -21841,6 +22916,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 2130903061}
 --- !u!1001 &2082623337
+>>>>>>> origin/feature/level2
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -21883,8 +22959,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (11)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 279901933}
@@ -21935,13 +23010,25 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
+<<<<<<< HEAD
+      objectReference: {fileID: 459235845}
+    - target: {fileID: 4478071340670506, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shootingDirection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+=======
       objectReference: {fileID: 1371890551}
     - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
         type: 2}
+>>>>>>> origin/feature/level2
       propertyPath: shootAtPlayer
       value: 0
       objectReference: {fileID: 0}
@@ -22055,8 +23142,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (36)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 329392903}
@@ -22217,8 +23303,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1879742200}
@@ -22226,13 +23311,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: shootingDirection
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: shootAtPlayer
       value: 0
       objectReference: {fileID: 0}
@@ -22428,8 +23511,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 577372865}
@@ -22637,8 +23719,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1879742200}
@@ -22646,16 +23727,19 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: shootingDirection
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: shootAtPlayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
+        type: 2}
+      propertyPath: WaypointContainer
+      value: 
+      objectReference: {fileID: 1879742200}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 238e67b2fa1fe724b8c88997373aa97e, type: 2}
   m_IsPrefabParent: 0
@@ -22749,8 +23833,7 @@ Prefab:
       propertyPath: m_Name
       value: BeeEnemy (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: WaypointContainer
       value: 
       objectReference: {fileID: 1879742200}
@@ -22758,13 +23841,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: shootingDirection
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114073290288023448, guid: 238e67b2fa1fe724b8c88997373aa97e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: shootAtPlayer
       value: 0
       objectReference: {fileID: 0}
