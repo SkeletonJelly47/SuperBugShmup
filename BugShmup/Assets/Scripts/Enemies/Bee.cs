@@ -10,8 +10,10 @@ public class Bee : Enemy
     [SerializeField] float shootingDirection;
     public Transform weaponTarget;
 
+    float rotation;
     GameObject target;
     Vector3 targetLocation;
+    GameObject beeHoming;
     protected override void Start()
     {
         base.Start();

@@ -121,6 +121,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90b7fea3a8d4e3941b863a1beef4a6b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energyAmount: 120
+  energyAmount: 6
   speed: 3
   followDistance: 3

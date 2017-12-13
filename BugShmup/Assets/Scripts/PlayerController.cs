@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-	public int energy;
+    [SerializeField] public int energy;
 	public float Speed;
 	[SerializeField]
 	float startingSpeed, maxSpeed, accelerationValue, movementGraceTimer;
@@ -23,7 +24,9 @@ public class PlayerController : MonoBehaviour
     float invincibilityAmount;
     [SerializeField]
     int collisionDamage;
-    float xMax, zMax, xMin, zMin;   
+    float xMax, zMax, xMin, zMin;
+    public List<GameObject> HPBarPieces;
+    public Image SuperShot;
 
 	public int Health
 	{
@@ -37,6 +40,17 @@ public class PlayerController : MonoBehaviour
 			health = value;
 			Debug.Log("HP: " + health);
             HitParticle.Play();
+            for (int i = 0; i < HPBarPieces.Count; i++)
+            {
+                if (i * 10 < health)
+                {
+                    HPBarPieces[i].SetActive(true);
+                }
+                else
+                {
+                    HPBarPieces[i].SetActive(false);
+                }
+            }
 			if (health <= 0)
 			{
 				DestroySelf();
@@ -56,11 +70,20 @@ public class PlayerController : MonoBehaviour
 
 			energy = value;
 
+
 			if (energy > 100)
 			{
 				energy = 100;
 			}
-
+            if (energy == 0)
+            {
+                SuperShot.fillAmount = 0;
+            }
+            else
+            {
+                SuperShot.fillAmount = 100 / energy;
+                Debug.Log(energy / 100);
+            }
 		}
 	}
 
@@ -68,6 +91,7 @@ public class PlayerController : MonoBehaviour
 	void Start()
 	{
         HitParticle.Pause();
+        SuperShot.fillAmount = 0;
         invincibility = false;
         invincibilityTimer = invincibilityAmount;
 		dir = Vector3.forward;
@@ -105,9 +129,9 @@ public class PlayerController : MonoBehaviour
 
 		if (Input.GetButtonDown("Fire2"))
 		{
-			if (energy == 100)
+			if (Energy == 100)
 			{
-				energy = 0;
+				Energy = 0;
 				Instantiate(PlayerProjectileSuperShot, transform.position, transform.rotation);
 
 			}

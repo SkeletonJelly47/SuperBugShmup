@@ -142,8 +142,8 @@ ModelImporter:
     400132: Wing.R
     400134: Wing.R_end
     4300000: Fly
-    7400000: FlyArmature|CubeAction
-    7400002: FlyArmature|FlyArmatureAction
+    7400000: Fly_Flying
+    7400002: Fly_Flying
     7400004: Fly|CubeAction
     9500000: //RootNode
     13700000: Fly
@@ -169,7 +169,171 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Fly_Flying
+      takeName: FlyArmature|FlyArmatureAction
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Fly
+        weight: 1
+      - path: FlyArmature
+        weight: 1
+      - path: FlyArmature/Base
+        weight: 1
+      - path: FlyArmature/Base/Hips
+        weight: 1
+      - path: FlyArmature/Base/Hips/Butt
+        weight: 1
+      - path: FlyArmature/Base/Hips/Butt/Butt_end
+        weight: 1
+      - path: FlyArmature/Base/Hips/Head
+        weight: 1
+      - path: FlyArmature/Base/Hips/Head/Head_end
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg1.1.L
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg1.1.L/Leg1.2.L
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg1.1.L/Leg1.2.L/Leg1.3.L
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg1.1.L/Leg1.2.L/Leg1.3.L/Leg1.4.L
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg1.1.L/Leg1.2.L/Leg1.3.L/Leg1.4.L/Leg1.4.L_end
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg1.1.R
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg1.1.R/Leg1.2.R
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg1.1.R/Leg1.2.R/Leg1.3.R
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg1.1.R/Leg1.2.R/Leg1.3.R/Leg1.4.R
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg1.1.R/Leg1.2.R/Leg1.3.R/Leg1.4.R/Leg1.4.R_end
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg2.1.L
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg2.1.L/Leg2.2.L
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg2.1.L/Leg2.2.L/Leg2.3.L
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg2.1.L/Leg2.2.L/Leg2.3.L/Leg2.3.L_end
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg2.1.R
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg2.1.R/Leg2.2.R
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg2.1.R/Leg2.2.R/Leg2.3.R
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg2.1.R/Leg2.2.R/Leg2.3.R/Leg2.3.R_end
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg3.1.L
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg3.1.L/Leg3.2.L
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg3.1.L/Leg3.2.L/Leg3.3.L
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg3.1.L/Leg3.2.L/Leg3.3.L/Leg3.3.L_end
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg3.1.R
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg3.1.R/Leg3.2.R
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg3.1.R/Leg3.2.R/Leg3.3.R
+        weight: 1
+      - path: FlyArmature/Base/Hips/Leg3.1.R/Leg3.2.R/Leg3.3.R/Leg3.3.R_end
+        weight: 1
+      - path: FlyArmature/Base/Hips/Wing.L
+        weight: 1
+      - path: FlyArmature/Base/Hips/Wing.L/Wing.L_end
+        weight: 1
+      - path: FlyArmature/Base/Hips/Wing.R
+        weight: 1
+      - path: FlyArmature/Base/Hips/Wing.R/Wing.R_end
+        weight: 1
+      - path: FlyArmature/Base/Leg1.Pole.L
+        weight: 1
+      - path: FlyArmature/Base/Leg1.Pole.L/Leg1.Pole.L_end
+        weight: 1
+      - path: FlyArmature/Base/Leg1.Pole.R
+        weight: 1
+      - path: FlyArmature/Base/Leg1.Pole.R/Leg1.Pole.R_end
+        weight: 1
+      - path: FlyArmature/Base/Leg1.Target.L
+        weight: 1
+      - path: FlyArmature/Base/Leg1.Target.L/Leg1.Target.L_end
+        weight: 1
+      - path: FlyArmature/Base/Leg1.Target.R
+        weight: 1
+      - path: FlyArmature/Base/Leg1.Target.R/Leg1.Target.R_end
+        weight: 1
+      - path: FlyArmature/Base/Leg2.Pole.L
+        weight: 1
+      - path: FlyArmature/Base/Leg2.Pole.L/Leg2.Pole.L_end
+        weight: 1
+      - path: FlyArmature/Base/Leg2.Pole.R
+        weight: 1
+      - path: FlyArmature/Base/Leg2.Pole.R/Leg2.Pole.R_end
+        weight: 1
+      - path: FlyArmature/Base/Leg2.Target.L
+        weight: 1
+      - path: FlyArmature/Base/Leg2.Target.L/Leg2.Target.L_end
+        weight: 1
+      - path: FlyArmature/Base/Leg2.Target.R
+        weight: 1
+      - path: FlyArmature/Base/Leg2.Target.R/Leg2.Target.R_end
+        weight: 1
+      - path: FlyArmature/Base/Leg3.Pole.L
+        weight: 1
+      - path: FlyArmature/Base/Leg3.Pole.L/Leg3.Pole.L_end
+        weight: 1
+      - path: FlyArmature/Base/Leg3.Pole.R
+        weight: 1
+      - path: FlyArmature/Base/Leg3.Pole.R/Leg3.Pole.R_end
+        weight: 1
+      - path: FlyArmature/Base/Leg3.Target.L
+        weight: 1
+      - path: FlyArmature/Base/Leg3.Target.L/Leg3.Target.L_end
+        weight: 1
+      - path: FlyArmature/Base/Leg3.Target.R
+        weight: 1
+      - path: FlyArmature/Base/Leg3.Target.R/Leg3.Target.R_end
+        weight: 1
+      - path: FlyArmature/Base/Wing.Control.Both
+        weight: 1
+      - path: FlyArmature/Base/Wing.Control.Both/Wing.Control.L
+        weight: 1
+      - path: FlyArmature/Base/Wing.Control.Both/Wing.Control.L/Wing.Control.L_end
+        weight: 1
+      - path: FlyArmature/Base/Wing.Control.Both/Wing.Control.R
+        weight: 1
+      - path: FlyArmature/Base/Wing.Control.Both/Wing.Control.R/Wing.Control.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []

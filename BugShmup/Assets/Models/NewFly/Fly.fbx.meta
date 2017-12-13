@@ -1,0 +1,218 @@
+fileFormatVersion: 2
+guid: d8ce34066e8727445b0d9012455f8fff
+timeCreated: 1513175143
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Base
+    100002: Butt
+    100004: Butt_end
+    100006: //RootNode
+    100008: Fly
+    100010: FlyArmature
+    100012: Head
+    100014: Head_end
+    100016: Hips
+    100018: Leg1.1.L
+    100020: Leg1.1.R
+    100022: Leg1.2.L
+    100024: Leg1.2.R
+    100026: Leg1.3.L
+    100028: Leg1.3.R
+    100030: Leg1.4.L
+    100032: Leg1.4.L_end
+    100034: Leg1.4.R
+    100036: Leg1.4.R_end
+    100038: Leg1.Pole.L
+    100040: Leg1.Pole.L_end
+    100042: Leg1.Pole.R
+    100044: Leg1.Pole.R_end
+    100046: Leg1.Target.L
+    100048: Leg1.Target.L_end
+    100050: Leg1.Target.R
+    100052: Leg1.Target.R_end
+    100054: Leg2.1.L
+    100056: Leg2.1.R
+    100058: Leg2.2.L
+    100060: Leg2.2.R
+    100062: Leg2.3.L
+    100064: Leg2.3.L_end
+    100066: Leg2.3.R
+    100068: Leg2.3.R_end
+    100070: Leg2.Pole.L
+    100072: Leg2.Pole.L_end
+    100074: Leg2.Pole.R
+    100076: Leg2.Pole.R_end
+    100078: Leg2.Target.L
+    100080: Leg2.Target.L_end
+    100082: Leg2.Target.R
+    100084: Leg2.Target.R_end
+    100086: Leg3.1.L
+    100088: Leg3.1.R
+    100090: Leg3.2.L
+    100092: Leg3.2.R
+    100094: Leg3.3.L
+    100096: Leg3.3.L_end
+    100098: Leg3.3.R
+    100100: Leg3.3.R_end
+    100102: Leg3.Pole.L
+    100104: Leg3.Pole.L_end
+    100106: Leg3.Pole.R
+    100108: Leg3.Pole.R_end
+    100110: Leg3.Target.L
+    100112: Leg3.Target.L_end
+    100114: Leg3.Target.R
+    100116: Leg3.Target.R_end
+    100118: Wing.Control.Both
+    100120: Wing.Control.L
+    100122: Wing.Control.L_end
+    100124: Wing.Control.R
+    100126: Wing.Control.R_end
+    100128: Wing.L
+    100130: Wing.L_end
+    100132: Wing.R
+    100134: Wing.R_end
+    400000: Base
+    400002: Butt
+    400004: Butt_end
+    400006: Fly
+    400008: //RootNode
+    400010: FlyArmature
+    400012: Head
+    400014: Head_end
+    400016: Hips
+    400018: Leg1.1.L
+    400020: Leg1.1.R
+    400022: Leg1.2.L
+    400024: Leg1.2.R
+    400026: Leg1.3.L
+    400028: Leg1.3.R
+    400030: Leg1.4.L
+    400032: Leg1.4.L_end
+    400034: Leg1.4.R
+    400036: Leg1.4.R_end
+    400038: Leg1.Pole.L
+    400040: Leg1.Pole.L_end
+    400042: Leg1.Pole.R
+    400044: Leg1.Pole.R_end
+    400046: Leg1.Target.L
+    400048: Leg1.Target.L_end
+    400050: Leg1.Target.R
+    400052: Leg1.Target.R_end
+    400054: Leg2.1.L
+    400056: Leg2.1.R
+    400058: Leg2.2.L
+    400060: Leg2.2.R
+    400062: Leg2.3.L
+    400064: Leg2.3.L_end
+    400066: Leg2.3.R
+    400068: Leg2.3.R_end
+    400070: Leg2.Pole.L
+    400072: Leg2.Pole.L_end
+    400074: Leg2.Pole.R
+    400076: Leg2.Pole.R_end
+    400078: Leg2.Target.L
+    400080: Leg2.Target.L_end
+    400082: Leg2.Target.R
+    400084: Leg2.Target.R_end
+    400086: Leg3.1.L
+    400088: Leg3.1.R
+    400090: Leg3.2.L
+    400092: Leg3.2.R
+    400094: Leg3.3.L
+    400096: Leg3.3.L_end
+    400098: Leg3.3.R
+    400100: Leg3.3.R_end
+    400102: Leg3.Pole.L
+    400104: Leg3.Pole.L_end
+    400106: Leg3.Pole.R
+    400108: Leg3.Pole.R_end
+    400110: Leg3.Target.L
+    400112: Leg3.Target.L_end
+    400114: Leg3.Target.R
+    400116: Leg3.Target.R_end
+    400118: Wing.Control.Both
+    400120: Wing.Control.L
+    400122: Wing.Control.L_end
+    400124: Wing.Control.R
+    400126: Wing.Control.R_end
+    400128: Wing.L
+    400130: Wing.L_end
+    400132: Wing.R
+    400134: Wing.R_end
+    4300000: Fly
+    7400000: FlyArmature|CubeAction
+    7400002: FlyArmature|FlyArmatureAction
+    9500000: //RootNode
+    13700000: Fly
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,324 @@
+fileFormatVersion: 2
+guid: ba96bfaffd403fc4c86049cf39382208
+timeCreated: 1513172888
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Base
+    100002: //RootNode
+    100004: Dragonfly
+    100006: DragonflyArmature
+    100008: Head
+    100010: Hips
+    100012: Jaw.L
+    100014: Jaw.L_end
+    100016: Jaw.R
+    100018: Jaw.R_end
+    100020: Tail1
+    100022: Tail2
+    100024: Tail2_end
+    100026: Wing1.L
+    100028: Wing1.L_end
+    100030: Wing1.R
+    100032: Wing1.R_end
+    100034: Wing1.Target.L
+    100036: Wing1.Target.L_end
+    100038: Wing1.Target.R
+    100040: Wing1.Target.R_end
+    100042: Wing2.L
+    100044: Wing2.L_end
+    100046: Wing2.R
+    100048: Wing2.R_end
+    100050: Wing2.Target.L
+    100052: Wing2.Target.L_end
+    100054: Wing2.Target.R
+    100056: Wing2.Target.R_end
+    100058: WingControlBack
+    100060: WingControlFront
+    400000: Base
+    400002: //RootNode
+    400004: Dragonfly
+    400006: DragonflyArmature
+    400008: Head
+    400010: Hips
+    400012: Jaw.L
+    400014: Jaw.L_end
+    400016: Jaw.R
+    400018: Jaw.R_end
+    400020: Tail1
+    400022: Tail2
+    400024: Tail2_end
+    400026: Wing1.L
+    400028: Wing1.L_end
+    400030: Wing1.R
+    400032: Wing1.R_end
+    400034: Wing1.Target.L
+    400036: Wing1.Target.L_end
+    400038: Wing1.Target.R
+    400040: Wing1.Target.R_end
+    400042: Wing2.L
+    400044: Wing2.L_end
+    400046: Wing2.R
+    400048: Wing2.R_end
+    400050: Wing2.Target.L
+    400052: Wing2.Target.L_end
+    400054: Wing2.Target.R
+    400056: Wing2.Target.R_end
+    400058: WingControlBack
+    400060: WingControlFront
+    4300000: Dragonfly
+    7400000: Dragonfly_Flying
+    7400002: DragonflyArmature|Fly|Fly|CubeAction|Fly|CubeAction
+    9500000: //RootNode
+    13700000: Dragonfly
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Dragonfly_Flying
+      takeName: DragonflyArmature|ArmatureAction
+      firstFrame: 0
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Dragonfly
+        weight: 1
+      - path: DragonflyArmature
+        weight: 1
+      - path: DragonflyArmature/Base
+        weight: 1
+      - path: DragonflyArmature/Base/Hips
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Head
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Head/Jaw.L
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Head/Jaw.L/Jaw.L_end
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Head/Jaw.R
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Head/Jaw.R/Jaw.R_end
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Tail1
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Tail1/Tail2
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Tail1/Tail2/Tail2_end
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Wing1.L
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Wing1.L/Wing1.L_end
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Wing1.R
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Wing1.R/Wing1.R_end
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Wing2.L
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Wing2.L/Wing2.L_end
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Wing2.R
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Wing2.R/Wing2.R_end
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/WingControlBack
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/WingControlBack/Wing2.Target.L
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/WingControlBack/Wing2.Target.L/Wing2.Target.L_end
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/WingControlBack/Wing2.Target.R
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/WingControlBack/Wing2.Target.R/Wing2.Target.R_end
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/WingControlFront
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/WingControlFront/Wing1.Target.L
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/WingControlFront/Wing1.Target.L/Wing1.Target.L_end
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/WingControlFront/Wing1.Target.R
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/WingControlFront/Wing1.Target.R/Wing1.Target.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: DragonflyArmature|Fly|Fly|CubeAction|Fly|CubeAction
+      takeName: DragonflyArmature|Fly|Fly|CubeAction|Fly|CubeAction
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Dragonfly
+        weight: 1
+      - path: DragonflyArmature
+        weight: 1
+      - path: DragonflyArmature/Base
+        weight: 1
+      - path: DragonflyArmature/Base/Hips
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Head
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Head/Jaw.L
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Head/Jaw.L/Jaw.L_end
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Head/Jaw.R
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Head/Jaw.R/Jaw.R_end
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Tail1
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Tail1/Tail2
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Tail1/Tail2/Tail2_end
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Wing1.L
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Wing1.L/Wing1.L_end
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Wing1.R
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Wing1.R/Wing1.R_end
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Wing2.L
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Wing2.L/Wing2.L_end
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Wing2.R
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/Wing2.R/Wing2.R_end
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/WingControlBack
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/WingControlBack/Wing2.Target.L
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/WingControlBack/Wing2.Target.L/Wing2.Target.L_end
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/WingControlBack/Wing2.Target.R
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/WingControlBack/Wing2.Target.R/Wing2.Target.R_end
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/WingControlFront
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/WingControlFront/Wing1.Target.L
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/WingControlFront/Wing1.Target.L/Wing1.Target.L_end
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/WingControlFront/Wing1.Target.R
+        weight: 1
+      - path: DragonflyArmature/Base/Hips/WingControlFront/Wing1.Target.R/Wing1.Target.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

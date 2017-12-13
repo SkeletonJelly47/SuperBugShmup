@@ -157,7 +157,6 @@ GameObject:
   - component: {fileID: 4478071340670506}
   - component: {fileID: 114073290288023448}
   - component: {fileID: 136420173152956938}
-  - component: {fileID: 95596298926822010}
   m_Layer: 0
   m_Name: BeeEnemy
   m_TagString: Enemy
@@ -1553,23 +1552,6 @@ Transform:
   m_Father: {fileID: 4546277058229774}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95596298926822010
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1109831213616376}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 18a91d5af570f554b86e089e154e68ab, type: 3}
-  m_Controller: {fileID: 9100000, guid: 9c3ed177104fd4f48a52e7b7efa78bdf, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &95601125026502002
 Animator:
   serializedVersion: 3
