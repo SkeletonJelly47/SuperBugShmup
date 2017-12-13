@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: 35212662eed90f247b4599986daa98a0
-timeCreated: 1511990513
+guid: 1cc9d394d5c89b8489bcbaa70d763361
+timeCreated: 1513179420
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Base
+    100000: Base
+    100002: //RootNode
     100004: Beetle_LP
     100006: BeetleArmature
     100008: Head
@@ -76,8 +76,8 @@ ModelImporter:
     100136: WingC.R
     100138: WingC.R_end
     100140: WingController
-    400000: //RootNode
-    400002: Base
+    400000: Base
+    400002: //RootNode
     400004: Beetle_LP
     400006: BeetleArmature
     400008: Head
@@ -147,13 +147,12 @@ ModelImporter:
     400136: WingC.R
     400138: WingC.R_end
     400140: WingController
-    2300000: //RootNode
-    2300002: Beetle_LP
-    3300000: //RootNode
-    3300002: Beetle_LP
     4300000: Beetle_LP
+    7400000: BeetleArmature|BeetleArmatureAction
+    9500000: //RootNode
+    13700000: Beetle_LP
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
   animations:
@@ -174,7 +173,177 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: BeetleArmature|BeetleArmatureAction
+      takeName: BeetleArmature|BeetleArmatureAction
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Beetle_LP
+        weight: 1
+      - path: BeetleArmature
+        weight: 1
+      - path: BeetleArmature/Base
+        weight: 1
+      - path: BeetleArmature/Base/Torso
+        weight: 1
+      - path: BeetleArmature/Base/Torso/Head
+        weight: 1
+      - path: BeetleArmature/Base/Torso/Head/Head_end
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegBack1.L
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegBack1.L/LegBack2.L
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegBack1.L/LegBack2.L/LegBack3.L
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegBack1.L/LegBack2.L/LegBack3.L/LegBack3.L_end
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegBack1.R
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegBack1.R/LegBack2.R
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegBack1.R/LegBack2.R/LegBack3.R
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegBack1.R/LegBack2.R/LegBack3.R/LegBack3.R_end
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegBackPole.L
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegBackPole.L/LegBackPole.L_end
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegBackPole.R
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegBackPole.R/LegBackPole.R_end
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegBackTarget.Con
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegBackTarget.Con/LegBackTarget.L
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegBackTarget.Con/LegBackTarget.L/LegBackTarget.L_end
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegBackTarget.Con/LegBackTarget.R
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegBackTarget.Con/LegBackTarget.R/LegBackTarget.R_end
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegFront1.L
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegFront1.L/LegFront2.L
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegFront1.L/LegFront2.L/LegFront3.L
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegFront1.L/LegFront2.L/LegFront3.L/LegFront3.L_end
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegFront1.R
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegFront1.R/LegFront2.R
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegFront1.R/LegFront2.R/LegFront3.R
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegFront1.R/LegFront2.R/LegFront3.R/LegFront3.R_end
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegFrontPole.L
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegFrontPole.L/LegFrontPole.L_end
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegFrontPole.R
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegFrontPole.R/LegFrontPole.R_end
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegFrontTargetCon
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegFrontTargetCon/LegFrontTarget.L
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegFrontTargetCon/LegFrontTarget.L/LegFrontTarget.L_end
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegFrontTargetCon/LegFrontTarget.R
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegFrontTargetCon/LegFrontTarget.R/LegFrontTarget.R_end
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegMiddle1.L
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegMiddle1.L/LegMiddle2.L
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegMiddle1.L/LegMiddle2.L/LegMiddle3.L
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegMiddle1.L/LegMiddle2.L/LegMiddle3.L/LegMiddle3.L_end
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegMiddle1.R
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegMiddle1.R/LegMiddle2.R
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegMiddle1.R/LegMiddle2.R/LegMiddle3.R
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegMiddle1.R/LegMiddle2.R/LegMiddle3.R/LegMiddle3.R_end
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegMiddlePole.L
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegMiddlePole.L/LegMiddlePole.L_end
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegMiddlePole.R.
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegMiddlePole.R./LegMiddlePole.R._end
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegMiddleTargetCon
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegMiddleTargetCon/LegMiddleTarget.L
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegMiddleTargetCon/LegMiddleTarget.L/LegMiddleTarget.L_end
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegMiddleTargetCon/LegMiddleTarget.R
+        weight: 1
+      - path: BeetleArmature/Base/Torso/LegMiddleTargetCon/LegMiddleTarget.R/LegMiddleTarget.R_end
+        weight: 1
+      - path: BeetleArmature/Base/Torso/Shell.L
+        weight: 1
+      - path: BeetleArmature/Base/Torso/Shell.L/Shell.L_end
+        weight: 1
+      - path: BeetleArmature/Base/Torso/Shell.R
+        weight: 1
+      - path: BeetleArmature/Base/Torso/Shell.R/Shell.R_end
+        weight: 1
+      - path: BeetleArmature/Base/Torso/Wing.L
+        weight: 1
+      - path: BeetleArmature/Base/Torso/Wing.L/Wing.L_end
+        weight: 1
+      - path: BeetleArmature/Base/Torso/Wing.R
+        weight: 1
+      - path: BeetleArmature/Base/Torso/Wing.R/Wing.R_end
+        weight: 1
+      - path: BeetleArmature/Base/Torso/WingController
+        weight: 1
+      - path: BeetleArmature/Base/Torso/WingController/WingC.L
+        weight: 1
+      - path: BeetleArmature/Base/Torso/WingController/WingC.L/WingC.L_end
+        weight: 1
+      - path: BeetleArmature/Base/Torso/WingController/WingC.R
+        weight: 1
+      - path: BeetleArmature/Base/Torso/WingController/WingC.R/WingC.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -192,7 +361,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -216,7 +385,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
