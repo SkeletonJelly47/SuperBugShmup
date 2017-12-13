@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum BossActions
 {
@@ -41,6 +42,9 @@ public class BossScript : MonoBehaviour
     [Header("ShootAtPlayer")]
     public float shootAtPlayerInterval;
 
+    public Image HPBar;
+    float maxHP;
+
     protected int Health
     {
         get
@@ -51,6 +55,15 @@ public class BossScript : MonoBehaviour
         set
         {
             //dead
+            if (health == 0)
+            {
+                HPBar.fillAmount = 0f;
+            }
+            else
+            {
+                HPBar.fillAmount = (float)(health / maxHP);
+            }
+
             health = value;
             if (health <= 0)
             {
@@ -61,7 +74,7 @@ public class BossScript : MonoBehaviour
 
     void Start()
     {
-
+        maxHP = (float)health;
       /*  eyeTransform = gameObject.GetComponentsInChildren<Transform>();
         eyeObject = new GameObject[eyeTransform.Length];
         foreach (Transform child in eyeTransform)
