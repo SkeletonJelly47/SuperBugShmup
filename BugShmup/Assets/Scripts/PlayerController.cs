@@ -77,12 +77,13 @@ public class PlayerController : MonoBehaviour
 			}
             if (energy == 0)
             {
-                SuperShot.fillAmount = 0;
+                SuperShot.fillAmount = 0f;
             }
             else
             {
-                SuperShot.fillAmount = 100 / energy;
-                Debug.Log(energy / 100);
+                SuperShot.fillAmount = energy / 100f;
+                Debug.Log("Fill amount: " + energy / 100f);
+                Debug.Log("Energy actual: " + energy);
             }
 		}
 	}
