@@ -21,7 +21,9 @@ public class AudioManager : MonoBehaviour
     private AudioClip solo;
     private AudioClip soloHarmony;
 
-    float endTime = 0;
+    private Scene scene;
+
+    float endTime = -1;
 
     private void Awake()
     {
@@ -46,6 +48,7 @@ public class AudioManager : MonoBehaviour
     private void Update()
     {
         PlayBackgroundMusic();
+        Debug.Log(scene.buildIndex);
     }
 
     public void LoadAudio()
@@ -116,11 +119,16 @@ public class AudioManager : MonoBehaviour
 
     void PlayBackgroundMusic()
     {
-        if (SceneManager.GetActiveScene().name == "Level1" || 
-            SceneManager.GetActiveScene().name == "Level2")
+        if(scene != SceneManager.GetActiveScene())
+        {
+            scene = SceneManager.GetActiveScene();
+        }
+
+        if (scene.buildIndex == 1|| 
+            scene.buildIndex == 2)
         {
             // Play these only once
-            if (audioSource.clip == null)
+            if (audioSource.clip != intro && endTime <= 0)
             {
                 audioSource.clip = intro;
                 audioSource.Play();
@@ -166,6 +174,16 @@ public class AudioManager : MonoBehaviour
             }
 
 
+        }
+
+        if(scene.buildIndex == 0)
+        {
+            if (!audioSource.clip == SFX.MenuAmbiance)
+            {
+                audioSource.clip = SFX.MenuAmbiance;
+                audioSource.Play();
+                audioSource.loop = true;
+            }
         }
     }
 }
