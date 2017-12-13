@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 	float startingSpeed, maxSpeed, accelerationValue, movementGraceTimer;
 	float timer;
 	public GameObject PlayerProjectileSuperShot;
+    public ParticleSystem HitParticle;
 	float verticalInput, horizontalInput;
 	Vector3 dir;
 	[SerializeField]
@@ -35,6 +36,7 @@ public class PlayerController : MonoBehaviour
 		{
 			health = value;
 			Debug.Log("HP: " + health);
+            HitParticle.Play();
 			if (health <= 0)
 			{
 				DestroySelf();
@@ -65,6 +67,7 @@ public class PlayerController : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
+        HitParticle.Pause();
         invincibility = false;
         invincibilityTimer = invincibilityAmount;
 		dir = Vector3.forward;

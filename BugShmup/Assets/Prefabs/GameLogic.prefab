@@ -67,7 +67,7 @@ MonoBehaviour:
   score: 0
   BG: {fileID: 0}
   killTriggerHeight: 5
-  killTriggerPadding: 1
+  killTriggerPadding: 2
   boundaryXInset: 1
   boundaryZInset: 1
   DieScreen: {fileID: 0}
