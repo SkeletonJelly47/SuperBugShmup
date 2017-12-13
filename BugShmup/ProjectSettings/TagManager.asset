@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - PlayerProjectile
   - BG
+  - Boss
+  - BossEye
   layers:
   - Default
   - TransparentFX
