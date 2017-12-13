@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 3114973171
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1b1139251b90d016d221229d90e5ae66
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c516f2a3b2b6b67ef759f6410a790acd
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+Assets:
+- Assets/Audio/SFX/Menu Ambience.ogg
+- Assets/Audio/SFX/HomingMissile.ogg
+- Assets/Audio/SFX/Super shot.ogg
+- Assets/Audio/SFX/Flyehive.ogg
+- Assets/Audio/SFX/player shoot.ogg
+- Assets/Audio/SFX/Block.ogg
+- Assets/Audio/SFX/EnemyShot.ogg
+- Assets/Audio/SFX/laser1.ogg
+- Assets/Audio/SFX/Hit.ogg
+Dependencies: []

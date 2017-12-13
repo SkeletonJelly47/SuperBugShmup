@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public abstract class Weapon : MonoBehaviour
 {
-
     [SerializeField] GameObject SpawnObj;
+    public GameObject PlayerProjectileSuperShot;
+
     public string FireKey = "Fire1";
     float timer;
     float fireInterval;
@@ -36,6 +38,15 @@ public abstract class Weapon : MonoBehaviour
         else
         {
             timer += Time.deltaTime;
+        }
+
+        if (Input.GetButtonDown("Fire2"))
+        {
+            if (PlayerController.energy == 100)
+            {
+                PlayerController.energy = 0;
+                Instantiate(PlayerProjectileSuperShot, transform.position, transform.rotation);
+            }
         }
     }
 }

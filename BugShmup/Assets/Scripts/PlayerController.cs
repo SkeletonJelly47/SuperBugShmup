@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] public int energy;
+    [SerializeField] public static int energy;
 	public float Speed;
 	[SerializeField]
 	float startingSpeed, maxSpeed, accelerationValue, movementGraceTimer;

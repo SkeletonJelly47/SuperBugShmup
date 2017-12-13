@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 3316001802
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a043f762f236c7b8ff90489fb511f001
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c516f2a3b2b6b67ef759f6410a790acd
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+Assets:
+- Assets/Audio/Music/SHUMP! - Bass, Lead & Kick.ogg
+- Assets/Audio/Music/SHUMP! - Intro.ogg
+- Assets/Audio/Music/SHUMP! - Solo.ogg
+- Assets/Audio/Music/SHUMP! - Solo Harmony.ogg
+- Assets/Audio/Music/SHUMP!.ogg
+- Assets/Audio/Music/SHUMP! - Arp.ogg
+- Assets/Audio/Music/SHUMP! - Bass & Lead.ogg
+Dependencies: []

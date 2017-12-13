@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SingleShot : Weapon
 {
-
     // Use this for initialization
     public override void Start()
     {
@@ -14,6 +13,7 @@ public class SingleShot : Weapon
     // Update is called once per frame
     public override void Update()
     {
+
         base.Update();
     }
 }
