@@ -8,7 +8,7 @@ public class PlayerProjectile : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        audioSource.clip = AudioManager.Audios.Laser;
+        audioSource.clip = AudioManager.SFX.Laser;
         audioSource.Play();
     }
 }

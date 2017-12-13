@@ -8,7 +8,7 @@ public class PlayerProjectileSuperShot : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        audioSource.clip = AudioManager.Audios.SuperShot;
+        audioSource.clip = AudioManager.SFX.SuperShot;
         audioSource.Play();
     }
 }

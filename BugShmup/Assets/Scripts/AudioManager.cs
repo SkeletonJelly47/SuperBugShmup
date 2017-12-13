@@ -1,19 +1,96 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
+
+[RequireComponent(typeof(AudioSource))]
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance = null;
 
     private List<AudioClip> audioList = new List<AudioClip>();
 
-    private AssetBundle audioBundle;
-    private AudioClip[] audioArray;
+    private AssetBundle audioBundleSFX, audioBundleMusic;
+    private AudioClip[] SFXArray, musicArray;
+    private AudioSource audioSource;
 
-    public struct Audios
+    private AudioClip intro;
+    private AudioClip arp;
+    private AudioClip bassAndLead;
+    private AudioClip bassLeadKick;
+    private AudioClip solo;
+    private AudioClip soloHarmony;
+
+    float endTime = 0;
+
+    private void Awake()
     {
-        public Audios(AudioClip block, AudioClip enemyShot, AudioClip fly, AudioClip hit, AudioClip homingMissile, AudioClip laser, AudioClip menu, AudioClip playerShoot, AudioClip superShot)
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
+
+        LoadAudio();
+
+        SFX audios = new SFX(SFXArray[0], SFXArray[1], SFXArray[2], SFXArray[3], SFXArray[4], SFXArray[5], SFXArray[6], SFXArray[7], SFXArray[8]);
+
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    private void Update()
+    {
+        PlayBackgroundMusic();
+    }
+
+    public void LoadAudio()
+    {
+        //SFX Load
+        audioBundleSFX = AssetBundle.LoadFromFile("AssetBundles/audio.sfx");
+        SFXArray = new AudioClip[audioBundleSFX.LoadAllAssets<AudioClip>().Length];
+
+        for(int i = 0; i < SFXArray.Length; i++)
+        {
+            SFXArray[i] = audioBundleSFX.LoadAllAssets<AudioClip>()[i];
+        }
+
+
+        //Music Load
+        audioBundleMusic = AssetBundle.LoadFromFile("AssetBundles/music");
+        musicArray = new AudioClip[audioBundleMusic.LoadAllAssets<AudioClip>().Length];
+
+        for (int i = 0; i < musicArray.Length; i++)
+        {
+            musicArray[i] = audioBundleMusic.LoadAllAssets<AudioClip>()[i];
+        }
+
+        for (int i = 0; i < musicArray.Length; i++)
+        {
+            if(musicArray[i].name == "SHUMP! - Intro")
+                intro = musicArray[i];
+            else if (musicArray[i].name == "SHUMP! - Arp")          
+                arp = musicArray[i];
+            else if (musicArray[i].name == "SHUMP! - Bass & Lead")
+                bassAndLead = musicArray[i];
+            else if (musicArray[i].name == "SHUMP! - Bass, Lead & Kick")
+                bassLeadKick = musicArray[i];
+            else if (musicArray[i].name == "SHUMP! - Bass, Lead & Kick")
+                bassLeadKick = musicArray[i];
+            else if (musicArray[i].name == "SHUMP! - Solo")
+                solo = musicArray[i];
+            else if (musicArray[i].name == "SHUMP! - Solo Harmony")
+                soloHarmony = musicArray[i];
+        }
+    }
+
+    public struct SFX
+    {
+        public SFX(AudioClip block, AudioClip enemyShot, AudioClip fly, AudioClip hit, AudioClip homingMissile, AudioClip laser, AudioClip menu, AudioClip playerShoot, AudioClip superShot)
         {
             Block = block;
             EnemyShot = enemyShot;
@@ -37,33 +114,58 @@ public class AudioManager : MonoBehaviour
         public static AudioClip SuperShot;
     }
 
-    public void Awake()
+    void PlayBackgroundMusic()
     {
-        if (instance == null)
+        if (SceneManager.GetActiveScene().name == "Level1" || 
+            SceneManager.GetActiveScene().name == "Level2")
         {
-            instance = this;
-        }
-        else if (instance != this)
-        {
-            Destroy(gameObject);
-        }
+            // Play these only once
+            if (audioSource.clip == null)
+            {
+                audioSource.clip = intro;
+                audioSource.Play();
+                endTime = Time.time + intro.length;
 
-        DontDestroyOnLoad(gameObject);
+            }
+            else if (audioSource.clip == intro && endTime < Time.time)
+            {
+                audioSource.clip = bassAndLead;
+                audioSource.Play();
+                endTime = Time.time + bassAndLead.length;
+            }
+            // loop this part
+            else
+            {
+                if ((audioSource.clip == bassAndLead || audioSource.clip == arp) && endTime < Time.time)
+                {
+                    audioSource.clip = bassLeadKick;
+                    audioSource.Play();
+                    endTime = Time.time + bassLeadKick.length;
+                }
 
-        LoadAudio();
+                if (audioSource.clip == bassLeadKick && endTime < Time.time)
+                {
+                    audioSource.clip = solo;
+                    audioSource.Play();
+                    endTime = Time.time + solo.length;
+                }
 
-        Audios audios = new Audios(audioArray[0], audioArray[1], audioArray[2], audioArray[3], audioArray[4], audioArray[5], audioArray[6], audioArray[7], audioArray[8]);
-    }
+                if (audioSource.clip == solo && endTime < Time.time)
+                {
+                    audioSource.clip = soloHarmony;
+                    audioSource.Play();
+                    endTime = Time.time + soloHarmony.length;
+                }
 
-    public void LoadAudio()
-    {
-        audioBundle = AssetBundle.LoadFromFile("AssetBundles/audio.sfx");
-        audioArray = new AudioClip[audioBundle.LoadAllAssets<AudioClip>().Length];
+                if (audioSource.clip == soloHarmony && endTime < Time.time)
+                {
+                    audioSource.clip = arp;
+                    audioSource.Play();
+                    endTime = Time.time + arp.length;
+                }
+            }
 
-        for(int i = 0; i < audioArray.Length; i++)
-        {
-            audioArray[i] = audioBundle.LoadAllAssets<AudioClip>()[i];
-            //Debug.Log(audioArray[i].name);
+
         }
     }
 }

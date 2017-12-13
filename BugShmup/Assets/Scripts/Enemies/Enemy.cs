@@ -77,7 +77,7 @@ public abstract class Enemy : MonoBehaviour
     {
         collider = GetComponent<BoxCollider>();
         audioSource = GetComponent<AudioSource>();
-        audioSource.clip = AudioManager.Audios.Hit;
+        audioSource.clip = AudioManager.SFX.Hit;
 
         //I knew there was an easier way!
         Waypoints = WaypointContainer.GetComponentsInChildren<EnemyWaypoint>().ToList();
